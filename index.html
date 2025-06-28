@@ -1,10 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>亞洲人種與膚色對照表</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        .skin-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #888;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        /* 膚色對應 */
+        .pale { background-color: #ffe0bd; }
+        .light { background-color: #f1c27d; }
+        .medium { background-color: #d2a679; }
+        .yellow-medium { background-color: #c68642; }
+        .dark { background-color: #8d5524; }
+        .light-medium { background-color: #e0ac69; }
+        .yellow-brown { background-color: #a86b37; }
+        #google_translate_element {
+            position:absolute;
+            top: 60px;  /* 距離頁面頂端 60px */
+            left: 10px; /* 距離頁面左側 10px */
+            z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+        }
+    </style>
 </head>
 <body>
-$END$
+<div id="google-translate-box">
+    <div id="google_translate_element"></div>
+    <!-- Google Translate 的自動翻譯功能 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'zh-TW',  // 頁面原語言
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <p>點擊上方的語言選單以切換語言</p>
+</div>
+<header><nav><a href="diversity_of_caucasian_in_europe.html">歐洲高加索人外觀特徵對照表</a><a href="race_distribution_in_africa.html">非洲人種分布與外貌特徵對照表</a></nav></header>
+<h1>亞洲各地人種與膚色對照表</h1>
+<table>
+    <thead>
+    <tr>
+        <th>地區</th>
+        <th>主要人種</th>
+        <th>膚色傾向</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>東亞（中國、日本、韓國）</td>
+        <td>蒙古人種</td>
+        <td><span class="skin-box light"></span>淺膚色</td>
+    </tr>
+    <tr>
+        <td>東北亞（蒙古、滿洲）</td>
+        <td>蒙古人種</td>
+        <td><span class="skin-box pale"></span>蒼白膚色</td>
+    </tr>
+    <tr>
+        <td>中亞（哈薩克、烏茲別克等）</td>
+        <td>混合（蒙古人種 + 高加索人種）</td>
+        <td><span class="skin-box medium"></span>中等膚色</td>
+    </tr>
+    <tr>
+        <td>南亞（印度、巴基斯坦、孟加拉）</td>
+        <td>高加索人種</td>
+        <td><span class="skin-box dark"></span>深膚色</td>
+    </tr>
+    <tr>
+        <td>西亞（伊朗、伊拉克、阿拉伯半島）</td>
+        <td>高加索人種</td>
+        <td><span class="skin-box yellow-medium"></span>偏黃或中等膚色</td>
+    </tr>
+    <tr>
+        <td>高加索地區（亞美尼亞、喬治亞）</td>
+        <td>高加索人種</td>
+        <td><span class="skin-box light-medium"></span>偏白或中等膚色</td>
+    </tr>
+    <tr>
+        <td>東南亞（越南、泰國、菲律賓）</td>
+        <td>蒙古人種</td>
+        <td><span class="skin-box yellow-brown"></span>偏黃或棕色膚色</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

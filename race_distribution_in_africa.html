@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="UTF-8" />
+  <title>非洲人種分布與外貌特徵對照表</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: #fafafa;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    td.note {
+      font-size: 0.9em;
+      color: #555;
+    }
+    #google_translate_element {
+      position:absolute;
+      top: 60px;  /* 距離頁面頂端 60px */
+      left: 10px; /* 距離頁面左側 10px */
+      z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+    }
+  </style>
 </head>
 <body>
-$END$
+<div id="google-translate-box">
+  <div id="google_translate_element"></div>
+  <!-- Google Translate 的自動翻譯功能 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',  // 頁面原語言
+        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <p>點擊上方的語言選單以切換語言</p>
+</div>
+<header><nav><a href="index.html">亞洲各地人種與膚色對照表</a><a href="diversity_of_caucasian_in_europe.html">歐洲高加索人外觀特徵對照表</a></nav></header>
+<h1>非洲人種分布與外貌特徵對照表</h1>
+<table>
+  <thead>
+  <tr>
+    <th>地區</th>
+    <th>主要族群/人種</th>
+    <th>膚色</th>
+    <th>典型外貌特徵</th>
+    <th>備註</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>北非（摩洛哥、埃及、利比亞等）</td>
+    <td>高加索人種（柏柏爾人、阿拉伯人）</td>
+    <td>中等至淺膚色</td>
+    <td>五官較立體，鼻樑較挺，膚色較淺</td>
+    <td class="note">與歐亞大陸相近，受歷史多次人口流動影響</td>
+  </tr>
+  <tr>
+    <td>非洲之角（衣索比亞、索馬利亞、厄立特里亞）</td>
+    <td>高加索人種亞群（庫施特人）</td>
+    <td>中等膚色</td>
+    <td>輪廓分明，鼻子較挺，膚色多樣</td>
+    <td class="note">與中東及北非文化和基因有密切聯繫</td>
+  </tr>
+  <tr>
+    <td>撒哈拉沙漠以南西非（奈及利亞、加納等）</td>
+    <td>尼格羅人種（班圖族等）</td>
+    <td>深膚色</td>
+    <td>頭髮捲曲，鼻翼較寬，唇厚</td>
+    <td class="note">非洲最多人口聚集區，多樣文化和語言</td>
+  </tr>
+  <tr>
+    <td>撒哈拉沙漠以南東非（肯亞、坦桑尼亞）</td>
+    <td>尼格羅人種（班圖族與南蘇丹人）</td>
+    <td>深膚色</td>
+    <td>頭髮捲曲，鼻寬，身材高大</td>
+    <td class="note">部分地區有努比亞人與庫施特人的基因混合</td>
+  </tr>
+  <tr>
+    <td>撒哈拉沙漠以南南非（南非、津巴布韋）</td>
+    <td>尼格羅人種、科依桑人（科伊科伊人）</td>
+    <td>深膚色</td>
+    <td>尼格羅人種類似東非，科依桑人有獨特扁鼻</td>
+    <td class="note">科依桑人為原住民族群，語言含點狀輔音</td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>
