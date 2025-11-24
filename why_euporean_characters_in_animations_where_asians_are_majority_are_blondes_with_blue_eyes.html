@@ -37,19 +37,29 @@
         .character {
             width: 100px;
             text-align: center;
-            position: relative;
+            position: relative; /* 父元素保持相對定位 */
             cursor: pointer;
+            overflow: visible;  /* 確保圖片放大不被裁掉 */
         }
+
         .character img {
             width: 100px;
             height: auto;
             border-radius: 5px;
             border: 3px solid transparent;
             transition: transform 0.2s, border-color 0.2s;
+            position: relative;  /* 初始為相對定位 */
+            z-index: 1;
+            transform-origin: center center; /* 放大以中心為基準 */
         }
+
         .character img:hover {
-            transform: scale(1.2);
-            z-index: 10;
+            transform: scale(5);/* 放大 */
+            position: absolute;    /* 絕對定位跳脫父元素限制 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(5); /* 保持中心放大 */
+            z-index: 999;          /* 確保在最上層 */
         }
         .gold-border { border-color: #FFD700; }
         .dark-border { border-color: #555555; }
@@ -245,7 +255,7 @@
         </div>
         <div class="character" onclick="showInfo('Richter Belmont', '惡魔城動畫', '白人', '人類、吸血鬼獵人、貝爾蒙特家族的創始人', '黑髮+藍眼', '角色群體本身為白人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
             <div class="label">白人主導</div>
-            <img src="images/richter_belmont.jpg" alt="里希特貝爾蒙特" class="dark-border">
+            <img src="images/richter_belmont.webp" alt="里希特貝爾蒙特" class="dark-border">
             <div class="tooltip">Richter Belmont</div>
         </div>
         <div class="character" onclick="showInfo('Trevor Belmont', '惡魔城動畫', '白人', '人類、吸血鬼獵人、貝爾蒙特家族的後人','黑髮+藍眼', '角色群體本身為白人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
