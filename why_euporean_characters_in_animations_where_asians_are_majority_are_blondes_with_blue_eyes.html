@@ -182,27 +182,27 @@
             <img src="images/cammy_white.webp" alt="Cammy" class="gold-border">
             <div class="tooltip">Cammy</div>
         </div>
-        <div class="character" onclick="showInfo('Terry Bogard', '格鬥天王', '歐裔','遊戲中的主角之一', '金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
+        <div class="character" onclick="showInfo('Terry Bogard', '餓狼傳說', '歐裔','遊戲中的主角', '金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
             <div class="label">東亞主導</div>
             <img src="images/Terry_Bogard_KOF95.webp" alt="Terry" class="gold-border">
             <div class="tooltip">Terry</div>
         </div>
-        <div class="character" onclick="showInfo('Andy Bogard', '格鬥天王', '歐裔', 'Terry Bogard的弟弟、不知火舞的男友','金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
+        <div class="character" onclick="showInfo('Andy Bogard', '餓狼傳說', '歐裔', 'Terry Bogard的弟弟、不知火舞的男友','金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
             <div class="label">東亞主導</div>
             <img src="images/andy.jpg" alt="Andy" class="gold-border">
             <div class="tooltip">Andy</div>
         </div>
-        <div class="character" onclick="showInfo('Blue Mary', '格鬥天王', '歐裔', 'Terry Bogard的好友','金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
+        <div class="character" onclick="showInfo('Blue Mary', '餓狼傳說', '歐裔', 'Terry Bogard的好友','金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
             <div class="label">東亞主導</div>
             <img src="images/blue_mary.png" alt="Blue Mary" class="gold-border">
             <div class="tooltip">Blue Mary</div>
         </div>
-        <div class="character" onclick="showInfo('Rock Howard', '格鬥天王', '歐裔','Terry Bogard的養子', '金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
+        <div class="character" onclick="showInfo('Rock Howard', '餓狼傳說', '歐裔','Geese Howard的親生兒子、Terry Bogard的養子', '金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
             <div class="label">東亞主導</div>
             <img src="images/rock_howard.jpeg" alt="Rock Howard" class="gold-border">
             <div class="tooltip">Rock Howard</div>
         </div>
-        <div class="character" onclick="showInfo('Geese Howard', '格鬥天王', '歐裔', '冷血的格鬥家、反派之一','金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
+        <div class="character" onclick="showInfo('Geese Howard', '餓狼傳說', '歐裔', '冷血的格鬥家、Rock Howard的生父、遊戲中的反派之一','金髮碧眼', '二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
             <div class="label">東亞主導</div>
             <img src="images/geese_howard.jpg" alt="Geese Howard" class="gold-border">
             <div class="tooltip">Geese Howard</div>
@@ -330,14 +330,14 @@
         角色的「官方設定髮色」通常不會變，但「你看到的插圖髮色」會因上述因素而產生視覺落差，這是完全正常且普遍的現象。</p>
 </div>
 <script>
-    function showInfo(name, work, ethnicity, identity, hair, strategy) {
+    function showInfo(name, work, ethnicity, identity, hair_and_eye, strategy) {
         const infoBox = document.getElementById('info-box');
         infoBox.innerHTML = `
         <h3>${name}</h3>
         <p><strong>作品：</strong> ${work}</p>
         <p><strong>族裔：</strong> ${ethnicity}</p>
         <p><strong>身分：</strong>${identity}</p>
-        <p><strong>髮色/眼色：</strong> ${hair}</p>
+        <p><strong>外貌特徵：</strong> ${hair_and_eye}</p>
         <p><strong>設計策略說明：</strong> ${strategy}</p>
       `;
     }
