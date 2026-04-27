@@ -32,7 +32,16 @@
 
         .img-placeholder { font-style: italic; color: #555; text-align: center; display: block; margin: 20px 0; border: 1px dashed #ccc; padding: 20px; }
 
-        footer { text-align: center; font-size: 0.9em; color: #95a5a6; margin-top: 50px; }
+        footer {
+            display:block;
+            text-align: center;
+            margin-top: 50px;
+            background-color: purple;
+            color: yellow;
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 6px;
+        }
         nav a {
             color: black;
             margin: 0 15px;
@@ -46,6 +55,31 @@
         }
         nav li{
             text-align: left;
+        }
+        #google_translate_element {
+            position:absolute;
+            top: 10px;  /* 距離頁面頂端 60px */
+            left: 10px; /* 距離頁面左側 10px */
+            z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+        }
+        #social-share a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #social-share a:hover {
+            text-decoration: underline;
+        }
+        #social-share span {
+            margin: 0 5px;
+        }
+        #social-share a#fb-share {
+            color: #4267B2;
+        }
+        #social-share a#line-share {
+            color: #00C300;
+        }
+        #social-share a#twitter-share {
+            color: #1DA1F2;
         }
     </style>
 
@@ -194,7 +228,7 @@
 
         <h3>實例觀察：為什麼《三個傻瓜》的主角群看起來像「白人」？</h3>
 
-        <p>觀察經典電影《三個傻瓜》（3 Idiots）中的主角：<b>藍丘、蘇哈斯、佩雅、拉朱</b>。只要讀者暫時忽略其文化背景與語言，會驚訝地發現：</p>
+        <p>觀察經典電影《三個傻瓜》（3 Idiots）中的人物：<b>藍丘、蘇哈斯、佩雅、拉朱</b>。只要讀者暫時忽略其文化背景與語言，會驚訝地發現：</p>
 
         <ul>
 
@@ -222,16 +256,40 @@
     <p>同時，透過美洲原住民演員 <b>Graham Greene</b> 的案例對照，我們更能理解「地理真實性」在視覺文化中的重要性。理解地圖上的綠色區塊，不僅是為了打破刻板印象，更是為了讓我們擁有一雙能穿透國籍、文化與外在「護甲」，直視人類演化真實歷史的眼睛。<b>地圖上的界線或許是人造的，但血緣與地理的共鳴，早已深刻地刻劃在每一副肉體之中。</b></p>
 
 </section>
-
+<ul id="messages"></ul>
+<div id="social-share" style="margin-top: 20px;">
+    <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+    <span> | </span>
+    <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+    <span> | </span>
+    <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+</div>
+<script>
+    // 自動抓取當前頁面的 URL
+    var currentUrl = window.location.href;
+    // Facebook 分享
+    document.getElementById("fb-share").href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+    // Line 分享
+    document.getElementById("line-share").href =
+        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+    // X (Twitter) 分享
+    document.getElementById("twitter-share").href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+</script>
 
 
 <footer>
 
-    <p>© 2026 Chris Chou | 世界人種分布與歷史原因專題筆記</p>
+    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
+    <p>創作日期：2026 年 4 月 27 日</p>
+    <img src="理平頭.jpg" alt="作者照片" width="300" height="400">
 
 </footer>
 
-
+<footer style="font-size: 0.9em; text-align: center; margin-top: 2em; color: yellow;">
+    所有頁面均來自同一 GitHub Pages 專案
+</footer>
 
 </body>
 
