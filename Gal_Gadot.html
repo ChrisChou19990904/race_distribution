@@ -139,14 +139,17 @@
       <li><strong>定義的荒謬：</strong> Gal Gadot 這種西亞亞裔被視為外國人，而美籍的小杉健（Kane Kosugi）卻因東亞面孔被當成自己人。這再次印證：<span class="logic-bug">大眾判斷的是「生理質感（Skin）」，而非「系統歸屬（Nationality）」</span>。</li>
     </ul>
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/UZF_zEJQHIE?si=ii2LOi04sdpaQd3f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <div class="case-study">
-      <h3>技術深度解析：認知系統中的命名空間衝突（Namespace Conflict）</h3>
-      <p>在開發者視角下，樓南光的「洋廟邏輯」本質上是一種 <span class="highlight">「命名空間強制分配（Namespace Enforcement）」</span>：</p>
-      <ul>
-        <li><strong>Namespace: Internal (內部)</strong> —— 包含道教、桃木劍、東亞面孔。這些物件被判定為「安全的、已知的」。</li>
-        <li><strong>Namespace: External (外部)</strong> —— 包含十字架、聖水、高加索特徵。即使這些變數（如基督教）起源於亞洲，但因為已被標記為 <code>External</code>，系統便拒絕讀取其原始碼。</li>
-      </ul>
-      <p><strong>這解釋了術語的窄化：</strong> 當大眾說「亞裔」時，其實是在調用 <code>Namespace: Asian</code>，但該命名空間的底層實現被錯誤地硬編碼（Hard-coded）為「僅限黃種人」。這導致 Gal Gadot 這種「西亞高加索變數」在運行時產生了溢出，被社會認知系統強行丟棄或重新標記。</p>
+    <div class="case-study" style="background: #2c3e50; color: #ecf0f1; border-left: 10px solid #e67e22;">
+      <h3 style="color: #e67e22;">// 技術報告：命名空間隔離執行結果 (Namespace Isolation Result)</h3>
+      <p>樓南光的「洋廟邏輯」並非單純的誤解，而是一次成功的 <span class="highlight" style="color:#000;">系統封裝（Encapsulation）</span>：</p>
+      <pre style="background: #1a1a1a; padding: 15px; border-radius: 5px; color: #57cc99;">
+IF (Object.Symbols.contains("Cross") || Object.Feature == "Caucasoid") {
+    AssignToNamespace("External/Foreigner");
+    ExecuteAction("Burn");
+} ELSE {
+    AssignToNamespace("Internal/Safe");
+}</pre>
+      <p>這解釋了為何 Gal Gadot 在台灣社會被視為「外國人」，因為系統在讀取到她的生理硬體時，觸發了上述的強制分配邏輯。</p>
     </div>
     <p class="technical-note">※ 技術註解：人類的社交系統傾向於讀取 UI（外貌）來判定對象屬性，而非讀取資料庫底層的來源地欄位。</p>
   </div>
