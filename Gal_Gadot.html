@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>視覺認知除錯：從蓋爾·加朵到殭屍電影看亞裔定義的邏輯盲點</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; line-height: 2; max-width: 950px; margin: 40px auto; padding: 0 20px; color: #2c3e50; background: #fafafa; }
+    header { background-color: #fce4ec; padding: 30px; border-radius: 12px; margin-bottom: 40px; border: 1px solid #f8bbd0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    header ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+    header a { color: #880e4f; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; transition: 0.3s; }
+    header a:hover { border-bottom: 2px solid #880e4f; }
+    h1 { color: #1a1a1a; font-size: 2.2em; border-bottom: 4px solid #d35400; padding-bottom: 15px; letter-spacing: 1px; }
+    h2 { margin-top: 2.5em; color: #d35400; border-left: 6px solid #d35400; padding-left: 20px; background: #fff; padding-top: 10px; padding-bottom: 10px; }
+    h3 { color: #2980b9; margin-top: 1.8em; font-size: 1.4em; }
+    .case-study { background: #fff; border: 1px solid #eee; padding: 35px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 2em 0; }
+    blockquote { border-left: 5px solid #d35400; padding: 20px; color: #444; background: #fff9f4; font-style: normal; margin: 1.5em 0; font-weight: 500; }
+    .highlight { background: #fff3cd; padding: 3px 8px; font-weight: bold; color: #856404; border-radius: 4px; }
+    .logic-bug { color: #c0392b; font-weight: bold; text-decoration: underline; }
+    .technical-note { font-size: 0.9em; color: #7f8c8d; border-top: 1px dashed #ccc; margin-top: 20px; padding-top: 10px; font-style: italic; }
+    footer { text-align: center; margin-top: 60px; background-color: #4a148c; color: #ffeb3b; padding: 40px; border-radius: 12px; }
+    footer a { color: #fff; text-decoration: none; font-weight: bold; }
+    video{
+      width: 100%;
+      border: 5px solid #d93025;
+      border-radius:15px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="google-translate-box">
+  <div id="google_translate_element"></div>
+  <!-- Google Translate 的自動翻譯功能 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',  // 頁面原語言
+        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <p>點擊上方的語言選單以切換語言</p>
+</div>
+<header>
+  <ul>
+    <li><strong class="guide">本頁內容：</strong><br>
+      <a>視覺認知除錯：從蓋爾·加朵到殭屍電影看亞裔定義的邏輯盲點</a></li>
+
+    <li><strong class="guide">其他文章連結：</strong>
+      <ol>
+        <li><a href="index.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
+        <li><a href="diversity_of_caucasian_in_europe.html" target="_blank">歐洲高加索人外觀特徵對照表</a></li>
+        <li><a href="race_distribution_in_africa.html" target="_blank">非洲人種分布與外貌特徵對照表</a></li>
+        <li><a href="brunette_in_caucasian.html" target="_blank">高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</a></li>
+        <li><a href="different_races_among_the_earth.html" target="_blank">世界人種分布與歷史原因</a></li>
+        <li><a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</a></li>
+        <li><a href="why_european_caucasians_can_be_diverse_while_mongolians_and_negroes_are_simple.html" target="_blank">角色髮色與眼睛色設計策略探討</a></li>
+        <li><a href="white_turns_black.html" target="_blank">全球影視改編之「種族置換」現象深度報告</a></li>
+        <li><a href="why_overseas_indians_are_always_tanned_in_pop_culture.html" target="_blank">印度族群、膚色與辨識問題：說明文件</a></li>
+        <li><a href="why_mongolian_no_longer_refers_to_yellow_people_nowadays.html" target="_blank">Mongolian 與 Caucasian：歷史人類學用語與現代科學的差異</a></li>
+        <li><a href="redhead_in_caucasians.html" target="_blank">紅髮白種人科普說明</a></li>
+        <li><a href="yellow_race_myth_and_reality.html" target="_blank">黑眼睛、黑頭髮、黃皮膚，永永遠遠是龍的傳人？透過影視作品破解大家對「黃種人」的刻板印象！</a></li>
+        <li><a href="nazi_racial_myth.html" target="_blank">金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</a></li>
+        <li><a href="non_european_caucasian.html" target="_blank">隱藏在歐洲之外：非歐裔白色人種的地理演化、生存適應與文化視覺誤區</a></li>
+      </ol>
+    </li>
+  </ul>
+</header>
+
+<h1>亞裔標籤的視覺革命：從蓋爾·加朵看認知的邏輯盲點</h1>
+
+<section>
+  <h2>一、 消失的亞裔：蓋爾·加朵（Gal Gadot）生理與身分悖論</h2>
+  <div class="case-study">
+    <h3>1. 《玩命關頭》封面的「無差別質感」</h3>
+    <p>當來自以色列的 <strong>Gal Gadot</strong> 與歐裔的 <strong>Paul Walker</strong> 並肩出現在海報上時，兩者的生理訊號在視覺上達到了驚人的對稱。這種「違和感的消失」並非偶然，而是地中海高加索支系在演化上的必然結果：</p>
+    <ul>
+      <li><strong>骨架標記：</strong> 兩人皆具備極高的鼻根點、發達的眉弓以及狹長的臉部幾何特徵。這些「解剖學硬代碼」在好萊塢的打光系統下被放大，形成了一種跨越國籍的 <span class="highlight">「綠色區塊視覺統一感」</span>。</li>
+      <li><strong>膚色反射率：</strong> 在系列電影追求的古銅色質感下，Gal Gadot 天然的橄欖色肌膚與歐裔演員人工曬黑的色值（RGB Value）幾乎重合。</li>
+      <li><span class="logic-bug">認知 Bug：</span> 因為她符合了台灣大眾對「外國人」的視覺預設，其「亞裔」的身分變數被系統自動判定為無效並過濾，使她成為大眾眼中「長得像白人的非亞洲人」。</li>
+    </ul>
+    <img src="fast_and_furious.jpg" style="width:600px;height:600px;" alt="玩命關頭海報" loading="lazy">
+    <h3>2. 神力女超人：亞洲臉孔如何完美詮釋希臘神話？</h3>
+    <p>神力女超人（Wonder Woman）源於歐洲希臘神話，但 Gal Gadot 的詮釋卻被視為影史經典。這在邏輯上打臉了「亞裔無法詮釋西方神」的狹隘觀念：</p>
+    <p>這證明了只要具備相同的生理基底，亞洲（西亞）與歐洲（南歐）的邊界在藝術表現上是完全透明的。當大眾驚嘆她的美麗時，其實是在無意識中承認了：<span class="highlight">亞洲人的骨架可以比歐洲人更符合歐洲神話的定義</span>。</p>
+    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/pNQZ5C4HG58?si=4u_s_zIjEsl_bIs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>二、 林正英電影：影視符號對生理現實的劫持</h2>
+  <div class="case-study">
+    <h3>1. 《驅魔道長》：「中西合璧」下的定義虛無</h3>
+    <blockquote>「中西合璧，天下無敵！」 —— 九叔（林正英）與吳神父（午馬）</blockquote>
+    <p>這句影史經典台詞背後隱藏著極大的認知落差：</p>
+    <ul>
+      <li><strong>擬態工程：</strong> 飾演神父的 <strong>午馬</strong> 是正宗東亞人。但在影視符號（神父袍、巨大十字架、梵蒂岡背書）的強行介入下，觀眾的大腦會忽略其平緩的眉骨與臉型，將其「實例化」為西方力量的代表。</li>
+      <li><strong>起源的諷刺：</strong> 九叔手中的符咒與午馬手中的聖水，在歷史源頭上其實皆位於廣義亞洲。但因為基督教在傳播過程中被「歐洲化」，導致亞洲人必須靠「裝扮成歐洲人」來表現這股源自亞洲的力量。這是一種視覺上的 <span class="logic-bug">循環定義錯誤</span>。</li>
+    </ul>
+    <video controls><source src="驅魔道長.mp4"></video>
+    <h3>2. 《一眉道人》：樓南光的「洋廟」排他邏輯</h3>
+    <blockquote>「我要燒了你這間『洋廟』...這叫邏輯你懂不懂啊？『洋婆』？」</blockquote>
+    <p>保安隊長樓南光的這段歪理，揭露了社會如何透過「標籤化」來簡化世界：</p>
+    <p>他將教堂稱為「洋廟」，這並非對建築美學的分類，而是將該空間直接標記為 <span class="highlight">「Namespace: External」</span>。對他而言，「洋」是一種帶有威脅感的外部標籤。即便修女（肥媽 飾）具備複雜的族裔背景，在樓南光的邏輯補丁中，只要與十字架掛鉤，就是必須清除的「洋婆」。</p>
+    <video controls><source src="一眉道人.mp4"></video>
+  </div>
+</section>
+
+<section>
+  <h2>三、 台灣社會認知 Bug：外國人定義的「選擇性渲染」</h2>
+  <div class="case-study">
+    <p>在台灣人的日常語境中，<span class="highlight">「外國人」</span> 這一變數的渲染（Rendering）受到強烈的政治與階級過濾：</p>
+    <ul>
+      <li><strong>種族視覺過濾：</strong> 提到「外國人」，腦中首選高加索支系。日本人與韓國人雖是異國，卻因「視覺相近」而被判定為同類；東南亞移工則因「階級偏見」，在語言習慣中被剝奪了「外國人」應有的異國情調。</li>
+      <li><strong>意識形態干擾：</strong> 中國大陸人在生理上是完全一致的同族，但在台獨份子等特定意識形態中，為了達成政治去連結，會強制在軟體層面將其賦予「外國人」的標籤，即便這與生理硬件的識別完全衝突。</li>
+      <li><strong>定義的荒謬：</strong> Gal Gadot 這種西亞亞裔被視為外國人，而美籍的小杉健（Kane Kosugi）卻因東亞面孔被當成自己人。這再次印證：<span class="logic-bug">大眾判斷的是「生理質感（Skin）」，而非「系統歸屬（Nationality）」</span>。</li>
+    </ul>
+    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/GOcwCjoO7-g?si=O46XVetLHhLMIj3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/UZF_zEJQHIE?si=ii2LOi04sdpaQd3f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="technical-note">※ 技術註解：人類的社交系統傾向於讀取 UI（外貌）來判定對象屬性，而非讀取資料庫底層的來源地欄位。</p>
+  </div>
+</section>
+
+<footer>
+  <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank">周彥廷 (Yen-Ting Chou)</a></p>
+  <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
+  <p>數據與邏輯修正日期：2026 年 4 月 29 日</p>
+  <p>這份專案旨在透過生理地理學解構影視符號，幫助觀者修復大腦中的認知 Bug。</p>
+</footer>
+<ul id="messages"></ul>
+<div id="social-share" style="margin-top: 20px;">
+  <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+  <span> | </span>
+  <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+  <span> | </span>
+  <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+</div>
+<script>
+  // 自動抓取當前頁面的 URL
+  var currentUrl = window.location.href;
+  // Facebook 分享
+  document.getElementById("fb-share").href =
+          "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+  // Line 分享
+  document.getElementById("line-share").href =
+          "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+  // X (Twitter) 分享
+  document.getElementById("twitter-share").href =
+          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+</script>
+</body>
+</html>
