@@ -319,6 +319,56 @@
   <em>上方的插入影片為本網頁的作者在網路上輸入「Japanese Girl AI」、「Chinese Girl AI」、「Korean Girl AI」、「Asian Girl AI」後所出現的搜尋結果。儘管沒有加上「pale skin」、「white skin」等關鍵字，各位還是可以看到這些AI生成的東亞女性角色中，皮膚白皙的女性還是佔大多數，這也說明了在東亞文化中，白皙的膚色是被視為美麗的標準之一。
   </em>
   <p><strong>補充說明</strong>：插入影片的背景音樂分別為<a href="https://www.youtube.com/shorts/yOkp6VOj_kY?feature=share" target="_blank">《戰鬥-通往勝利》</a>、<a href="https://www.youtube.com/shorts/aY8gg1soR1Q?feature=share" target="_blank">《帝皇再臨》</a>，皆為本網頁的作者親自彈奏。</p>
+  <div class="audit-note" style="background-color: #fafafa; border-left: 4px solid #b89d6c; padding: 18px; margin: 25px 0; border-radius: 0 8px 8px 0; box-shadow: inset 0 0 4px rgba(0,0,0,0.02);">
+    <h3 style="margin-top: 0; color: #222; font-size: 1.2em;">💡 演算法盲測審計：無提示詞下的「觀音菩薩」預設著色劑穿幫現場</h3>
+    <p>
+      為了驗證東亞社會對「白皙」的追求是否已內化為某種集體無意識，本網頁作者在主流大模型 SuperGrok 中進行了一項極端的變因控制盲測。
+    </p>
+    <p>
+      作者在提示詞中僅輸入中性的宗教 IP 與基本性別構圖：<code>"Guanyin bodhisattva with beautiful female appearance in TV drama sits on a lotus in a pond, dresses herself in flowing robes and elegant Buddhist garments of sexy white lace style..."</code>。<strong>在這段描述中，作者完全沒有加入「東亞人（East Asian）」、「黃種人（Mongolian）」或「皮膚白皙（pale/white skin）」等任何關於族裔與膚色的關鍵字。</strong>
+    </p>
+    <p>
+      然而，盲測吐出的多模態結果卻極具穿透力——<strong>演算法 100% 自動生成了皮膚極致粉白、面容精緻的東亞美女 UI。</strong>
+    </p>
+    <p>
+      這在數據人類學上實錘了兩件冷酷的 Facts：
+    </p>
+    <ul>
+      <li><strong>「神聖 UI」的千年強行覆蓋（Override）：</strong> 原始印度神話或早期西域壁畫中，那位源自印歐語族（雅利安人）、蓄著小鬍子、骨骼立體、長相英俊的原始男性觀音 Data，在大數據庫的權重矩陣裡早已被東亞千年的傳教二創洗產地給徹底抹殺，使 AI 模型預設將其與「東亞粉白美女」標籤死死錨定。</li>
+      <li><strong>「黃皮膚」政治標籤的集體內耗破產：</strong> 流行歌詞長年教條式傳唱著「黑眼睛黑頭髮黃皮膚」，但當大數據與集體潛意識在編譯最美麗、最神聖、甚至帶有極致現代商業性吸引力（如蕾絲內衣與丁字褲的反差博弈）的視覺符號時，人類大腦與演算法都無一例外、極其誠實地選擇了與「黃皮膚」完全割裂的「欺霜賽雪、膚白如玉」。</li>
+    </ul>
+
+    <div class="evidence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px;">
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy.jpg" class="white-bg-img" alt="Grok 盲測證物 1" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 A：提示詞輸入檢視 1</span>
+      </div>
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy2.jpg" class="white-bg-img" alt="Grok 盲測證物 2" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 B：提示詞輸入檢視 2</span>
+      </div>
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy3.jpg" class="white-bg-img" alt="Grok 盲測證物 3" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 C：提示詞輸入檢視 3</span>
+      </div>
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy4.jpg" class="white-bg-img" alt="Grok 盲測證物 4" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 D：提示詞輸入檢視 4</span>
+      </div>
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy5.jpg" class="white-bg-img" alt="Grok 盲測證物 5" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 E：特徵特寫审計 1</span>
+      </div>
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy6.jpg" class="white-bg-img" alt="Grok 盲測證物 6" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 F：特徵特寫审計 2</span>
+      </div>
+      <div style="text-align: center;">
+        <img loading="lazy" src="guan_yin_sexy7.jpg" class="white-bg-img" alt="Grok 盲測證物 7" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;">
+        <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 G：特徵特寫审計 3</span>
+      </div>
+    </div>
+  </div>
 </div>
 <h2 id="section4">四、 影視案例：《葉問4》的膚色反轉與電影台詞的翻譯符號對抗</h2>
 <div class="case">
