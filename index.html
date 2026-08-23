@@ -61,6 +61,8 @@
             font-size: 0.9em;
             color: yellow;
             background-color: purple;
+            padding: 15px;
+            border-radius: 8px;
         }
         header a{
             color: black;
@@ -90,6 +92,15 @@
         }
         #social-share a#twitter-share {
             color: #1DA1F2;
+        }
+        .author-section {
+            background: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px #ccc;
+            text-align: center;
         }
     </style>
 </head>
@@ -154,6 +165,7 @@
         <li><a href="#factors">形成因素</a></li>
         <li><a href="#cases">案例國家</a></li>
         <li><a href="#regions">南亞、中亞與中東</a></li>
+        <li><a href="#hollywood-politics">附錄：美國普查法規與當代好萊塢的神話選角現象</a></li>
         <li><a href="#video">影片作證</a></li>
         <li><a href="#conclusion">結論</a></li>
     </ol>
@@ -241,6 +253,29 @@
         而是在持續的遷徙與融合中形成現代的多樣格局。
     </p>
 </section>
+<section id="hollywood-politics">
+    <h2>附錄：美國普查法規與當代好萊塢的神話選角現象</h2>
+    <p>
+        在探討世界人種分布與歷史之餘，當代的法律定義及影視娛樂工業也深刻地反映了這些人種分類的延伸應用：
+    </p>
+    <h3>1. 美國官方普查中的「白人」定義</h3>
+    <p>
+        根據美國聯邦政府（美國人口普查局與預算局 OMB）的官方標準定義，<strong>凡是來自歐洲、中東或北非（MENA地區）的原始居民，在族裔分類上都必須被填寫與歸類為「白人」（White）</strong>。儘管中東與北非移民的文化和具體外貌經驗各有差異，但在官方人口統計文書中始終歸納於此範疇。
+    </p>
+    <h3>2. 好萊塢的多元化選角與伊斯蘭/西亞角色定位</h3>
+    <p>
+        為了落實當代影視產業的多元、公平與包容（DEI）原則，影視團隊在組建時通常會刻意平衡白人、非裔、亞裔與拉丁裔等多個族群的面孔。<br>
+        然而，由於中東/北非人官方被視為白人，加上部分西亞裔演員具備高加索人種深邃立體的骨相特徵，他們在作品中經常被指派為白人角色。在情節設定上，來自伊斯蘭或中東地區的角色往往會被賦予特定的社會標籤，例如在涉及財富或商業帝國的劇本中，常被形塑成「石油大亨」或「跨國企業富豪」等財閥形象。
+    </p>
+    <h3>3. 中東神話電影中的深髮白人選角現象</h3>
+    <p>
+        在許多以古埃及、美索不達米亞或波斯等中東神話為題材的電影中，製片方經常會刻意挑選<strong>擁有一頭深色頭髮與深色眼睛的歐裔白人（包含歐洲原生白人或歐裔美國人）</strong>來擔任主角。這種現象背後有著雙重脈絡：
+    </p>
+    <ul>
+        <li><strong>高加索人種的廣義同源：</strong>從歷史人類學和基因地理來看，歐洲白人與中東、南亞雅利安後裔同屬於廣義的高加索人種，在骨骼結構、鼻梁與五官輪廓上有著天生的相通性，因此深髮歐裔演員在扮演中東神話角色時，骨相違和感較低。</li>
+        <li><strong>商業審美與公關考量：</strong>相比於金髮碧眼的典型北歐長相（容易帶有過度強烈的現代西方感），深髮黑眸的歐裔演員既能維持好萊塢商業市場習慣的主流星光與白人骨相，又能散發神祕的異國情調，同時巧妙避開了過去直接找純金髮白人飾演非歐古文明所招致的「洗白（Whitewashing）」批判。</li>
+    </ul>
+</section>
 <section id="video">
     <h2>影片作證</h2>
     <em>
@@ -300,11 +335,14 @@
     document.getElementById("twitter-share").href =
         "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
 </script>
-<footer>
-    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
+
+<!-- 優化後的結尾區塊 -->
+<div class="author-section">
+    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: #004d66; font-weight: bold;">周彥廷</a></p>
     <p>創作日期：2025 年 9 月 5 日</p>
-    <img src="理平頭.jpg" alt="作者照片" width="300" height="400">
-</footer>
+    <img src="理平頭.jpg" alt="作者照片" width="300" height="400" style="margin-top: 10px;">
+</div>
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
@@ -313,10 +351,12 @@
 <div class="fb-comments"
      data-href="https://chrischou19990904.github.io/harp_app_introduction"
      data-width="100%"
-     data-numposts="5">
+     data-numposts="5"
+     style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 8px;">
 </div>
+
 <footer>
-    所有頁面均來自同一 GitHub Pages 專案
+    <p style="margin: 0; color: yellow;">所有頁面均來自同一 GitHub Pages 專案</p>
 </footer>
 
 </body>
