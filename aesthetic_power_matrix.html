@@ -440,8 +440,10 @@
     <p>在全球 3A 級遊戲引擎與好萊塢影視工業的管線中，美型角色的底層 Class 存在著硬編碼架構偏置。當系統執行 <code>renderBeauty()</code> 函式時，底層資源調度器只會對兩套特定的骨骼拓撲結構（Facial Mesh Topology）開放最高級別的幾何運算與光影著色預算：一套是<strong>立體縱深極高的高加索拓撲</strong>，另一套則是<strong>平滑微曲面、高容錯的東亞拓撲</strong>。</p>
 
     <div class="code-block">
-        <span class="keyword">const</span> <span class="type">AestheticMatrix</span> = {
+        <span class="keyword">const</span> <span class="type">AestheticMatrix</span> =
+        <br>
         <span class="comment">// 第一梯隊：絕對壟斷。共享商業工業最頂級的 3D 骨架幾何雕琢、次表面散射（SSS）材質與浪漫光影權限</span>
+        <br>
         monopoly_namespaces: {
         caucasian_bracket: [
         <span class="string">"European_Nordic_Alpine_Med"</span>,  <span class="comment">// 歐裔：古典好萊塢標準</span>
@@ -455,7 +457,9 @@
         <span class="string">"Korean_Peninsular"</span>            <span class="comment">// K-Pop 工業化極致皮相管理</span>
         ]
         },
+        <br><br>
         <span class="comment">// 第二梯隊：結構性邊緣化。被剝奪純粹作為「美學焦點」的獨立變現權，強制鎖死於功能性或符號化標籤</span>
+        <br>
         peripheral_namespaces: [
         <span class="string">"SouthAsian_Dravidian"</span>,            <span class="comment">// 達羅毗荼人：被內部種姓與膚色政治封鎖</span>
         <span class="string">"SubSaharan_Negroid"</span>,              <span class="comment">// 尼格羅人：被工具化為 STR 力量型或 DEI 符號</span>
