@@ -37,6 +37,7 @@
             padding: 10px 20px;
         }
 
+        /* 頂部跨文章導航 */
         header nav {
             background-color: #f8fafc;
             border: 1px solid var(--border-color);
@@ -74,40 +75,6 @@
             color: #0f172a;
         }
 
-        /* 錨點目錄專屬層級樣式 */
-        .toc-wrapper {
-            background-color: #ffffff;
-            border: 1px solid var(--panel-border);
-            border-radius: 6px;
-            padding: 14px 18px;
-            margin: 10px 0 20px 0;
-        }
-
-        .toc-wrapper ol {
-            margin: 4px 0 0 0;
-            padding-left: 22px;
-        }
-
-        .toc-wrapper ul {
-            list-style: circle;
-            padding-left: 20px;
-            margin-top: 4px;
-            margin-bottom: 6px;
-        }
-
-        .toc-wrapper ul ul {
-            list-style: square;
-            padding-left: 20px;
-            margin-top: 2px;
-            margin-bottom: 4px;
-        }
-
-        .toc-wrapper li {
-            margin-bottom: 4px;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
         .guide {
             color: #0f172a;
             font-size: 1.05rem;
@@ -137,7 +104,7 @@
             border-bottom: 1px solid var(--panel-border);
             padding: 20px 24px;
             border-radius: 4px;
-            margin: 30px 0;
+            margin: 30px 0 20px 0;
         }
 
         .quote-title {
@@ -156,7 +123,64 @@
             font-weight: 500;
         }
 
-        /* 滾動偏移補償，防止錨點跳轉時緊貼頂部 */
+        /* 專案專屬目錄區塊樣式（置於內文核心處） */
+        .article-toc {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 6px;
+            padding: 20px 25px;
+            margin: 30px 0 45px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .article-toc .toc-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 8px;
+        }
+
+        .article-toc ol {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .article-toc ul {
+            list-style: circle;
+            padding-left: 20px;
+            margin-top: 4px;
+            margin-bottom: 6px;
+        }
+
+        .article-toc ul ul {
+            list-style: square;
+            padding-left: 20px;
+            margin-top: 2px;
+            margin-bottom: 4px;
+        }
+
+        .article-toc li {
+            margin-bottom: 5px;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            color: var(--text-main);
+        }
+
+        .article-toc a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .article-toc a:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        /* 滾動偏移補償，避免錨點跳轉時緊貼頂端 */
         h2, h3, li[id] {
             scroll-margin-top: 30px;
         }
@@ -304,74 +328,8 @@
 <header>
     <nav>
         <ul>
-            <li>
-                <strong class="guide">本頁導航目錄（章節、子標題與細部項目）：</strong>
-                <div class="toc-wrapper">
-                    <ol>
-                        <li><a href="#core-constant">核心審計常數宣告 / Core Constant Definition</a></li>
-                        <li><a href="#section-1">一、 審美命名空間（Namespace）雙頭壟斷審計</a></li>
-                        <li><a href="#section-2">二、 全維度地緣審美權力分配矩陣（Matrix Table）</a></li>
-                        <li>
-                            <a href="#section-3">三、 遺傳代碼分化深層除錯：破解「黃種人」與「白種人」的粗糙標籤</a>
-                            <ul>
-                                <li>
-                                    <a href="#sub-3-1">1. 廣義「黃種人」內部的殘酷分流：美洲原住民與南島語族的邊緣化真相</a>
-                                    <ul>
-                                        <li><a href="#item-3-1-1">美洲原住民的孤立分化與面部幾何演變</a></li>
-                                        <li><a href="#item-3-1-2">南島語族的大洋洲基因交流與紫外線選擇</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#sub-3-2">2. 達羅毗荼人算「白人」嗎？為何與印歐雅利安人存在天壤之別？</a>
-                                    <ul>
-                                        <li><a href="#item-3-2-1">雙組分遺傳本質（ANI 雅利安 vs ASI 達羅毗荼）</a></li>
-                                        <li><a href="#item-3-2-2">數千年「種姓制度」內婚制構成的基因防火牆</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#section-4">四、 雙頭壟斷成因剖析：骨骼幾何與文化資本的共謀</a>
-                            <ul>
-                                <li><a href="#sub-4-1">1. 高加索骨骼的「原生 3D 渲染優勢」</a></li>
-                                <li><a href="#sub-4-2">2. 東亞人群的「平滑面容與極致資本反攻」</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#section-5">五、 邊緣族群的「功能性閹割」機制</a>
-                            <ul>
-                                <li><a href="#item-5-1">南亞達羅毗荼人的內部階級過濾</a></li>
-                                <li><a href="#item-5-2">尼格羅人的力量（STR）與肉搏標籤鎖死</a></li>
-                                <li><a href="#item-5-3">美洲原住民與南島人的「時空凍結與博物展品化」</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#section-6">六、 DEI 政治正確的「Type Mismatch」技術穿幫審計</a>
-                            <ul>
-                                <li><a href="#sub-6-1">技術穿幫實踐路徑（忽視原生幾何 vs 粗糙置換貼圖）</a></li>
-                                <li>
-                                    <a href="#sub-6-2">政治正確的雙標假象：黑白置換的巨大噪音 vs 邊緣族群的絕對沉默</a>
-                                    <ul>
-                                        <li><a href="#item-6-2-1">聲量特權的本質：美國市場票倉與政治槓桿</a></li>
-                                        <li><a href="#item-6-2-2">無人問津的絕對邊緣：缺乏商業發行資源的冷宮</a></li>
-                                        <li><a href="#item-6-2-3">投機工程的破產：只打顏色補丁的偽多元</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#sub-6-3">工業實證案例：《暮光之城》奎魯特狼人族的偽原住民貼圖工程</a>
-                                    <ul>
-                                        <li><a href="#item-6-3-1">設定宣告（Metadata Declaration）：本土原住民設定</a></li>
-                                        <li><a href="#item-6-3-2">運行時抽換（Runtime Patching）：高加索骨架套褐色貼圖</a></li>
-                                        <li><a href="#item-6-3-3">邏輯穿幫分析：既收割題材又不敢信任原生面貌</a></li>
-                                        <li><a href="#item-6-3-4">市場邊緣化的冷酷現實：失去引發爭議話題的資本</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#section-7">七、 結論：審美權力重構與實相歸位</a></li>
-                    </ol>
-                </div>
-            </li>
+            <li><strong class="guide">本頁內容：</strong><br>
+                <a href="#">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
 
             <li><strong class="guide">其他文章連結：</strong>
                 <ol>
@@ -407,8 +365,75 @@
     <div class="quote-box" id="core-constant">
         <div class="quote-title">// 核心審計常數宣告 / Core Constant Definition</div>
         <div class="quote-text">
-            「審視全球 3A 遊戲與影視渲染管線的實例化輸出，高顏值角色的幾何網格（Mesh）長期被高加索人種（橫跨歐洲、黎凡特西亞、北非及北印雅利安支系）與東亞人群強行壟斷；而達羅毗荼人、尼格羅人、南島人與美洲原住民，則在主流商業算法中被系統性降級為無關美感的功能性配角。」
+            「審視全球 3A 遊戲與影視渲染管線的實例化輸出，高顏值角色的幾何網格（Mesh）長期被高加索人種（橫跨歐洲、西亞、北非及北印度的雅利安支系）與東亞人群強行壟斷；而達羅毗荼人、尼格羅人、南島人與美洲原住民，則在主流商業算法中被系統性降級為無關美感的功能性配角。」
         </div>
+    </div>
+
+    <!-- 位於常數宣告之後、第一章之前的全層次目錄導航 -->
+    <div class="article-toc">
+        <div class="toc-title">📑 本篇深度審計章節與子項目導航目錄（Index & Subsections）</div>
+        <ul>
+            <li><a href="#section-1">一、 審美命名空間（Namespace）雙頭壟斷審計</a></li>
+            <li><a href="#section-2">二、 全維度地緣審美權力分配矩陣（Matrix Table）</a></li>
+            <li>
+                <a href="#section-3">三、 遺傳代碼分化深層除錯：破解「黃種人」與「白種人」的粗糙標籤</a>
+                <ul>
+                    <li>
+                        <a href="#sub-3-1">1. 廣義「黃種人」內部的殘酷分流：美洲原住民與南島語族的邊緣化真相</a>
+                        <ul>
+                            <li><a href="#item-3-1-1">美洲原住民的孤立分化與面部幾何演變</a></li>
+                            <li><a href="#item-3-1-2">南島語族的大洋洲基因交流與紫外線選擇</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sub-3-2">2. 達羅毗荼人算「白人」嗎？為何與印歐雅利安人存在天壤之別？</a>
+                        <ul>
+                            <li><a href="#item-3-2-1">雙組分遺傳本質（ANI 雅利安 vs ASI 達羅毗荼）</a></li>
+                            <li><a href="#item-3-2-2">數千年「種姓制度」內婚制構成的基因防火牆</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#section-4">四、 雙頭壟斷成因剖析：骨骼幾何與文化資本的共謀</a>
+                <ul>
+                    <li><a href="#sub-4-1">1. 高加索骨骼的「原生 3D 渲染優勢」</a></li>
+                    <li><a href="#sub-4-2">2. 東亞人群的「平滑面容與極致資本反攻」</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#section-5">五、 邊緣族群的「功能性閹割」機制</a>
+                <ul>
+                    <li><a href="#item-5-1">南亞達羅毗荼人的內部階級過濾</a></li>
+                    <li><a href="#item-5-2">尼格羅人的力量（STR）與肉搏標籤鎖死</a></li>
+                    <li><a href="#item-5-3">美洲原住民與南島人的「時空凍結與博物展品化」</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#section-6">六、 DEI 政治正確的「Type Mismatch」技術穿幫審計</a>
+                <ul>
+                    <li><a href="#sub-6-1">技術穿幫實踐路徑（忽視原生幾何 vs 粗糙置換貼圖）</a></li>
+                    <li>
+                        <a href="#sub-6-2">政治正確的雙標假象：黑白置換的巨大噪音 vs 邊緣族群的絕對沉默</a>
+                        <ul>
+                            <li><a href="#item-6-2-1">聲量特權的本質：美國市場票倉與政治槓桿</a></li>
+                            <li><a href="#item-6-2-2">無人問津的絕對邊緣：缺乏商業發行資源的冷宮</a></li>
+                            <li><a href="#item-6-2-3">投機工程的破產：只打顏色補丁的偽多元</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sub-6-3">工業實證案例：《暮光之城》奎魯特狼人族的偽原住民貼圖工程</a>
+                        <ul>
+                            <li><a href="#item-6-3-1">設定宣告（Metadata Declaration）：本土原住民設定</a></li>
+                            <li><a href="#item-6-3-2">運行時抽換（Runtime Patching）：高加索骨架套褐色貼圖</a></li>
+                            <li><a href="#item-6-3-3">邏輯穿幫分析：既收割題材又不敢信任原生面貌</a></li>
+                            <li><a href="#item-6-3-4">市場邊緣化的冷酷現實：失去引發爭議話題的資本</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#section-7">七、 結論：審美權力重構與實相歸位</a></li>
+        </ul>
     </div>
 
     <h2 id="section-1">一、 審美命名空間（Namespace）雙頭壟斷審計</h2>
