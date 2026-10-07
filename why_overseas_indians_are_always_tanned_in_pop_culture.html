@@ -55,7 +55,14 @@
         }
         .chart-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 30px auto;
+            padding: 20px 15px;
+            border: 2px solid #4a5568; /* 明確的深灰/鐵灰色實線框 */
+            border-radius: 8px;        /* 輕微圓角，視覺更精緻 */
+            background-color: #f8fafc; /* 淺灰底色，使圖表區域與本文背景區隔 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 輕微懸浮陰影 */
+            max-width: 650px;          /* 限制最大寬度以貼合 600px 的 SVG */
+            overflow-x: auto;          /* 手機版若螢幕太窄可橫向滑動，避免破版 */
         }
         svg {
             max-width: 100%;
@@ -154,20 +161,33 @@
         </ul>
     </nav>
 </header>
-<h1>印度族群、膚色與辨識問題：說明文件</h1>
-
+<h1>印度族群、膚色與辨識問題：深度審計與說明文件</h1>
+<h2>章節導航</h2>
+<ul>
+    <li><a href="#introduction">前言</a></li>
+    <li><a href="#section1">一、海外印僑為何常被刻板定格為深膚色？</a></li>
+    <li><a href="#section2">二、西方動畫工業的極簡符號化：《飛哥與小佛》中的 Baljeet</a></li>
+    <li><a href="#section3">三、淺膚色印度人在歐美的「辨識錯位」與認知本質</a></li>
+    <li><a href="#section4">四、跨族裔政治符號學：賀錦麗（Kamala Devi Harris）的雙重視角</a></li>
+    <li><a href="#section5">五、破解迷思：古 DNA 視角下的南亞遺傳光譜</a></li>
+    <li><a href="#section6">六、影視工業的內外分流：本土「白皙神格」 vs 海外「深膚標籤」</a></li>
+    <li><a href="#section7">七、結論與認識論總結</a></li>
+</ul>
+<hr>
+<h2 id="introduction">前言</h2>
 <p>
-    本文件整理了一連串關於<strong>印度族群、膚色差異、海外辨識，以及歐美流行文化中刻板印象</strong>的討論，用以說明為何某些印度人特別容易被「看見」，而另一些則在視覺與社會認知中被「隱形」。
+    本文件整理了一連串關於<strong>印度族群結構、膚色差異、海外視覺辨識機制，以及歐美流行文化中符號刻板化</strong>的深度剖析，用以說明為何特定生理表型的印度人在全球影視工業中被高度「超額代表」，而另一群具備淺膚色高加索特徵的本土人群則在跨文化視覺中被系統性「隱形」。
 </p>
 
 <hr>
 
-<h2>一、海外印僑為何常被認為是深膚色？</h2>
+<h2 id="section1">一、海外印僑為何常被刻板定格為深膚色？</h2>
 
 <ul>
-    <li>早期海外移民多來自南印度或勞工階層</li>
-    <li>深膚色在視覺上更容易被快速標記為「印度人」</li>
-    <li>膚色較白的印度人常被誤認為白人、中東人或南歐人</li>
+    <li><strong>早期移民的人口結構偏差：</strong><br>歐美大航海及殖民時期的大規模海外勞工、契約工（Indentured Laborers）大多來自南印度（如泰米爾、安得拉）或底層勞動階層，其深膚色奠定了西方大眾對「印度人」的初級刻板坐標。</li>
+    <li><strong>視覺符號的高對比標記：</strong><br>在跨文化傳播中，深棕色皮膚被西方媒體當作最廉價、辨識門檻最低的「南亞族群代碼」，藉此與歐洲白人、東亞人快速切割。</li>
+    <li><strong>淺膚色印度人的「視覺歸類失效」：</strong><br>膚色白皙的北印高種姓人群在海外常被路人直覺誤認為南歐人（如義大利、希臘）、地中海人或中東黎凡特人，導致大眾「看見了卻認不出來」。</li>
+    <li><strong>近期現象級案例：</strong><br>2023–2024 年印度 21 歲力量舉選手 <strong>Keyaa Banerji</strong> 爆紅，因其深邃雙眼與白皙皮膚被全球網友驚呼「好看得不像印度人」。其背後真相在於其姓氏「Banerji（Banerjee）」為孟加拉頂級婆羅門（Kulin Brahmin）大姓，其外貌完全是印歐雅利安基因庫在內婚制下的生理實相，卻反襯出大眾對印度長相的普遍認知盲區。</li>
 </ul>
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/IpVJvI9cSS0?si=9uqtqKVfsX2CAMhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <br>
@@ -175,133 +195,127 @@
 <br>
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/TbDgFStEE3U?si=JmsAplMrzLGcZIZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <blockquote>
-    你看不到，不代表他們不存在，而是他們沒有被辨識成「印度人」。
+    你看不到，不代表他們不存在；而是當他們出現在你眼前時，你拒絕承認那是「印度人」。
 </blockquote>
 
 <hr>
 
-<h2>二、美國動畫《Phineas and Ferb》中的 Baljeet 設定</h2>
+<h2 id="section2">二、西方動畫工業的極簡符號化：《飛哥與小佛》中的 Baljeet</h2>
 
 <ul>
-    <li>官方設定 Baljeet 為印度人，刻意畫成深膚色</li>
-    <li>卡通畫風下五官差異弱化，膚色成為主要族群符號</li>
-    <li>若未標明背景，觀眾可能誤認為非裔美國人</li>
+    <li><strong>卡通畫風下的幾何閹割：</strong><br>2D 卡通線條極端簡化，無法展現細膩的面部 3D 骨骼縱深（如鼻骨起點、眶骨凹凸）。</li>
+    <li><strong>膚色作為唯一辨識槓桿：</strong><br>官方設定 Baljeet 為印度書呆子小孩，製作團隊必須將其塗裝為顯著的深黑褐色皮膚與微捲短髮，否則觀眾在無文字說明下極易產生跨種族混淆（甚至誤認為非裔角色）。</li>
+    <li><strong>文化工業的雙重鎖死：</strong><br>歐美編劇透過「深色皮膚 + 濃厚南亞口音 + 數學學霸/書呆子性格」的固定三件套，構建了一套全球通用的「印度人符號牢籠」。</li>
 </ul>
 <img loading="lazy" src="baljeet.png" alt="baljeet" style="border:red 10px solid">
 <hr>
 
-<h2>三、白皮膚印度人為何容易在歐美「被認錯」？</h2>
+<h2 id="section3">三、淺膚色印度人在歐美的「辨識錯位」與認知本質</h2>
 
 <ul>
-    <li>辨識依賴外觀、口音與穿著，而非基因或血統分析</li>
+    <li>大眾的日常生活辨識高度依賴<strong>「表層特徵採樣」</strong>（膚色、口音、服裝飾品），而非基因分析或體質人類學維度。</li>
+    <li>當一位高加索五官且皮膚白皙的印度人操著一口標準流利的英式/美式英語時，西方大眾的認知神經網絡會優先將其匹配至「地中海/中東/南歐」分類標籤。</li>
 </ul>
 
 <div class="note">
-    <strong>重要澄清：</strong><br>
-    「高加索人」是19世紀分類概念，現代遺傳學不再使用。
-    印度人並非白人的分支，而是多個南亞族群高度混合。
+    <strong>現代體質遺傳學澄清：</strong><br>
+    19 世紀殖民時代粗暴的「高加索人種（Caucasoid）」生物劃分早已被現代群體遺傳學揚棄。印度人絕非歐洲白人的「次級複製品」，而是由歐亞草原印歐人群、伊朗農業人群與南亞古老採集狩獵族群在數千年間高度演變融合而成的獨特群體。
 </div>
 
 <hr>
 
-<h2>四、Kamala Devi Harris 的族裔背景</h2>
+<h2 id="section4">四、跨族裔政治符號學：賀錦麗（Kamala Devi Harris）的雙重視角</h2>
 
 <ul>
-    <li>母親：印度泰米爾裔移民</li>
-    <li>父親：牙買加裔</li>
-    <li>本人認同為美國人，也承認多重族裔背景</li>
+    <li><strong>母系血統：</strong><br>母親 Shyamala Gopalan 來自印度南部泰米爾納德邦的婆羅門家庭，具有顯著的南亞特徵。</li>
+    <li><strong>父系血統：</strong><br>父親 Donald J. Harris 為非裔牙買加裔經濟學教授。</li>
+    <li><strong>傳播政治上的角色切換：</strong><br>賀錦麗在不同政治場域與受眾面前，其「非裔黑人女性首腦」與「南亞印度裔移民之女」的符號會根據選舉利益彈性調用，生動詮釋了種族標籤在政治修辭中的高度流動性。</li>
 </ul>
 <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/LoietO34dgU" title="&quot;So, We&#39;re Both Indian,&quot; &quot;Yes!&quot; - Kamala Harris and Mindy Kaling&#39;s 2019 Indian Cooking Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <hr>
 
-<h2>五、印度人的血統與族群澄清</h2>
+<h2 id="section5">五、破解迷思：古 DNA 視角下的南亞遺傳光譜</h2>
 
 <p>
-    有人可能會說「印度人是白人的分支，只是血統純度不如歐洲人」，這是不正確的。
+    坊間常有「印度人是白人分支，只是血統不純」的通俗言論，在現代群體遺傳學面前完全站不住腳：
 </p>
 
 <ul>
-    <li>北印度人與歐洲人確實共享部分遠古祖先，但這只是一部分基因</li>
-    <li>印度人的基因組成高度混合：
+    <li><strong>古基因組雙核心模型：</strong> 現代南亞人群的遺傳底層由兩大成分奠定：
         <ul>
-            <li>南亞古老族群（ASI）</li>
-            <li>印度-歐洲語系入侵族群（ANI）</li>
+            <li><strong>古北印度成分（ANI - Ancestral North Indian）：</strong><br>包含顯著的歐亞草原青銅時代牧民（Steppe_MLBA）與伊朗新石器農民血統，與歐洲人群共享部分遠古同源基因，廣泛分佈於北印及高種姓階層。</li>
+            <li><strong>古南印度成分（ASI - Ancestral South Indian）：</strong><br>由遠古印度土著「古南亞採集狩獵群（AASI）」與遠古伊朗農民混合而成，在南印及低種姓/部落群體中比例極高，表現為較深的黑色素沉積。</li>
         </ul>
     </li>
-    <li>現代遺傳學不使用「高加索人」或「血統純度」來定義族群</li>
-    <li>印度人是獨立混合的南亞族群，而非白人分支</li>
+    <li><strong>種姓制度的「基因冰凍效應」：</strong><br>長達數千年的嚴格內婚制阻止了兩大成分的均質融合，形成了從北到南、從高階婆羅門到低階不可接觸者之間極為劇烈的膚色與骨相階梯。</li>
+    <li><strong>共享祖先不等於「次等分支」：</strong><br>基因分支的演化是樹狀擴散與網狀交織的過程，將南亞人群視為「劣化版白人」是 19 世紀社會達爾文主義與殖民種族主義留下的認知毒素。</li>
 </ul>
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4fRw8llv-dg?si=OR1JOZIA5-9Lzz9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<div class="note">
-    強調：共享祖先不代表「次等」或「不純」，這是舊式人種觀念的誤導。
-</div>
 
 <div class="chart-container">
-    <p><strong>印度人與歐洲人基因關係示意圖</strong></p>
+    <p><strong>南亞基因演化交織架構示意圖</strong></p>
     <svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
         <!-- 歐洲人 -->
         <rect x="50" y="50" width="100" height="100" fill="#8da0cb"/>
         <text x="100" y="45" text-anchor="middle" font-size="14">歐洲人</text>
 
-        <!-- 北印度人 (ANI + ASI) -->
+        <!-- 北印度人 (ANI: Steppe + Iran_N) -->
         <rect x="250" y="50" width="100" height="100" fill="#fc8d62"/>
-        <text x="300" y="45" text-anchor="middle" font-size="14">北印度人</text>
+        <text x="300" y="45" text-anchor="middle" font-size="14">北印度高種姓 (ANI主導)</text>
 
-        <!-- 南印度人 (ASI為主) -->
+        <!-- 南印度人 (ASI: AASI + Iran_N) -->
         <rect x="450" y="50" width="100" height="100" fill="#66c2a5"/>
-        <text x="500" y="45" text-anchor="middle" font-size="14">南印度人</text>
+        <text x="500" y="45" text-anchor="middle" font-size="14">南印度/基層 (ASI主導)</text>
 
         <!-- 標示 ANI 與 ASI 來源 -->
         <line x1="250" y1="50" x2="50" y2="150" stroke="#222" stroke-width="2" stroke-dasharray="5,5"/>
-        <text x="150" y="170" text-anchor="middle" font-size="12">ANI 部分基因來源</text>
+        <text x="150" y="170" text-anchor="middle" font-size="12">歐亞草原同源血脈 (ANI)</text>
 
         <line x1="250" y1="150" x2="500" y2="150" stroke="#222" stroke-width="2" stroke-dasharray="5,5"/>
-        <text x="375" y="170" text-anchor="middle" font-size="12">ASI 部分基因來源</text>
+        <text x="375" y="170" text-anchor="middle" font-size="12">古南亞本土基因 (AASI/ASI)</text>
     </svg>
 </div>
 
 <hr>
 
-<h2>六、海外與本土角色膚色設計差異</h2>
+<h2 id="section6">六、影視工業的內外分流：本土「白皙神格」 vs 海外「深膚標籤」</h2>
 
 <p>
-    在印度本土背景的故事中，主角通常是膚色較白的北印度人或雅利安人，例如電影演員<strong>阿米爾罕（Aamir Khan）</strong>就經常飾演白皙的印度角色，觀眾立即知道他是印度人。又比如電視劇<a href="https://en.wikipedia.org/wiki/Buddha_(TV_series)" target="_blank" class="Buddha">《佛陀》</a>裡的高種性印度人也由皮膚白的雅利安人扮演。
+    在印度本土的文化工業中，商業票房與大眾美學長期被北印雅利安高種姓骨相牢牢統治。頂級影星如<strong>阿米爾·罕（Aamir Khan，普什圖高加索血統）</strong>、<strong>沙曼·喬希（Sharman Joshi，古吉拉特婆羅門世家）</strong>，皆擁有與南歐無異的立體五官與淺白皮膚。百集史詩電視劇<a href="https://en.wikipedia.org/wiki/Buddha_(TV_series)" target="_blank" class="Buddha">《佛陀》</a>在選角時，更是全套起用淺膚白皙的高種姓演員來扮演佛陀與釋迦族王室，藉由高加索美學換取崇高的收視率與神聖性。
 </p>
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/oJtI2qYjwws?si=gRBG8HbTq_E1jo4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <br>
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/upvKbKsGW_A?si=lcmUU5nYT9CDvxqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <p>
-    但如果故事背景在海外，尤其是美國或歐洲，角色設計往往必須使用深膚色，才能讓觀眾快速辨識出他是印度人。例如美國動畫《Phineas and Ferb》中的<strong>Baljeet Rai Patel</strong>。
+    然而，一旦敘事鏡頭切換至西方歐美作品，工業流水線為了節省大眾辨識成本，會立刻抹除這層內部階層多樣性，強制使用深膚色作為單一標籤（如 Baljeet）。這導致了一種荒謬的割裂：<strong>印度人自己看著螢幕上的白人化神明與明星，而西方大眾卻深信所有印度人都如焦炭般黝黑。</strong>
 </p>
 
 <div class="chart-container">
-    <p><strong>角色膚色設計示意圖：本土 vs 海外</strong></p>
+    <p><strong>角色膚色設計示意圖：本土商業美學 vs 海外刻板符號</strong></p>
     <svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
         <!-- 本土 -->
         <rect x="50" y="50" width="200" height="50" fill="#fc8d62"/>
-        <text x="150" y="45" text-anchor="middle" font-size="14">本土故事</text>
-        <text x="150" y="80" text-anchor="middle" font-size="10" fill="#fff">白皮膚 → 膚色非必需辨識符號 (例: 阿米爾罕)</text>
+        <text x="150" y="45" text-anchor="middle" font-size="14">印度本土影視 (寶萊塢/歷史劇)</text>
+        <text x="150" y="80" text-anchor="middle" font-size="10" fill="#fff">高加索白皙骨相 → 神格化與美學溢價 (阿米爾罕/佛陀)</text>
 
         <!-- 海外 -->
         <rect x="350" y="50" width="200" height="50" fill="#8c6bb1"/>
-        <text x="450" y="45" text-anchor="middle" font-size="14">海外故事</text>
-        <text x="450" y="80" text-anchor="middle" font-size="10" fill="#fff">深膚色 → 快速辨識印度人 (例: Baljeet)</text>
+        <text x="450" y="45" text-anchor="middle" font-size="14">西方流行文化 (歐美卡通/喜劇)</text>
+        <text x="450" y="80" text-anchor="middle" font-size="10" fill="#fff">極端深膚標籤 → 快速區隔族群 (Baljeet)</text>
     </svg>
 </div>
 
 <hr>
 
-<h2>七、總結</h2>
+<h2 id="section7">七、結論與認識論總結</h2>
 
 <ul>
-    <li>深膚色印度人在媒體中被過度代表</li>
-    <li>淺膚色印度人常因外觀而在視覺上「隱形」</li>
-    <li>流行文化傾向使用快速可辨識的族群符號</li>
-    <li>被誤認為他族，並不等於族群相同</li>
-    <li>印度人的基因組成複雜，現代遺傳學不支援「印度人是白人的分支」說法</li>
+    <li><strong>媒體代表性的階層過濾：</strong><br>歐美影視在深膚色上過度標記南亞，而本土影視則在淺膚色上極致神格化高種姓，兩者共同閹割了南亞真實的多元光譜。</li>
+    <li><strong>社會辨識的表象牢籠：</strong><br>大眾在日常中無法以科學基因看人，導致許多淺膚色印度人永久處於「視覺上被偷換國籍」的隱形狀態。</li>
+    <li><strong>終結粗暴二元對立：</strong><br>理解印度族群不能停留在「全黑」或「全白」的低階思維，唯有正視 AASI、伊朗農業先民與歐亞草原牧民在種姓制度下的動態博弈，才能徹底看清跨文化流行符號背後的權力代碼。</li>
 </ul>
 <blockquote>
-    族群辨識更多是社會與文化現象，而非生物學事實。
+    族群辨識從來不是客觀的生物學鏡像，而是地緣政治、商業算計與集體刻板印象共同調教出的視覺幻覺。
 </blockquote>
 <div id="social-share" style="margin-top: 20px;">
     <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
