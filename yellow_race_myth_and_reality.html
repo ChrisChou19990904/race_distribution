@@ -110,17 +110,28 @@
       border-radius: 6px;
     }
     footer p {
-      color: yellow; /* 確保文字顏色與背景對比鮮明 */
+      color: yellow;
     }
     footer img {
-      display: block; /* 使圖片顯示 */
-      margin: 20px auto; /* 中央對齊 */
+      display: block;
+      margin: 20px auto;
     }
-    /* 給白色背景圖片專用的類別 */
     .white-bg-img {
-      border: 1px solid #ddd; /* 淺灰色細邊框，比純黑更柔和 */
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.05); /* 淡淡的陰影，增加立體感 */
-      border-radius: 4px; /* 微小的圓角，讓視覺更精緻 */
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+    .video-grid-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .video-grid-box iframe {
+      width: 100%;
+      height: 220px;
+      border: 5px red solid;
+      box-sizing: border-box;
     }
     @media screen and (max-width: 767px) {
       iframe{
@@ -138,12 +149,11 @@
 <body>
 <div id="google-translate-box">
   <div id="google_translate_element"></div>
-  <!-- Google Translate 的自動翻譯功能 -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
-        pageLanguage: 'zh-TW',  // 頁面原語言
-        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
@@ -185,38 +195,38 @@
 <h2>目錄</h2>
 <div class="case">
   <p>隨便點選下方其中一個主題便能快速跳到該主題的說明區</p>
-<ul>
-  <li><a href="#introduction">前言</a></li>
-  <li><a href="#section1">一、 生理硬體明明很白，為何我們被稱為「黃種人」？——一場歷史與人種色碼的洗產地騙局</a></li>
-  <li><a href="#section2">二、審美反轉：為何白人追求小麥色？</a></li>
-  <li><a href="#section3">三、東亞的相反邏輯：越白越好</a></li>
-  <li><a href="#section4">四、 影視案例：《葉問4》的膚色反轉與電影台詞的翻譯符號對抗</a></li>
-  <li><a href="#section5">五、黑髮與黑眼的迷思：天然棕髮以及染髮文化與隱眼文化的視覺革命</a></li>
-  <li><a href="#section6">六、緯度不低，為何東亞沒有天生金髮藍眼</a></li>
-  <li><a href="#section7">七、外貌其實是「被解讀的訊號」與虛構的完全解放</a></li>
-  <li><a href="#section8">八、次文化視覺編譯：東亞面孔與非黑髮 UI 組件的防碰撞除錯報告</a></li>
-  <li><a href="#conclusion">結論：從矛盾中看清現實</a></li>
-</ul>
+  <ul>
+    <li><a href="#introduction">前言</a></li>
+    <li><a href="#section1">一、 生理硬體明明很白，為何我們被稱為「黃種人」？——一場歷史與人種色碼的洗產地騙局</a></li>
+    <li><a href="#section2">二、 審美反轉：為何白人追求小麥色？</a></li>
+    <li><a href="#section3">三、 東亞的相反邏輯：越白越好</a></li>
+    <li><a href="#section4">四、 影視案例：《葉問4》的膚色反轉與電影台詞的翻譯符號對抗</a></li>
+    <li><a href="#section5">五、 黑髮與黑眼的迷思：天然棕髮以及染髮文化與隱眼文化的視覺革命</a></li>
+    <li><a href="#section6">六、 緯度不低，為何東亞沒有天生金髮藍眼</a></li>
+    <li><a href="#section7">七、 外貌其實是「被解讀的訊號」與虛構的完全解放</a></li>
+    <li><a href="#section8">八、 次文化視覺編譯：東亞面孔與非黑髮 UI 組件的防碰撞除錯報告</a></li>
+    <li><a href="#conclusion">九、 結論：從矛盾中看清現實</a></li>
+  </ul>
 </div>
 <h2 id="introduction">前言</h2>
 <div class="case">
-<p>
-  「黑眼睛、黑頭髮、黃皮膚」這樣的描述，長久以來被視為東亞人的典型特徵。然而，只要稍微觀察現實，就會發現這種說法與實際情況存在明顯落差。
-</p>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/L8kLPuBSruc?si=ye4khFNtuaPY0yAn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>
-  當我們再進一步把視角放到影視作品與全球審美，就會看到更多耐人尋味的矛盾：
-</p>
+  <p>
+    「黑眼睛、黑頭髮、黃皮膚」這樣的描述，長久以來被視為東亞人的典型特徵。然而，只要稍微觀察現實，就會發現這種說法與實際情況存在明顯落差。
+  </p>
+  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/L8kLPuBSruc?si=ye4khFNtuaPY0yAn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>
+    當我們再進一步把視角放到影視作品與全球審美，就會看到更多耐人尋味的矛盾：
+  </p>
 
-<ul>
-  <li>所謂「黃種人」，其實往往膚色白皙</li>
-  <li>所謂「白種人」，卻常以小麥色為美</li>
-  <li>電影中的種族衝突，甚至與畫面呈現的膚色不一致</li>
-</ul>
+  <ul>
+    <li>所謂「黃種人」，其實往往膚色白皙</li>
+    <li>所謂「白種人」，卻常以小麥色為美</li>
+    <li>電影中的種族衝突，甚至與畫面呈現的膚色不一致</li>
+  </ul>
 
-<blockquote>
-  這些矛盾指向同一件事：外貌的意義，並不是自然的，而是被文化與社會所建構。
-</blockquote>
+  <blockquote>
+    這些矛盾指向同一件事：外貌的意義，並不是自然的，而是被文化與社會所建構。
+  </blockquote>
 </div>
 <h2 id="section1">一、 生理硬體明明很白，為何我們被稱為「黃種人」？——一場歷史與人種色碼的洗產地騙局</h2>
 <div class="case">
@@ -241,76 +251,76 @@
     「黃種人」這個詞，從來都不是一個基於演化生物學的客觀事實描述，而是一個為了服務西方殖民權力與審美金字塔，被強行發明、洗產地出來的<strong>政治美學使用者介面（UI）</strong>。大眾消費了幾百年的標籤，本身就是一個嚴重的認知系統錯誤（Type Mismatch）。
   </blockquote>
 </div>
-<h2 id="section2">二、審美反轉：為何白人追求小麥色？</h2>
+<h2 id="section2">二、 審美反轉：為何白人追求小麥色？</h2>
 <div class="case">
-<h3>1. 歷史轉變</h3>
+  <h3>1. 歷史轉變</h3>
 
-<p>
-  在歐洲早期社會：
-</p>
+  <p>
+    在歐洲早期社會：
+  </p>
 
-<ul>
-  <li>白皮膚＝不用勞動＝上層階級</li>
-</ul>
+  <ul>
+    <li>白皮膚＝不用勞動＝上層階級</li>
+  </ul>
 
-<p>
-  但到了現代：
-</p>
+  <p>
+    但到了現代：
+  </p>
 
-<ul>
-  <li>小麥色＝有時間戶外活動與度假</li>
-  <li>象徵健康、自由與生活品質</li>
-</ul>
+  <ul>
+    <li>小麥色＝有時間戶外活動與度假</li>
+    <li>象徵健康、自由與生活品質</li>
+  </ul>
 
-<h3>2. 現代審美案例</h3>
+  <h3>2. 現代審美案例</h3>
 
-<p>
-  許多歐美明星會刻意曬出健康膚色，例如：</p>
+  <p>
+    許多歐美明星會刻意曬出健康膚色，例如：</p>
 
-<ul>
-  <li>健身文化中的古銅膚色</li>
-  <li>海灘文化帶來的日曬形象</li>
-</ul>
-<img loading="lazy" src="katya_clover.jpg" width="426" height="640" alt="">
-<br>
-<em>上圖為俄羅斯魅力模特兒Katya Clover在社交媒體上曬出的小麥色膚色照片</em>
-<p>
-  這種膚色不僅不被視為「變黑」，反而是一種吸引力的象徵。
-</p>
+  <ul>
+    <li>健身文化中的古銅膚色</li>
+    <li>海灘文化帶來的日曬形象</li>
+  </ul>
+  <img loading="lazy" src="katya_clover.jpg" width="426" height="640" alt="">
+  <br>
+  <em>上圖為俄羅斯魅力模特兒Katya Clover在社交媒體上曬出的小麥色膚色照片</em>
+  <p>
+    這種膚色不僅不被視為「變黑」，反而是一種吸引力的象徵。
+  </p>
 </div>
-<h2 id="section3">三、東亞的相反邏輯：越白越好</h2>
+<h2 id="section3">三、 東亞的相反邏輯：越白越好</h2>
 <div class="case">
-<p>
-  在東亞文化中，審美標準長期走向另一個方向：
-</p>
+  <p>
+    在東亞文化中，審美標準長期走向另一個方向：
+  </p>
 
-<ul>
-  <li>白＝精緻、乾淨、社會地位高</li>
-  <li>黑＝勞動、戶外、辛苦</li>
-</ul>
+  <ul>
+    <li>白＝精緻、乾淨、社會地位高</li>
+    <li>黑＝勞動、戶外、辛苦</li>
+  </ul>
 
-<p>
-  即使在現代社會，這種觀念仍然透過：
-</p>
+  <p>
+    即使在現代社會，這種觀念仍然透過：
+  </p>
 
-<ul>
-  <li>美白產品</li>
-  <li>影視打光</li>
-  <li>偶像文化</li>
-</ul>
+  <ul>
+    <li>美白產品</li>
+    <li>影視打光</li>
+    <li>偶像文化</li>
+  </ul>
 
-<p>
-  持續被強化。
-</p>
-<img loading="lazy" src="加藤岳美.webp" alt="">
-<br>
-<em>上圖為日本女藝人加藤岳美，她的膚色非常白皙，這也是她在日本娛樂圈中被視為美麗的原因之一。她在西元2001年唱的日文歌《響の調べ》（中文：響之調）是我的拿手曲目之一（如下插入影片所示）</em>
-<iframe loading="lazy" width="560" height="750" src="https://www.youtube.com/embed/iJExM7vMjZ4?si=wYtn6FpQ5G9px-CC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-<img loading="lazy" src="長澤奈央與山本梓.jpg" width="460" height="415" alt="">
-<br>
-<em>註：上圖為日本女藝人山本梓（紅色衣服）與長澤奈央（白色衣服），她們和加藤岳美一樣是典型的膚白東亞美女。她們在西元2002年合唱的日文歌《幸せShaking Hands》也是我的拿手曲目之一（如下插入影片所示）</em><br>
-<iframe loading="lazy" width="560" height="750" src="https://www.youtube.com/embed/oGfwQa3xXFE?si=v8PhwVZjUEmy_vuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>
+    持續被強化。
+  </p>
+  <img loading="lazy" src="加藤岳美.webp" alt="">
+  <br>
+  <em>上圖為日本女藝人加藤岳美，她的膚色非常白皙，這也是她在日本娛樂圈中被視為美麗的原因之一。她在西元2001年唱的日文歌《響の調べ》（中文：響之調）是我的拿手曲目之一（如下插入影片所示）</em>
+  <iframe loading="lazy" width="560" height="750" src="https://www.youtube.com/embed/iJExM7vMjZ4?si=wYtn6FpQ5G9px-CC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br><br>
+  <img loading="lazy" src="長澤奈央與山本梓.jpg" width="460" height="415" alt="">
+  <br>
+  <em>註：上圖為日本女藝人山本梓（紅色衣服）與長澤奈央（白色衣服），她們和加藤岳美一樣是典型的膚白東亞美女。她們在西元2002年合唱的日文歌《幸せShaking Hands》也是我的拿手曲目之一（如下插入影片所示）</em><br>
+  <iframe loading="lazy" width="560" height="750" src="https://www.youtube.com/embed/oGfwQa3xXFE?si=v8PhwVZjUEmy_vuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
   <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/1wHIDiuFh0M" title="《Shiawase Shaking Hands》 Ending Part Piano Cover #特撮ソング #悲傷情歌 #sadsong #sadsongs #supersentaiseries" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br><br>
@@ -321,9 +331,9 @@
   <br>
   <video controls width="560" height="750" style="border:red solid 5px"><source src="淡淡的愛意_實體鋼琴.mp4"></video>
   <br><br>
-<img src="英文課本.jpg" loading="lazy" width="435" height="941" class="white-bg-img" alt="" style="border: 10px solid black;">
-<br>
-<em>註：上方的謎因向我們呈現美國的族群多樣性，不過圖片中的東亞裔美國人的膚色很明顯與歐裔美國人一樣白，這也說明膚色不是判斷人種的唯一根據</em>
+  <img src="英文課本.jpg" loading="lazy" width="435" height="941" class="white-bg-img" alt="" style="border: 10px solid black;">
+  <br>
+  <em>註：上方的謎因向我們呈現美國的族群多樣性，不過圖片中的東亞裔美國人的膚色很明顯與歐裔美國人一樣白，這也說明膚色不是判斷人種的唯一根據</em>
   <br><br>
   <video width="350" height="700" controls style="border:red 5px solid"><source src="japanese_girl_chinese_girl_korean_girl_asian_girl_ai.mp4"></video>
   <br>
@@ -467,7 +477,7 @@
     這精準戳破了種族主義者的盲點：在他們的權力結構裡，大腦早就裝載了傲慢的 UI 鋼印，即使自己曬得比華人還黑、即使華人長得比他們更白，他們依然要教條式地使用 "yellow" 來進行政治定罪。畫面上的「物理顏色深淺（Data）」，與強權口中的「種族命名空間（Namespace）」，在這裡徹底發生了毀滅性的脫鉤。
   </p>
 </div>
-<h2 id="section5">五、黑髮與黑眼的迷思：天然棕髮以及染髮文化與隱眼文化的視覺革命</h2>
+<h2 id="section5">五、 黑髮與黑眼的迷思：天然棕髮以及染髮文化與隱眼文化的視覺革命</h2>
 <div class="case">
   <p>
     除了膚色，「黑頭髮」和「黑眼睛」也是東亞人的標籤。但在現實與影視文化中，這道牆早已倒塌：
@@ -489,7 +499,7 @@
   <img loading="lazy" src="螢幕擷取畫面%202026-03-25%20213554.png" style="border:10px red solid" alt="">
   <br>
   <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/_TjItGP04mg?si=m7oSUsqdDDra8pg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
+  <br>
   <img loading="lazy" src="端木將軍.jpg" width="456" height="897"style="border:10px red solid" alt="">
   <br>
   <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/XGbnxgNusUc?si=iG5ov44hElST2y-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -528,7 +538,7 @@
     當歌詞還在傳唱「黑眼睛、黑頭髮」時，現代亞洲人早已透過隱眼和染髮劑，重新奪回了定義自己形象的主控權。
   </blockquote>
 </div>
-<h2 id="section6">六、緯度不低，為何東亞沒有天生金髮藍眼？</h2>
+<h2 id="section6">六、 緯度不低，為何東亞沒有天生金髮藍眼？</h2>
 <div class="case">
   <p>
     既然膚色深淺不是劃分人種的絕對根據，那另一個常讓人產生的疑問是：<strong>中國北方、韓國與日本的緯度明明與歐洲許多國家相當，為何在排除染髮劑與隱形眼鏡的情況下，東亞常規人群卻極少出現天生的金髮與藍眼？</strong>
@@ -565,7 +575,7 @@
       <strong>現實世界中的萬中選一奇蹟：</strong><br>反觀天狗衛視貼出的那些蒙古人照片，才是真正符合人類學上的基因斑斕奇蹟。遺傳學證明，控制面部骨骼（五官）的基因與控制黑色素（髮色瞳色）的基因是完全「解耦」獨立抽籤的。在完全沒有西方白人血統的情況下，那些孩子擁有一張<strong>極度純正、扁平的東亞面孔（寬顴骨、內眥贅皮單眼皮），卻因局部基因獨立突變，自帶一頭璀璨的亞麻金髮</strong>。這種奇蹟在常規人口中機率極低，但它是大自然隱性基因的真實大爆發。
     </li>
   </ul>
-<img id="tengu_media" src="天狗衛視.jpg" alt="" width="435" height="941" style="border:5px red solid">
+  <img id="tengu_media" src="天狗衛視.jpg" alt="" width="435" height="941" style="border:5px red solid">
   <br>
   <img src="天狗衛視2.jpg" alt="" width="435" height="941" style="border:5px red solid">
   <blockquote>
@@ -575,7 +585,7 @@
   <a href="https://youtu.be/eXpv93-pomY" target="_blank">金髮碧眼蒙古人！</a>（此影片禁止在第三方網站播放所以只能使用超連結）
 </div>
 
-<h2 id="section7">七、外貌其實是「被解讀的訊號」與虛構的完全解放</h2>
+<h2 id="section7">七、 外貌其實是「被解讀的訊號」與虛構的完全解放</h2>
 <div class="case">
   <p>
     綜合上述現象，我們能看清一個核心事實：<strong>外貌並非固定的物理數據，而是隨環境與權力跳動的「訊號」。</strong>
@@ -591,20 +601,17 @@
   <blockquote>
     外貌與符號本身沒有固定意義，意義來自觀看者腦中的成見、大自然的生存適應、創作者主動的解構（如將印度男觀音二創漂白為東亞女觀音），以及展示者背後的勇氣。
   </blockquote>
+
+  <div class="video-grid-box">
+    <iframe loading="lazy" src="https://www.youtube.com/embed/k4KvGbv59j0?si=1U6iMaq1xdrWyhMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/ls25TIPf94w?si=Iyt2s4aQ0MDEWH8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/S8LQAb2PxLU?si=NvZALsw9s5RwRO1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/ida0qdRqmYQ?si=IUL-G3E6JIBp85xV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/54fO2dgvuBY?si=m-Vtq-stgWoarhw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/LlAXznNGs8g?si=eMTaMmS557KQ0L5p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/xvjOUN_bF9U?si=85AwiOqfAhb_chvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 </div>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/k4KvGbv59j0?si=1U6iMaq1xdrWyhMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/ls25TIPf94w?si=Iyt2s4aQ0MDEWH8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/S8LQAb2PxLU?si=NvZALsw9s5RwRO1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/ida0qdRqmYQ?si=IUL-G3E6JIBp85xV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/54fO2dgvuBY?si=m-Vtq-stgWoarhw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/LlAXznNGs8g?si=eMTaMmS557KQ0L5p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:10px red solid" width="560" height="315" src="https://www.youtube.com/embed/xvjOUN_bF9U?si=85AwiOqfAhb_chvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <h2 id="section8">八、 次文化視覺編譯：東亞面孔與非黑髮 UI 組件的防碰撞除錯報告</h2>
 <div class="case">
   <p>
@@ -733,17 +740,13 @@
   <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
 </div>
 <script>
-  // 自動抓取當前頁面的 URL
   var currentUrl = window.location.href;
-  // Facebook 分享
   document.getElementById("fb-share").href =
           "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-  // Line 分享
   document.getElementById("line-share").href =
           "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-  // X (Twitter) 分享
   document.getElementById("twitter-share").href =
-          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=被政治性發明的「黃種人」色碼：從布盧門巴赫偽科學到《葉問4》膚色反轉的視覺除錯報告";
 </script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
@@ -751,7 +754,7 @@
 </script>
 
 <div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-href="https://chrischou19990904.github.io/yellow_race_myth_and_reality.html"
      data-width="100%"
      data-numposts="5">
 </div>
