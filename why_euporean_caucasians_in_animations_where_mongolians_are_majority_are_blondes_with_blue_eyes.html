@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: "Microsoft JhengHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
             background-color: #f9f9f9;
             color: #333;
             margin: 20px;
+            line-height: 1.7;
         }
         h1, h2 {
             color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 40px;
+            border-left: 6px solid #666;
+            padding-left: 10px;
         }
         .section {
             margin-bottom: 40px;
@@ -38,9 +48,9 @@
         .character {
             width: 100px;
             text-align: center;
-            position: relative; /* 父元素保持相對定位 */
+            position: relative;
             cursor: pointer;
-            overflow: visible;  /* 確保圖片放大不被裁掉 */
+            overflow: visible;
         }
 
         .character img {
@@ -49,21 +59,22 @@
             border-radius: 5px;
             border: 3px solid transparent;
             transition: transform 0.2s, border-color 0.2s;
-            position: relative;  /* 初始為相對定位 */
+            position: relative;
             z-index: 1;
-            transform-origin: center center; /* 放大以中心為基準 */
+            transform-origin: center center;
         }
 
         .character img:hover {
-            transform: scale(5);/* 放大 */
-            position: absolute;    /* 絕對定位跳脫父元素限制 */
+            transform: scale(5);
+            position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(5); /* 保持中心放大 */
-            z-index: 999;          /* 確保在最上層 */
+            transform: translate(-50%, -50%) scale(5);
+            z-index: 999;
         }
         .gold-border { border-color: #FFD700; }
         .dark-border { border-color: #555555; }
+        .二階堂紅丸 { border-color: #FFD700; }
         .tooltip {
             visibility: hidden;
             background-color: rgba(0,0,0,0.8);
@@ -82,20 +93,7 @@
             transition: opacity 0.3s;
         }
         .character:hover .tooltip { visibility: visible; opacity: 1; }
-        /*
-        .label {
-            position: absolute;
-            top: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #3498db;
-            color: white;
-            font-size: 0.7em;
-            padding: 2px 6px;
-            border-radius: 3px;
-            white-space: nowrap;
-        }
-        */
+
         #info-box {
             border: 2px solid #2c3e50;
             border-radius: 8px;
@@ -116,7 +114,7 @@
             margin-top: 50px;
             background-color: purple;
             color: yellow;
-            font-size: 20px;
+            font-size: 18px;
             padding: 20px;
             border-radius: 6px;
         }
@@ -130,10 +128,14 @@
             text-decoration: underline;
         }
         #mongoloid {
-            background-color: yellow;
+            background-color: #fffde7;
+            padding: 15px;
+            border-radius: 8px;
         }
         #caucasoid {
-            background-color: #9b59b6;
+            background-color: #ede7f6;
+            padding: 15px;
+            border-radius: 8px;
         }
         #social-share a {
             text-decoration: none;
@@ -154,17 +156,35 @@
         #social-share a#twitter-share {
             color: #1DA1F2;
         }
+        .catalog a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .catalog a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+        blockquote {
+            background: #f0f0f0;
+            padding: 15px 20px;
+            border-left: 5px solid #999;
+            margin: 20px 0;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
 <div id="google-translate-box">
     <div id="google_translate_element"></div>
-    <!-- Google Translate 的自動翻譯功能 -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',  // 頁面原語言
-                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                pageLanguage: 'zh-TW',
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
@@ -202,7 +222,20 @@
         </ul>
     </nav>
 </header>
+
 <h1>為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</h1>
+
+<h2>章節導航</h2>
+<ul class="catalog">
+    <li><a href="#section1">一、二次元視覺辨識槓桿：金髮碧眼的歐裔角色牆</a></li>
+    <li><a href="#section2">二、環境基準（Ground Truth）反轉：黑髮歐裔角色牆</a></li>
+    <li><a href="#section3">三、深度除錯：Ken Masters 的「染髮偽裝」與日系遊戲的設定矛盾</a></li>
+    <li><a href="#section4">四、補充說明（一）：不同媒介與插圖中的髮色落差原因</a></li>
+    <li><a href="#section5">五、補充說明（二）：眼睛顏色在跨媒介改編中的光學與設定偏移</a></li>
+    <li><a href="#section6">六、結論：符號經濟學與二次元工業的設計本質</a></li>
+</ul>
+
+<hr>
 
 <div class="legend">
     <strong>圖例：</strong>
@@ -211,28 +244,24 @@
     <span style="background-color:purple;border-color:purple;"></span> 黑髮白人角色
 </div>
 
-<p>滑鼠懸停可放大角色，點擊角色圖片可在下方顯示詳細資訊與設計策略說明。</p>
+<p>滑鼠懸停可放大角色（5 倍檢視），點擊角色圖片可在下方動態面板顯示詳細資訊與設計策略說明。</p>
 
 <div class="section" id="mongoloid">
-    <h2>金髮碧眼的歐裔角色</h2>
+    <h2 id="section1">一、二次元視覺辨識槓桿：金髮碧眼的歐裔角色牆</h2>
     <div class="character-wall">
         <div class="character" onclick="showInfo('喬·吉普森', '棒球大聯盟','男', '歐裔美國人', '用觸身球誤殺本田茂治的投手','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/83577.jpg" alt="gibson" class="gold-border">
             <div class="tooltip">喬·吉普森</div>
         </div>
         <div class="character" onclick="showInfo('吉普森二世', '棒球大聯盟','男', '歐裔美國人','喬·吉普森的兒子', '金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/83707.jpg" alt="gibson" class="gold-border">
             <div class="tooltip">吉普森二世</div>
         </div>
-        <div class="character" onclick="showInfo('Ken', '快打旋風','男', '歐裔美國人', '男主角之一、Ryu的師弟','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
+        <div class="character" onclick="showInfo('Ken Masters', '快打旋風', '男', '歐裔美國人／日美混血（官方補丁）', '男主角之一、Ryu的師弟兼好友', '官方視覺：金髮+藍眼（文獻爭議：少數資料曾補丁其本質為黑髮染金）', '典型「美式金髮硬漢」的符號化產物。縱使官方曾有冷門補丁稱其為混血且金髮是染的，但去除香港搞笑片《超級學校霸王》的惡搞版不計，歷代好萊塢官方正統真人改編（如1994年電影版Damian Chapa、2014年《暗殺拳》Christian Howard）全數由白人演員出演。這種「名字純西化、視覺長年金髮藍眼、官方真人正劇皆為白人，卻在紙面上凹成染髮混血」的割裂，反而凸顯了設定的無效性；更與「二階堂紅丸、坂崎良擁有純日本大名姓氏卻是天生金髮」形成極度諷刺的反差。')">
             <img src="images/ken.jpg" alt="Ken" class="gold-border">
-            <div class="tooltip">Ken</div>
+            <div class="tooltip">Ken Masters</div>
         </div>
         <div class="character" onclick="showInfo('Cammy White', '快打旋風','女', '英國人','英國特種部隊 Delta Red 的成員', '金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/cammy_white.webp" alt="Cammy" class="gold-border">
             <div class="tooltip">Cammy White</div>
         </div>
@@ -241,41 +270,38 @@
             <div class="tooltip">Guile</div>
         </div>
         <div class="character" onclick="showInfo('二階堂紅丸', '格鬥天王','男', '日本人和歐裔美國人的混血兒','草薙京的好友之一、電能力使用者', '金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/二階堂紅丸.jpg" alt="二階堂紅丸" class="二階堂紅丸">
             <div class="tooltip">二階堂紅丸</div>
+        </div>
+        <div class="character" onclick="showInfo('坂崎良 (Ryo Sakazaki)', '龍虎之拳 / 格鬥天王', '男', '日美混血（父為日本人坂崎琢磨、母為美國人Ronnet）', '極限流空手道正統傳人、無敵之龍', '天生金髮+棕眼/黑眼', '極限流空手道的正統宗師，背負著極具東洋日本色彩的大名姓氏「坂崎」，卻因母系遺傳擁有貨真價實的「天生金髮」。這與隔壁棚名字完全西化的 Ken 形成絕妙諷刺：西化名字的 Ken 被官方硬拗成「黑髮染金」，傳統東洋武者坂崎良反而是「天生金毛」。')">
+            <img src="images/ryo_sakazaki.jpeg" alt="Ryo Sakazaki" class="gold-border">
+            <div class="tooltip">坂崎良 (Ryo)</div>
         </div>
         <div class="character" onclick="showInfo('King', '格鬥天王','女', '法國人', '格鬥家、酒吧店主，以泰拳踢技聞名','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
             <img src="images/king.png" alt="King" class="gold-border">
             <div class="tooltip">King</div>
         </div>
         <div class="character" onclick="showInfo('Terry Bogard', '餓狼傳說','男', '歐裔美國人','遊戲中的主角', '金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/Terry_Bogard_KOF95.webp" alt="Terry" class="gold-border">
             <div class="tooltip">Terry Bogard</div>
         </div>
         <div class="character" onclick="showInfo('Andy Bogard', '餓狼傳說','男', '歐裔美國人', 'Terry Bogard的弟弟、不知火舞的男友','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/AndyBogard.webp" alt="Andy" class="gold-border">
             <div class="tooltip">Andy Bogard</div>
         </div>
         <div class="character" onclick="showInfo('Blue Mary', '餓狼傳說','女', '歐裔美國人', 'Terry Bogard的好友','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/blue_mary.png" alt="Blue Mary" class="gold-border">
             <div class="tooltip">Blue Mary</div>
         </div>
         <div class="character" onclick="showInfo('Rock Howard', '餓狼傳說','男', '歐裔美國人','Geese Howard的親生兒子、Terry Bogard的養子', '金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/rock_howard.jpeg" alt="Rock Howard" class="gold-border">
             <div class="tooltip">Rock Howard</div>
         </div>
         <div class="character" onclick="showInfo('Geese Howard', '餓狼傳說','男', '歐裔美國人', '冷血的格鬥家、Rock Howard的生父、遊戲中的反派之一','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/geese_howard.jpg" alt="Geese Howard" class="gold-border">
             <div class="tooltip">Geese Howard</div>
         </div>
         <div class="character" onclick="showInfo('Billy Kane', '餓狼傳說','男', '歐裔美國人', '棍術高手、具備反英雄特質的角色','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/billy_kane.png" alt="Billy Kane" class="gold-border">
             <div class="tooltip">Billy Kane</div>
         </div>
@@ -284,22 +310,18 @@
             <div class="tooltip">B. Jenet</div>
         </div>
         <div class="character" onclick="showInfo('Rugal Bernstein', '格鬥天王','男', '白種人（官方未明確設定他是歐裔美國人還是歐洲人，但根據其姓氏可以推測他是德國人）', '軍火商、終極反派之一','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/Rugal_Bernstein.webp" alt="Rugal Bernstein" class="gold-border">
             <div class="tooltip">Rugal Bernstein</div>
         </div>
         <div class="character" onclick="showInfo('Charlotte Christine De Colde', '侍魂','女', '法國人','霸王丸的女友', '金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/Charlotte_Christine_De_Colde.webp" alt="Charlotte Christine De Colde" class="gold-border">
             <div class="tooltip">Charlotte Christine De Colde</div>
         </div>
         <div class="character" onclick="showInfo('Yuki', '月華劍士', '女','歐裔日本人（官方未明確設定她來自哪個國家，只知道她失去父母後被日本人收養）', '御明方守矢的徒弟','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!-- <div class="label">金髮碧眼</div>-->
             <img src="images/yuki_last_blade.jpg" alt="Yuki" class="gold-border">
             <div class="tooltip">Yuki</div>
         </div>
         <div class="character" onclick="showInfo('Kigunasu no Hyōga', '聖鬥士星矢', '男','俄羅斯人與日本人的混血兒', '青銅聖鬥士','金髮+藍眼', '故事發生的所在地的主要群體為黃種人，但二次元畫風無法清楚辨認角色族裔，因此使用金髮凸顯少數歐裔角色的異國感')">
-            <!--<div class="label">金髮碧眼</div>-->
             <img src="images/冰河.webp" alt="Yuki" class="gold-border">
             <div class="tooltip">Kigunasu no Hyōga</div>
         </div>
@@ -307,105 +329,85 @@
 </div>
 
 <div class="section" id="caucasoid">
-    <h2>黑髮的歐裔角色</h2>
+    <h2 id="section2">二、環境基準（Ground Truth）反轉：黑髮歐裔角色牆</h2>
     <div class="character-wall">
         <div class="character" onclick="showInfo('セバスチャン・ミカエリス', '黑執事','男', '外貌為黑髮白人的惡魔','惡魔、貴族家庭的侍者', '黑髮+紅眼', '作品雖為日系作品，但由於故事發生的所在地的主要群體為歐裔白種人，因此玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/sebastian.webp" alt="塞巴斯蒂安" class="dark-border">
             <div class="tooltip">セバスチャン・ミカエリス</div>
         </div>
         <div class="character" onclick="showInfo('Alucard', 'Hellsing','男', '外貌為黑髮白人的吸血鬼','吸血鬼伯爵德古拉、吸血鬼王、皇家國教騎士團的武器', '黑髮+紅眼', '作品雖為日系作品，但由於故事發生的所在地的主要群體為歐裔白種人，因此玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/alucard_hellsing.jpg" alt="阿魯卡多" class="dark-border">
             <div class="tooltip">Alucard</div>
         </div>
         <div class="character" onclick="showInfo('Kevin Levin', '少年駭客','男', '白人', '可以吸收能量的改造人、田小班的夥伴、田小玟的男友','黑髮+黑眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/kevin_levin.webp" alt="Kevin Levin" class="dark-border">
             <div class="tooltip">Kevin Levin</div>
         </div>
         <div class="character" onclick="showInfo('Count Dracula', '惡魔城動畫','男','外貌為黑髮白人的吸血鬼', '動畫和遊戲中的大Boss、吸血鬼的領袖', '黑髮+琥珀色眼（使用超能力的時候眼睛會變成紅色）', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/dracula_castlevania.jpg" alt="德古拉" class="dark-border">
             <div class="tooltip">Dracula in Castlevania</div>
         </div>
         <div class="character" onclick="showInfo('Trevor Belmont', '惡魔城動畫','男', '白人', '人類、吸血鬼獵人、貝爾蒙特家族的後人','黑髮+藍眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/trevor_belmont.webp" alt="崔佛貝爾蒙特" class="dark-border">
             <div class="tooltip">Trevor Belmont</div>
         </div>
         <div class="character" onclick="showInfo('Batman', 'DC Comics','男', '白人', '人類、正義聯盟的成員','黑髮+黑眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/bruce_wayne.png" alt="蝙蝠俠" class="dark-border">
             <div class="tooltip">Batman</div>
         </div>
         <div class="character" onclick="showInfo('Robin', 'DC Comics', '男','白人','人類、蝙蝠俠的徒弟兼助手、少年悍將團的隊長、Starfire的男友', '黑髮（因戴眼罩，眼睛顏色不明）', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/robin.webp" alt="羅賓" class="dark-border">
             <div class="tooltip">Robin</div>
         </div>
         <div class="character" onclick="showInfo('Shazam', 'DC Comics', '男','白人', '巫師、超級英雄','黑髮+藍眼（Fawcett Comics 時期設定是藍色沒錯，且使用超能力的時候眼睛會變成金色或白色）', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/shazam.jpg" alt="沙贊" class="dark-border">
             <div class="tooltip">Shazam</div>
         </div>
         <div class="character" onclick="showInfo('Wonder Woman', 'DC Comics','女', '以白人為原型的神祉', '亞馬遜部落的神族、超級英雄、正義聯盟的成員','黑髮+藍眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/wonder_woman.jpg" alt="神力女超人" class="dark-border">
             <div class="tooltip">Wonder Woman</div>
         </div>
         <div class="character" onclick="showInfo('Tony Stark', 'Marvel Comics','男', '白人', '人類、天才科學家、富有企業家、復仇者聯盟的核心人物、麻省理工學院電機系的傑出校友','黑髮+棕眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/tony_stark_from_facebook.jpg" alt="Tony Stark" class="dark-border">
             <div class="tooltip">Tony Stark</div>
         </div>
         <div class="character" onclick="showInfo('Bucky Barnes', 'Marvel Comics','男', '白人', '人類、改造人、九頭蛇組織的前成員、復仇者聯盟的現任成員、Steve Rogers的發小','黑髮+藍眼或棕眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/bucky_barnes.jpg" alt="Bucky Barnes" class="dark-border">
             <div class="tooltip">Bucky Barnes</div>
         </div>
         <div class="character" onclick="showInfo('Maria Hill', 'Marvel Comics','女', '白人', '人類、神頓局特工、神盾局副局長','黑髮+藍眼或棕眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/maria_hill.jpg" alt="Maria Hill" class="dark-border">
             <div class="tooltip">Maria Hill</div>
         </div>
         <div class="character" onclick="showInfo('Loki', 'Marvel Comics','男', '以白人為原型的神祉', '神祇、寒冰巨人的後代、奧丁的養子、反英雄','黑髮', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/loki.jpg" alt="Loki" class="dark-border">
             <div class="tooltip">Loki</div>
         </div>
         <div class="character" onclick="showInfo('Sif', 'Marvel Comics','女', '以白人為原型的神祉', '神祇、索爾的妻子','黑髮+藍眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/sif.jpg" alt="sif" class="dark-border">
             <div class="tooltip">sif</div>
         </div>
         <div class="character" onclick="showInfo('Hela', 'Marvel Comics','女', '以白人為原型的神祉', '神祇、死亡女神、奧丁的女兒、索爾和洛基的姐姐','黑髮', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/hela.webp" alt="hela" class="dark-border">
             <div class="tooltip">hela</div>
         </div>
         <div class="character" onclick="showInfo('Count Dracula', 'Hotel Transylvania','男', '外貌為黑髮白人的吸血鬼','精靈旅社的老闆兼創辦人、Mavis的生父、吸血鬼', '黑髮+藍眼（使用超能力的時候眼睛會變成紅色）', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!-- <div class="label">黑髮</div>-->
             <img src="images/dracula_hotel_transylvania.webp" alt="Dracula" class="dark-border">
             <div class="tooltip">Dracula in Hotel Translyvania</div>
         </div>
         <div class="character" onclick="showInfo('Mavis Dracula', 'Hotel Transylvania','女', '外貌為黑髮白人的吸血鬼','Dracula和Martha的女兒、吸血鬼', '黑髮+藍眼（使用超能力的時候眼睛會變成紅色）', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/mavis_hotel_transylvania.jpg" alt="Mavis" class="dark-border">
             <div class="tooltip">Mavis Dracula</div>
         </div>
         <div class="character" onclick="showInfo('Countess Martha Maria Dracula', 'Hotel Transylvania','女', '外貌為黑髮白人的吸血鬼','Dracula的前妻兼亡妻、Mavis的生母、吸血鬼', '黑髮', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/martha.webp" alt="Martha" class="dark-border">
             <div class="tooltip">Countess Martha Maria Dracula</div>
         </div>
         <div class="character" onclick="showInfo('Liesel Van Helsing', 'Zenescope Comics（Grimm Universe）','女', '白人','人類、吸血鬼獵人、Abraham Van Helsing的女兒', '黑髮+黑眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/liesel_van_helsing.jpg" alt="Liesel Van Helsing" class="dark-border">
             <div class="tooltip">Liesel Van Helsing</div>
         </div>
         <div class="character" onclick="showInfo('Mr. Bean', 'Mr. Bean: The Animated Series','男', '白人','人類、搞笑專家、童心未泯的中年男子', '黑髮+黑眼', '故事發生的所在地的主要群體為白種人，二次元畫風雖誇張，但玩家/讀者無需額外符號即可辨識族裔；髮色/眼色用於呈現個性與背景')">
-            <!--<div class="label">黑髮</div>-->
             <img src="images/mr_bean.webp" alt="Liesel Van Helsing" class="dark-border">
             <div class="tooltip">Mr. Bean</div>
         </div>
@@ -413,116 +415,157 @@
 </div>
 
 <div id="info-box">
-    <h3>角色資訊</h3>
-    <p>請點擊上方角色圖片以查看詳細資訊與設計策略說明。</p>
+    <h3>角色資訊面板</h3>
+    <p>請點擊上方任一角色圖片以查看詳細資訊與設計策略說明。</p>
 </div>
-<!-- ======= ★ 新增內容：髮色差異原因解析 ======= -->
-<div class="section">
-    <h2>補充說明一：某些角色的髮色在不同插圖中可能會有差異</h2>
-    <p>以下是造成金髮、銀髮、黑髮等髮色在不同作品、插圖、像素美術中呈現差異的典型原因：</p>
+
+<!-- ======= ★ 核心深度考據區塊 ======= -->
+<div class="section" id="section3" style="background: #fff8e1; border-left: 5px solid #f39c12; padding: 20px; border-radius: 6px; margin-top: 35px;">
+    <h2>三、深度除錯：Ken Masters 的「染髮偽裝」與日系遊戲的設定矛盾</h2>
+    <p>
+        常有硬核考據者試圖反駁：<strong>「Ken Masters 其實是日美混血，原本是黑髮，金髮是高中為了耍帥染的！」</strong>
+    </p>
+    <p>
+        然而，排除香港王晶導演在《超級學校霸王》中由鄭伊健頂著半染的金髮飾演的無厘頭惡搞版不論，回歸到好萊塢與 Capcom 官方認可的正統真人改編（如 1994 年尚格雲頓電影版中的 Damian Chapa、2014 年官方影集《暗殺拳》中的 Christian Howard），全數由貨真價實的高加索白人演員出演。
+    </p>
+    <ul>
+        <li><strong>符號功能凌駕紙面文字：</strong> 在初代遊戲設計中，Ken 的存在意義就是作為 Ryu（隆）的鏡像符號——以「紅道服 + 金髮 + 藍眼」承載最直觀的美式格鬥家形象。這種深入全球玩家骨髓的視覺定式，絕非設定集角落幾行「他是染髮」的小字補丁所能抹除。</li>
+        <li><strong>荒謬的「天生 vs 染髮」倒錯：</strong>
+            名字完全西化、真人由歐美白人飾演的 Ken，被官方補丁凹成「黑髮染金的亞裔混血」；反而是名字極具日本傳統色彩的極限流空手道傳人<strong>坂崎良（Ryo Sakazaki）</strong>、以及日系財閥貴公子<strong>二階堂紅丸</strong>，在設定中那頭金髮反而是<strong>「貨真價實的天生遺傳」</strong>。
+        </li>
+    </ul>
+    <p>
+        這種「洋名角色被補丁成染髮，東洋名角色反而天生金毛」的現象，正是 90 年代二次元工業為了追求畫面炫酷與高辨識度，在種族與髮色邏輯上隨興混用的最佳鐵證。
+    </p>
+</div>
+
+<!-- ======= ★ 補充說明一 ======= -->
+<div class="section" id="section4">
+    <h2>四、補充說明（一）：不同媒介與插圖中的髮色落差原因</h2>
+    <p>以下是造成金髮、銀髮、黑髮等髮色在不同作品、插圖、像素美術中呈現差異的典型工程與美術原因：</p>
 
     <ul>
-        <li><strong>1. 像素或色板限制（早期 2D 遊戲）：</strong>
-            <br>舊遊戲常受限於 16～32 色的色板，導致角色髮色需要簡化。
-            <br>例如：金髮會變成白金、銀白或偏橘；黑髮可能呈現深藍。</li>
-
-        <li><strong>2. 光影表現方式不同：</strong>
-            <br>許多畫師會在髮絲上加入大面積高光，使金髮看起來偏白、銀髮帶藍、黑髮帶棕。
-            <br>光照越強，原始髮色就越容易「看起來不準確」。</li>
-
-        <li><strong>3. 畫師個人風格差異：</strong>
-            <br>同一角色由不同畫師繪製時，色彩習慣常不一致。
-            <br>例如 SNK、Capcom、動作遊戲官方宣傳圖，各畫家會調整髮色冷暖度。</li>
-
-        <li><strong>4. 風格化設計（Stylization）：</strong>
-            <br>動畫或遊戲為了表現角色個性，可能誇張髮色或使其明亮化。
-            <br>因此原設定雖然是「金髮」，但藝術化後更像「白金」或「銀金混合」。</li>
-
-        <li><strong>5. 顯示器或年代差異：</strong>
-            <br>早期 CRT 螢幕、掃描線、飽和度偏移，使得髮色看起來不同於現在的高清畫面。</li>
+        <li><strong>1. 像素或色板限制（早期 2D 遊戲）：</strong><br>
+            舊世代硬體受限於 16～32 色的色板限制，導致角色髮色必須大幅簡化。例如金髮常被壓縮為偏橘的白金，黑髮則常以深藍色表現高光。</li>
+        <li><strong>2. 光影表現方式不同：</strong><br>
+            畫師在髮絲上加入高對比環境光照時，會使金髮看起來偏白、銀髮帶冷藍、黑髮帶暖棕。光照越強，原始固有色越容易產生視覺位移。</li>
+        <li><strong>3. 畫師個人色彩習慣：</strong><br>
+            同一官方角色由不同畫師繪製（如森氣樓、西村絹、BENGUS 等名家）時，調色盤的冷暖傾向與明度習慣皆不相同。</li>
+        <li><strong>4. 二次元風格化（Stylization）：</strong><br>
+            為了突顯主角在戰鬥場景中的可讀性，會刻意將髮色明亮化或誇張化，使設定上的「金髮」在實機視覺中更接近「白金」或「淡金」。</li>
+        <li><strong>5. 顯示裝置與年代差異：</strong><br>
+            早期 CRT 映像管螢幕的掃描線、色彩飽和度偏移與 gamma 曲線，與現代廣色域 LCD/OLED 面板顯示效果存在巨大物理落差。</li>
     </ul>
-
-    <p><strong>總結：</strong>
-        角色的「官方設定髮色」通常不會變，但「你看到的插圖髮色」會因上述因素而產生視覺落差，這是完全正常且普遍的現象。</p>
+    <p><strong>工程總結：</strong> 角色的「官方設定髮色」通常具備文字規範，但在「具體點陣與插圖渲染」中，因上述硬體限制與風格化策略產生落差是完全必然的工程現象。</p>
 </div>
-<!-- ======= ★ 新增內容：眼色差異原因解析 ======= -->
-<div class="section">
-    <h2>補充說明二：某些角色的眼睛顏色在不同插圖或媒介中可能會有差異</h2>
-    <p>角色眼睛的顏色在動畫、遊戲、漫畫、電影等不同版本中可能出現差異，主要原因如下：</p>
+
+<!-- ======= ★ 補充說明二 ======= -->
+<div class="section" id="section5">
+    <h2>五、補充說明（二）：眼睛顏色在跨媒介改編中的光學與設定偏移</h2>
+    <p>角色眼睛的顏色在動畫、遊戲、漫畫、電影等不同版本中經常出現差異，主要原因如下：</p>
 
     <ul>
-        <li><strong>1. 光影與上色方式：</strong>
-            <br>畫師在描繪眼睛時，可能使用不同的高光、陰影或漸層，使原本的顏色看起來更深、偏亮或偏冷/暖色調。</li>
-
-        <li><strong>2. 媒介差異：</strong>
-            <br>像素遊戲、2D 動畫或3D建模中，受限於色板或渲染方式，眼睛顏色可能有所偏移。</li>
-
-        <li><strong>3. 畫師個人風格差異：</strong>
-            <br>不同插畫家或動畫團隊會微調眼睛顏色，以呈現角色個性或整體色彩和諧。</li>
-
-        <li><strong>4. 魔法、特殊效果或變身設定：</strong>
-            <br>某些角色的眼睛顏色會因能力、魔法、戰鬥狀態或超能力而改變。例如變身、覺醒或技能發動時眼睛顏色可能發光或變色。</li>
-
-        <li><strong>5. 改編作品設定差異：</strong>
-            <br>漫畫、動畫、遊戲、電影之間可能有官方設定差異，導致同一角色眼睛顏色在不同媒介中不一致。</li>
+        <li><strong>1. 光影與材質著色策略：</strong><br>
+            瞳孔反光、虹膜陰影或漸層表現手法，會使原本的藍眼看起來偏灰藍、棕眼看起來近乎全黑。</li>
+        <li><strong>2. 跨媒介解析度落差：</strong><br>
+            點陣像素時代角色面部僅有數個像素，瞳孔顏色多被省略或以高對比單色帶過；到了 3D 高精度建模時代才得以還原虹膜細節。</li>
+        <li><strong>3. 狀態特效與覺醒設定：</strong><br>
+            許多戰鬥角色在施展超能力、爆氣、變身或進入狂暴狀態時，眼睛會發出紅光、金色或藍白色光芒（如沙贊、德古拉）。</li>
+        <li><strong>4. 改編權限與官方版本重啟：</strong><br>
+            美漫（Marvel / DC）經歷多次宇宙重啟（Crisis）或由不同編劇/作畫執筆，同一個英雄的虹膜顏色在不同年代有不同官方記載。</li>
     </ul>
-
-    <p><strong>總結：</strong>
-        角色的「官方設定眼色」通常有標準，但因光影、畫師風格、媒介限制及改編版本不同，呈現的顏色會有所落差，這是正常且普遍的現象。</p>
 </div>
 
+<hr>
+
+<!-- ======= ★ 新增：結尾與理論總結 ======= -->
+<div class="section" id="section6">
+    <h2>六、結論：符號經濟學與二次元工業的設計本質</h2>
+    <ul>
+        <li>
+            <strong>「環境基準（Ground Truth）」決定了符號的冗餘程度：</strong><br>
+            在以黃種人為多數的日系日常或武道故事中，二次元極簡的五官線條無法精確傳達骨骼特徵，因此創作者必須動用「金髮碧眼」作為最高成本、最強效的<strong>異國符號槓桿</strong>；反之，在《黑執事》或歐美漫畫等全白人環境中，讀者預設環境中的人皆為白人，此時「黑髮黑眼」或「黑髮藍眼」反而成為塑造沉穩、冷酷與神秘個性的<strong>去符號化工具</strong>。
+        </li>
+        <li>
+            <strong>視覺功能永遠凌駕於設定小字：</strong><br>
+            Ken Masters 的案例徹底戳破了設定補丁的虛偽性。無論官方小字如何補償其為「黑髮染金的日美混血」，在全球大眾的集體視覺印象中，他早已被固定為金髮白人符號；與此同時，極限流的坂崎良卻頂著純日本大名姓氏天生自帶金髮。這種自相矛盾證明了：<strong>二次元商業美術的第一法則是「畫面衝擊力與角色區隔」，世界觀邏輯往往只是事後追認的補丁。</strong>
+        </li>
+        <li>
+            <strong>走出二元色碼的迷宮：</strong><br>
+            無論是「歐洲人全都是金髮碧眼」的刻板崇拜，還是「二次元角色髮色等於生物遺傳」的生硬對應，皆忽視了文化工業在傳播過程中的妥協與算計。唯有解碼這套視覺槓桿背後的工程脈絡，我們才能看清螢幕符號與人類生理實相的真實邊界。
+        </li>
+    </ul>
+
+    <blockquote>
+        角色身上的每一道髮色與瞳色，從來不是生物學的客觀切片，而是商業辨識成本、硬體技術極限與創作者視覺權力共同妥協出的「工程代碼」。
+    </blockquote>
+</div>
+
+<div id="social-share" style="margin-top: 30px;">
+    <a id="fb-share" href="#" target="_blank">分享到 Facebook</a>
+    <span> | </span>
+    <a id="line-share" href="#" target="_blank">分享到 Line</a>
+    <span> | </span>
+    <a id="twitter-share" href="#" target="_blank">分享到 X</a>
+</div>
+
+<script>
+    var currentUrl = window.location.href;
+    document.getElementById("fb-share").href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+    document.getElementById("line-share").href =
+        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+    document.getElementById("twitter-share").href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
+</script>
 <script>
     function showInfo(name, work, gender, ethnicity, identity, hair_and_eye, strategy) {
         const infoBox = document.getElementById('info-box');
+        if (!infoBox) {
+            console.error("找不到 id 為 'info-box' 的元素！");
+            return;
+        }
+
+        // 渲染資訊並加上清晰的結構樣式
         infoBox.innerHTML = `
-        <h3><strong>人物名字：</strong>${name}</h3>
-        <p><strong>登場的作品：</strong> ${work}</p>
-        <p><strong>性別：</strong> ${gender}</p>
-        <p><strong>族裔：</strong> ${ethnicity}</p>
-        <p><strong>身分：</strong>${identity}</p>
-        <p><strong>外貌特徵：</strong> ${hair_and_eye}</p>
-        <p><strong>設計策略說明：</strong> ${strategy}</p>
-      `;
+            <h3 style="margin-top:0; color:#2c3e50; border-bottom: 2px solid #bdc3c7; padding-bottom: 5px;">
+                <strong>人物名字：</strong>${name}
+            </h3>
+            <p><strong>登場的作品：</strong> ${work}</p>
+            <p><strong>性別：</strong> ${gender}</p>
+            <p><strong>族裔：</strong> ${ethnicity}</p>
+            <p><strong>身分：</strong> ${identity}</p>
+            <p><strong>外貌特徵：</strong> ${hair_and_eye}</p>
+            <div style="margin-top: 12px; padding: 12px 15px; background: #ffffff; border-left: 5px solid #3498db; border-radius: 4px; line-height: 1.6;">
+                <strong style="color: #2c3e50;">設計策略說明：</strong><br>
+                ${strategy}
+            </div>
+        `;
+
+        // 點擊後平滑捲動到資訊欄，避免讀者在上方點擊卻沒察覺下方更新
+        infoBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 </script>
-<ul id="messages"></ul>
-<div id="social-share" style="margin-top: 20px;">
-    <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
-    <span> | </span>
-    <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
-    <span> | </span>
-    <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
-</div>
-<script>
-    // 自動抓取當前頁面的 URL
-    var currentUrl = window.location.href;
-    // Facebook 分享
-    document.getElementById("fb-share").href =
-        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-    // Line 分享
-    document.getElementById("line-share").href =
-        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-    // X (Twitter) 分享
-    document.getElementById("twitter-share").href =
-        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
-</script>
-<footer>
-    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
-    <p>創作日期：2025 年 11 月 24 日</p>
-    <img src="理平頭.jpg" alt="作者照片" width="300" height="400">
-</footer>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
 </script>
 
+<!-- 修復：data-href 精準綁定當前文章檔名 -->
 <div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-href="https://chrischou19990904.github.io/why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html"
      data-width="100%"
-     data-numposts="5">
+     data-numposts="5"
+     style="margin-top: 25px;">
 </div>
-<footer style="font-size: 0.9em; text-align: center; margin-top: 2em; color: yellow;">
-    所有頁面均來自同一 GitHub Pages 專案
+
+<!-- 修復：整併為單一乾淨的 footer -->
+<footer>
+    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white; text-decoration: underline;">周彥廷</a></p>
+    <p>創作日期：2025 年 11 月 24 日（2026 年重構升級）</p>
+    <img src="理平頭.jpg" alt="作者照片" width="300" height="400" style="display: block; margin: 15px auto; border-radius: 4px;">
+    <p style="font-size: 0.8em; margin-top: 15px; color: yellow;">版權所有 © 2026 同屬 GitHub Pages 人類學與次文化視覺革命專案</p>
 </footer>
+
 </body>
 </html>
