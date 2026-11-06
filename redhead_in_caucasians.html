@@ -3,72 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>紅髮白種人科普說明</title>
+  <title>紅髮白種人科普說明：遺傳演化、文化符號與角色設計策略</title>
   <style>
     body {
-      font-family: 'Noto Sans TC', sans-serif;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.7;
       padding: 20px;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       background-color: #f9f9f9;
+      color: #333;
     }
     h1, h2, h3 {
-      color: #333;
+      color: #2c3e50;
+    }
+    h1 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin-top: 40px;
+      border-left: 6px solid #c0392b;
+      padding-left: 10px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
+      background-color: #fff;
     }
     th, td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 10px;
       text-align: left;
+      font-size: 0.95em;
     }
     th {
-      background-color: #eee;
+      background-color: #f2f2f2;
+      color: #2c3e50;
     }
     code {
-      background-color: #eee;
-      padding: 2px 4px;
+      background-color: #edf2f7;
+      padding: 2px 5px;
       border-radius: 4px;
+      color: #c53030;
+      word-break: break-all;
     }
     header {
       background-color: pink;
       padding: 10px 0;
-      top: 30px;
+      margin-bottom: 20px;
     }
-    header ul li a{
-        text-decoration: none;
-        color: black;
-    }
-    header ul li a:hover{
-        text-decoration: underline;
-    }
-    header ul li a:visited{
+    header ul li a {
       text-decoration: none;
       color: black;
+      font-weight: bold;
     }
-    header ul li ol li a{
-      text-decoration: none;
-      color: black;
-    }
-    header ul li ol li a:hover{
+    header ul li a:hover {
       text-decoration: underline;
     }
-    header ul li ol li a:visited{
+    header ul li ol li a {
       text-decoration: none;
       color: black;
+      font-weight: normal;
     }
-    nav a {
+    header ul li ol li a:hover {
+      text-decoration: underline;
+    }
+    nav.catalog-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px 25px;
+      margin: 20px 0;
+    }
+    nav.catalog-box a {
       display: block;
-      margin: 5px 0;
+      margin: 6px 0;
       text-decoration: none;
-      color: #0066cc;
+      color: #2980b9;
+      font-weight: 500;
     }
-    nav a:hover {
+    nav.catalog-box a:hover {
       text-decoration: underline;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .video-grid iframe, .video-grid video {
+      width: 100%;
+      height: 200px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .info-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #3498db;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .warning-card {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-left: 5px solid #f39c12;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    blockquote {
+      background: #f0f0f0;
+      padding: 15px 20px;
+      border-left: 5px solid #999;
+      margin: 20px 0;
+      font-style: italic;
     }
     #social-share a {
       text-decoration: none;
@@ -93,256 +145,411 @@
       text-align: center;
       margin-top: 50px;
       background-color: purple;
-      font-size: 20px;
+      font-size: 18px;
       padding: 20px;
       border-radius: 6px;
+      color: yellow;
     }
-    footer p {
-      color: yellow; /* 確保文字顏色與背景對比鮮明 */
+    footer a {
+      color: white;
+      text-decoration: underline;
     }
-    footer img {
-      display: block; /* 使圖片顯示 */
-      margin: 20px auto; /* 中央對齊 */
-    }
-    @media screen and (max-width: 767px){
-      iframe{
-        width: 100%;
+    @media screen and (max-width: 767px) {
+      body {
+        padding: 12px;
       }
-      video{
-        width: 100%;
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+      .video-grid iframe, .video-grid video {
+        height: 220px;
       }
     }
   </style>
 </head>
 <body>
+
 <div id="google-translate-box">
   <div id="google_translate_element"></div>
-  <!-- Google Translate 的自動翻譯功能 -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
-        pageLanguage: 'zh-TW',  // 頁面原語言
-        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
   </script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <p>點擊上方的語言選單以切換語言</p>
+  <p style="font-size: 0.85em; color: #666;">點擊上方選單切換語言</p>
 </div>
+
 <header>
-    <ul>
-      <li><strong class="guide">本頁內容：</strong><br>
-        <a>紅髮白種人科普說明</a></li>
-
-      <li><strong class="guide">其他文章連結：</strong>
-        <ol>
-          <li><a href="index.html" target="_blank">世界人種分布與歷史原因</a></li>
-          <li><a href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
-          <li><a href="diversity_of_caucasian_in_europe.html" target="_blank">歐洲高加索人外觀特徵對照表</a></li>
-          <li><a href="race_distribution_in_africa.html" target="_blank">非洲人種分布與外貌特徵對照表</a></li>
-          <li><a href="brunette_in_caucasian.html" target="_blank">高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</a></li>
-          <li><a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</a></li>
-          <li><a href="why_european_caucasians_can_be_diverse_while_mongolians_and_negroes_are_simple.html" target="_blank">角色髮色與眼睛色設計策略探討</a></li>
-          <li><a href="white_turns_black.html" target="_blank">全球影視改編之「種族置換」現象深度報告</a></li>
-          <li><a href="why_overseas_indians_are_always_tanned_in_pop_culture.html" target="_blank">跨文化視覺的「雙向閹割」：古 DNA 遺傳光譜、好萊塢深膚刻板印記與南亞族群認知除錯報告</a></li>
-          <li><a href="why_mongolian_no_longer_refers_to_yellow_people_nowadays.html" target="_blank">Mongolian 與 Caucasian：歷史人類學用語與現代科學的差異</a></li>
-          <li><a href="yellow_race_myth_and_reality.html" target="_blank">被政治性發明的「黃種人」色碼：從布盧門巴赫偽科學到《葉問4》膚色反轉的視覺除錯報告</a></li>
-          <li><a href="nazi_racial_myth.html" target="_blank">金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</a></li>
-          <li><a href="non_european_caucasian.html" target="_blank">隱藏在歐洲之外：非歐裔白色人種的地理演化、生存適應與文化視覺誤區</a></li>
-          <li><a href="Gal_Gadot.html" target="_blank">視覺認知除錯：從蓋爾·加朵到林正英電影看亞裔定義的邏輯盲點</a></li>
-          <li><a href="diversity_of_european_caucasian.html" target="_blank">歐洲奇幻文化分類系統（視覺與文化模板整理）</a></li>
-          <li><a href="why_angels_are_always_blondes_with_blue_eyes.html" target="_blank">從西亞沙漠到西北歐雪造的「神話修正」：地理演化、歷史權力與 AI 時代的天使形象演變報告</a></li>
-          <li><a href="aesthetic_power_matrix.html" target="_blank">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
-        </ol>
-      </li>
-    </ul>
+  <ul>
+    <li><strong class="guide">本頁內容：</strong><br>
+      <a>紅髮白種人科普說明：遺傳演化、文化符號與角色設計策略</a></li>
+    <li><strong class="guide">其他文章連結：</strong>
+      <ol>
+        <li><a href="index.html" target="_blank">世界人種分布與歷史原因</a></li>
+        <li><a href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
+        <li><a href="diversity_of_caucasian_in_europe.html" target="_blank">歐洲高加索人外觀特徵對照表</a></li>
+        <li><a href="race_distribution_in_africa.html" target="_blank">非洲人種分布與外貌特徵對照表</a></li>
+        <li><a href="brunette_in_caucasian.html" target="_blank">高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</a></li>
+        <li><a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</a></li>
+        <li><a href="why_european_caucasians_can_be_diverse_while_mongolians_and_negroes_are_simple.html" target="_blank">角色髮色與眼睛色設計策略探討</a></li>
+        <li><a href="white_turns_black.html" target="_blank">全球影視改編之「種族置換」現象深度報告</a></li>
+        <li><a href="why_overseas_indians_are_always_tanned_in_pop_culture.html" target="_blank">跨文化視覺的「雙向閹割」：古 DNA 遺傳光譜、好萊塢深膚刻板印記與南亞族群認知除錯報告</a></li>
+        <li><a href="why_mongolian_no_longer_refers_to_yellow_people_nowadays.html" target="_blank">Mongolian 與 Caucasian：歷史人類學用語與現代科學的差異</a></li>
+        <li><a href="yellow_race_myth_and_reality.html" target="_blank">被政治性發明的「黃種人」色碼：從布盧門巴赫偽科學到《葉問4》膚色反轉的視覺除錯報告</a></li>
+        <li><a href="nazi_racial_myth.html" target="_blank">金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</a></li>
+        <li><a href="non_european_caucasian.html" target="_blank">隱藏在歐洲之外：非歐裔白色人種的地理演化、生存適應與文化視覺誤區</a></li>
+        <li><a href="Gal_Gadot.html" target="_blank">視覺認知除錯：從蓋爾·加朵到林正英電影看亞裔定義的邏輯盲點</a></li>
+        <li><a href="diversity_of_european_caucasian.html" target="_blank">歐洲奇幻文化分類系統（視覺與文化模板整理）</a></li>
+        <li><a href="why_angels_are_always_blondes_with_blue_eyes.html" target="_blank">從西亞沙漠到西北歐雪造的「神話修正」：地理演化、歷史權力與 AI 時代的天使形象演變報告</a></li>
+        <li><a href="aesthetic_power_matrix.html" target="_blank">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
+      </ol>
+    </li>
+  </ul>
 </header>
-<h1>紅髮白種人科普說明</h1>
 
-<nav>
-  <h2>目錄</h2>
-  <a href="#gene">1. 紅髮的基因與自然現象</a>
-  <a href="#fiction">2. 虛構角色中的自然紅髮</a>
-  <a href="#real">3. 現實中的自然紅髮白種人明星</a>
-  <a href="#natasha">4. 特殊案例：娜塔莎·羅曼諾夫（黑寡婦）</a>
-  <a href="#visual">5. 視覺語言與創作意圖</a>
+<h1>紅髮白種人科普說明：遺傳演化、文化符號與角色設計策略</h1>
+
+<nav class="catalog-box">
+  <h3 style="margin-top:0;">章節導航</h3>
+  <a href="#section1">一、體質人類學與遺傳機制：MC1R 雙隱性基因的演化代價</a>
+  <a href="#section2">二、現實明星與流行文化除錯：天生紅髮 vs. 好萊塢染髮符號</a>
+  <a href="#section3">三、經典虛構角色與文本考據表</a>
+  <a href="#section4">四、文化歷史的雙向投影：從中世紀「女巫獵殺」到當代「Gingercide」</a>
+  <a href="#section5">五、角色設計工程指南：如何在文學、動漫與遊戲中精確架構紅髮白人</a>
 </nav>
 
-<h2 id="gene">1. 紅髮的基因與自然現象</h2>
+<hr>
+
+<h2 id="section1">一、體質人類學與遺傳機制：MC1R 雙隱性基因的演化代價</h2>
+
+<div class="info-card">
+  <p>
+    <strong>自然紅髮（Natural Red Hair / Ginger）</strong>是高加索人種（Caucasian）中出現率極低的體質特徵，全球人口中僅佔約 <strong>1% 至 2%</strong>。在地理分布上，它呈現出高度集中的西北歐核心光譜：蘇格蘭（約 13%）、愛爾蘭（約 10%）、威爾斯以及部分斯堪地那維亞沿海地區。
+  </p>
+</div>
+
 <ul>
-  <li><strong>基因原因：</strong>紅髮主要由 <code>MC1R</code> 基因變異控制，影響黑色素生成，使髮色偏紅（pheomelanin）。</li>
-  <li><strong>伴隨特徵：</strong>淡色皮膚、淺色眼睛、雀斑。</li>
-  <li><strong>分布：</strong>全球人口中約 1-2%，集中於蘇格蘭、愛爾蘭、威爾斯及北歐部分地區。</li>
+  <li>
+    <strong>遺傳突變機制：</strong><br>
+    紅髮主要受第 16 號染色體上的 <code>MC1R</code>（黑素皮質素受體 1）基因隱性突變控制。這是一種<strong>常染色體隱性遺傳</strong>，意味著個體必須同時從父母雙方遺傳到該突變等位基因才會表現出紅髮表型。若僅帶有單個突變基因，個體本身多為棕髮或金髮，但可能帶有微紅鬍鬚或雀斑傾向。
+  </li>
+  <li>
+    <strong>色素轉換：</strong><br>
+    一般的 <code>MC1R</code> 受體會將酪胺酸轉化為保護皮膚的<strong>真黑素（Eumelanin，黑/棕色）</strong>；突變後受體功能失活，色素沉著機制被迫轉向生成大量的<strong>褐黑素（Pheomelanin，紅/黃色）</strong>，造成毛髮呈現鮮紅、紅褐或草莓金。
+  </li>
+  <li>
+    <strong>伴隨體質特徵：</strong><br>
+    紅髮個體通常伴隨極端白皙且薄透的皮膚（Fitzpatrick 膚色分級第一型 Type I）、密集的雀斑（Ephelides）、以及淡藍色、淺綠色或琥珀色眼睛（因缺乏真黑素沈積）。
+  </li>
+  <li>
+    <strong>高緯度演化優勢與代價（維生素 D vs. 黑色素瘤）：</strong><br>
+    在中高緯度陰雨綿綿的西北歐，極度白皙的皮膚能最大程度吸收稀微的紫外線（UVB），以合成足夠的維生素 D 防止佝僂病；但代價是皮膚完全缺乏防曬黑色素屏障，對紫外線毫無抵抗力，在日光下<strong>只會曬傷、無法曬黑（Never tan, always burn）</strong>，皮膚癌風險極高。
+  </li>
+  <li>
+    <strong>醫學臨床冷知識：疼痛敏感性與麻醉耐受度</strong><br>
+    醫學研究證實，<code>MC1R</code> 基因同時參與中樞神經系統的疼痛調控。自然紅髮者對溫熱與電刺激疼痛的敏感度顯著高於常人，且在進行外科手術時，<strong>平均需要比一般患者額外追加約 20% 的氣體吸入麻醉劑或局部麻醉劑</strong>才能達到相同的鎮痛深度。
+  </li>
 </ul>
 
-<h2 id="fiction">2. 虛構角色中的自然紅髮</h2>
+<hr>
+
+<h2 id="section2">二、現實明星與流行文化除錯：天生紅髮 vs. 好萊塢染髮符號</h2>
+
+<p>
+  由於自然紅髮極其稀罕且視覺張力極強，好萊塢與流行文化長期將其作為凸顯角色「潑辣、叛逆、致命吸引力」的商業著色劑，導致大眾經常將「後天染紅」與「天生紅髮」混淆。
+</p>
+
 <table>
+  <thead>
+  <tr>
+    <th>公眾人物 / 明星</th>
+    <th>遺傳實相</th>
+    <th>原生髮色</th>
+    <th>符號功能與歷史考據說明</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>潔西卡·雀絲坦 (Jessica Chastain)</strong></td>
+    <td><strong>真實自然紅髮</strong></td>
+    <td>自然紅髮</td>
+    <td>好萊塢當代最具代表性的天然紅髮女演員之一，天生伴隨 Type I 白皙皮膚與淡綠色眼眸，堅持不染黑出鏡。</td>
+  </tr>
+  <tr>
+    <td><strong>紅髮艾德 (Ed Sheeran)</strong></td>
+    <td><strong>真實自然紅髮</strong></td>
+    <td>自然火紅髮</td>
+    <td>典型英格蘭與愛爾蘭後裔血統，其鮮明紅髮成為其全球創作歌手品牌的最高辨識度視覺符號。</td>
+  </tr>
+  <tr>
+    <td><strong>魯伯特·葛林特 (Rupert Grint)</strong></td>
+    <td><strong>真實自然紅髮</strong></td>
+    <td>自然紅髮</td>
+    <td>《哈利波特》榮恩·韋斯理飾演者，完美符合小說中韋斯理純血魔法家族「全家滿臉雀斑、一頭火紅毛髮」的凱爾特原型。</td>
+  </tr>
+  <tr>
+    <td><strong>伊莎貝拉·費雪 (Isla Fisher)</strong></td>
+    <td><strong>真實自然紅髮</strong></td>
+    <td>自然紅棕髮</td>
+    <td>澳洲籍蘇格蘭血統女演員，天然紅髮讓她經常在喜劇與浪漫電影中飾演個性跳脫、熱情活潑的標誌性角色。</td>
+  </tr>
+  <tr>
+    <td><strong>卡麥隆·莫納韓 (Cameron Monaghan)</strong></td>
+    <td><strong>真實自然紅髮</strong></td>
+    <td>自然紅髮</td>
+    <td>在喜劇電影《命運好好玩》(Click) 飾演鄰居小孩，後在影集《萬惡高譚市》中完美演繹雙胞胎小丑，紅髮凸顯了神經質與狂暴特質。</td>
+  </tr>
+  <tr>
+    <td><strong>艾瑪·史東 (Emma Stone)</strong></td>
+    <td><span style="color: #c0392b; font-weight: bold;">後天常態染紅（偽紅髮）</span></td>
+    <td><strong>天生金髮 (Blonde)</strong></td>
+    <td><strong>【重大認知除錯】</strong>大眾常誤以為其為紅髮，實為天生金髮。早年在《男孩我最愛》(Superbad) 聽從導演建議染紅大獲成功，紅髮從此成為其影視商業名片。</td>
+  </tr>
+  <tr>
+    <td><strong>史嘉蕾·喬韓森 (Scarlett Johansson)</strong></td>
+    <td><span style="color: #c0392b; font-weight: bold;">後天角色染髮</span></td>
+    <td>自然深金/棕髮</td>
+    <td>漫威電影宇宙中飾演黑寡婦（Natasha Romanoff），染紅是為了貼合美漫中蘇聯致命女特工「紅髮危險妖姬」的冷戰視覺符號。</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="video-grid">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/JqxYnMiVA5w" title="Oscar Winner Emma Stone" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/IiWo-cAkblo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <video controls><source src="click.mp4" type="video/mp4"></video>
+  <video controls><source src="click2.mp4" type="video/mp4"></video>
+</div>
+
+<hr>
+
+<h2 id="section3">三、經典虛構角色與文本考據表</h2>
+
+<table>
+  <thead>
   <tr>
     <th>角色</th>
-    <th>出處</th>
-    <th>背景/設定</th>
-    <th>紅髮屬性</th>
+    <th>作品出處</th>
+    <th>設定背景與族裔原型</th>
+    <th>紅髮屬性與設計考據</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>Jonathan Loughran (Johnny)</strong></td>
+    <td>《精靈旅社》(Hotel Transylvania)</td>
+    <td>現代美國白人青年</td>
+    <td>蓬鬆雜亂的天然紅髮，搭配隨性套頭衫，精準呈現加州陽光背包客的無厘頭與樂天性格。</td>
   </tr>
   <tr>
-    <td>Jonathan Loughran (Johnny)</td>
-    <td>《Hotel Transylvania》</td>
-    <td>現代架空美國/白人少年</td>
-    <td>自然紅髮，符合白種人遺傳特徵</td>
+    <td><strong>榮恩·韋斯理 (Ron Weasley)</strong></td>
+    <td>《哈利·波特》(Harry Potter)</td>
+    <td>英國凱爾特魔法世家</td>
+    <td>韋斯理家族世代遺傳，紅髮、貧窮、純血統但親近麻瓜，是羅琳對傳統不列顛紅髮大家庭的典型致敬。</td>
   </tr>
   <tr>
-    <td>榮恩·韋斯理</td>
-    <td>《哈利·波特》</td>
-    <td>韋斯理家族的魔法師</td>
-    <td>自然紅髮，全家族特徵</td>
+    <td><strong>梅莉達 (Merida)</strong></td>
+    <td>《勇敢傳說》(Brave)</td>
+    <td>中世紀蘇格蘭高地公主</td>
+    <td>如同烈火般不受拘束的爆炸式天然紅捲髮，象徵其反叛封建聯姻、渴望野性自由的高地精神。</td>
   </tr>
   <tr>
-    <td>梅莉達</td>
-    <td>《勇敢傳說》</td>
-    <td>中世紀蘇格蘭公主</td>
-    <td>自然紅髮，符合蘇格蘭分布</td>
+    <td><strong>維多莉亞 (Victoria)</strong></td>
+    <td>《暮光之城》(Twilight)</td>
+    <td>近代愛爾蘭血統吸血鬼</td>
+    <td>烈火般的紅髮象徵復仇烈焰、敏捷殺戮與難以捉摸的殘酷野性。</td>
   </tr>
   <tr>
-    <td>維多莉亞</td>
-    <td>《暮光之城》</td>
-    <td>愛爾蘭血統吸血鬼</td>
-    <td>自然紅髮</td>
+    <td><strong>Scarlett Fox & Guy Dangerous</strong></td>
+    <td>《神廟大逃亡》(Temple Run)</td>
+    <td>歐美遺跡探險家</td>
+    <td>經典紅髮搭配卡其探險服，在熱帶雨林背景中形成極高對比度，提升移動端遊戲畫面的識別度。</td>
   </tr>
   <tr>
-    <td>Scarlett Fox</td>
-    <td>《神廟大逃亡》</td>
-    <td>遊戲裡的冒險者</td>
-    <td>自然紅髮，符合白種人基因</td>
-  </tr>
-  <tr>
-    <td>Guy Dangerous</td>
-    <td>《神廟大逃亡》</td>
-    <td>遊戲裡的冒險者</td>
-    <td>自然紅髮，符合白種人基因</td>
-  </tr>
-  <tr>
-    <td>Doric</td>
+    <td><strong>Doric</strong></td>
     <td>《龍與地下城：盜亦有道》</td>
-    <td>電影原創角色（Tiefling，德魯伊）</td>
-    <td>紅髮（Sophia Lillis 飾演，自然紅髮），電影原創角色，非桌遊原創</td>
+    <td>提夫林 (Tiefling) 德魯伊</td>
+    <td>由天然紅髮女星 Sophia Lillis 飾演，紅髮與頭頂小角結合，強化半人半異界生物的自然靈動感。</td>
   </tr>
   <tr>
-    <td>Wanda Maximoff</td>
-    <td>漫威電影宇宙</td>
-    <td>變種人/超級英雄</td>
-    <td>自然紅髮（Elizabeth Olsen 飾演）</td>
+    <td><strong>Sypha Belnades</strong></td>
+    <td>《惡魔城》(Castlevania)</td>
+    <td>塞法族元素魔法使</td>
+    <td>自然紅髮搭配藍色學者法袍，冷暖色調強烈碰撞，呼應其同時操縱極炎之火與極寒之冰的術式設定。</td>
   </tr>
   <tr>
-    <td>Sypha Belnades</td>
-    <td>《惡魔城》系列</td>
-    <td>操控火與冰的元素魔法師</td>
-    <td>自然紅髮，符合白種人基因</td>
+    <td><strong>娜塔莎·羅曼諾夫 (Black Widow)</strong></td>
+    <td>漫威漫畫 / MCU</td>
+    <td>前蘇聯紅房特工</td>
+    <td>出生於近代俄羅斯（斯拉夫原生紅髮率低），紅髮在冷戰視覺語境中兼具「危險毒蜘蛛」與「紅色蘇聯」的雙重暗喻，本質偏向後天造型符號。</td>
   </tr>
-  <!--
-  <tr>
-    <td>伊索爾德</td>
-    <td>本網頁的作者欲建構的<a href="https://chrischou19990904.github.io/dracula/" style="color:deepskyblue" target="_blank">遊戲世界觀</a>的其中一位女主角</td>
-    <td>被教會迫害的科學家兼能夠操空元素（火焰、冰霜、閃電）、隔空取物、製造魔法屏障、變形（貓頭鷹、黑貓）、使用治癒魔法、永生，但是物理能力與普通人類無異的女巫</td>
-    <td>自然紅髮，典型的凱爾特人</td>
-  </tr>
-  -->
+  </tbody>
 </table>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/-XYINTL4VAA?si=Yk4RP5pIjRsKmcBv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/mDf_IhlG98Y?si=GqVAnL4SxAzblVhZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/gUsosiEqzY4?si=NAztyQHBejE4N1aD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/2QdL16fbRK4?si=W9wG0Xa_eJ0BBbDW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SZj6XzswCSQ?si=7h1QVGh9vo18OTt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/gICE0rPEeAw?si=UtJ3Fg3BsjxObiVu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/a947Z_v5Imw?si=DU7zqUSwp9rm7nhh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/czgazVaWujI?si=gSehqkGuCZscCcFS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/NP-vXtuzuVY?si=m_n2oivyU2SqypBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h2 id="real">3. 現實中的自然紅髮白種人明星</h2>
-<table>
-  <tr>
-    <th>明星</th>
-    <th>國籍/背景</th>
-    <th>備註</th>
-  </tr>
-  <tr>
-    <td>艾瑪·史東 (Emma Stone)</td>
-    <td>美國</td>
-    <td>本身為紅髮家庭</td>
-  </tr>
-  <tr>
-    <td>伊莎貝拉·維多娃 (Isla Fisher)</td>
-    <td>澳大利亞/蘇格蘭血統</td>
-    <td>自然紅髮，經常飾演活潑角色</td>
-  </tr>
-  <tr>
-    <td>卡麥隆·莫納韓（Cameron Riley Monaghan）</td>
-    <td>美國</td>
-    <td>自然紅髮，曾在亞當·山德勒主演的喜劇《Click》飾演嘴賤的鄰居家小屁孩Kevin O'Doyle</td>
-  </tr>
-</table>
-<iframe loading="lazy" style="border:red solid 10px" width="410" height="730" src="https://www.youtube.com/embed/JqxYnMiVA5w" title="Oscar Winner Emma Stone | Best Actress for &#39;La La Land&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" style="border:red solid 10px" width="560" height="315" src="https://www.youtube.com/embed/IiWo-cAkblo?si=la_nV3Z1TwMfUJO7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<video controls width="560" height="315" style="border:red solid 10px" ><source src="click.mp4"></video>
-<br>
-<video controls width="560" height="315" style="border:red solid 10px" ><source src="click2.mp4"></video>
-<h2 id="natasha">4. 特殊案例：娜塔莎·羅曼諾夫（《漫威漫畫》裡的黑寡婦）</h2>
-<p>娜塔莎出生於近代俄羅斯，紅髮在該地區自然出現率低，漫畫與電影官方未明說是否染髮，但紅髮具有醒目、性感、叛逆的視覺象徵功能，所以可以合理推測其紅髮可能是染髮。</p>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/iMWgn3eFDUQ?si=tspQ7BMblp9F5y5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h2 id="visual">5. 視覺語言與創作意圖</h2>
+
+<div class="video-grid">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/-XYINTL4VAA" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/mDf_IhlG98Y" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/gUsosiEqzY4" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/2QdL16fbRK4" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/SZj6XzswCSQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/gICE0rPEeAw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/a947Z_v5Imw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/NP-vXtuzuVY" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<hr>
+
+<h2 id="section4">四、文化歷史的雙向投影：從中世紀「女巫獵殺」到當代「Gingercide」</h2>
+
+<p>
+  紅髮在西方文化史中從未被平淡看待過，它始終處於極端崇敬或極端排斥的劇烈搖擺之中：
+</p>
+
 <ul>
-  <li>紅髮角色常被設計成醒目、叛逆、異國感或個性突出。</li>
-  <li>在二次元、奇幻、超級英雄作品中，紅髮有助於角色辨識度和家族特徵表達。</li>
-  <li>自然紅髮或染髮皆可達到視覺符號效果。</li>
+  <li>
+    <strong>古羅馬時代的蠻族凝視：</strong><br>
+    塔西佗在《阿古利可拉傳》中記錄不列顛喀里多尼亞人（蘇格蘭先民）時，特別強調他們「龐大的肢體與赤紅的頭髮」，將其作為未開化、剽悍原始北方蠻族的典型生理特徵。
+  </li>
+  <li>
+    <strong>中世紀的「猶大污名」與女巫審判：</strong><br>
+    文藝復興早期的歐洲宗教繪畫中，為使不識字的信徒能一眼認出背叛基督的<strong>加略人猶大 (Judas Iscariot)</strong>，畫師普遍將其畫成紅髮、紅鬍鬚，使紅髮在天主教民間文化中成為「狡詐、背叛、道德敗壞」的代名詞。至 15 世紀《女巫之槌》(Malleus Maleficarum) 盛行時，紅髮、綠眼與身體雀斑更被指控為惡魔印記，大批紅髮女性在獵巫運動中遭到審判處決。
+  </li>
+  <li>
+    <strong>當代校園歧視（Ginger Bashing）：</strong><br>
+    在現代英國、愛爾蘭與澳洲，紅髮人群長年遭受校園霸凌，被戲稱為「Ginger」或「Daywalker」，甚至催生了「紅髮人沒有靈魂（Gingers have no souls）」的都市迷因。
+  </li>
+  <li>
+    <strong>流行文化中的「紅髮置換現象」（Gingercide）：</strong><br>
+    近年好萊塢與串流平台在追求政治正確與族裔多元性時，出現了一種極其奇特的文化現象：<strong>原本在歐美漫畫或經典動畫中具備標誌性紅髮的白人角色，在真人影視改編時幾乎全面被非裔少數族裔演員取代</strong>。例如：
+    <ul>
+      <li>《小美人魚》愛麗兒 (Ariel)</li>
+      <li>《蜘蛛人》MJ (Mary Jane Watson 改編為 Michelle Jones)</li>
+      <li>《閃電俠》艾莉絲·威斯特 (Iris West)</li>
+      <li>《泰坦》星火 (Starfire)</li>
+      <li>《超人：鋼鐵英雄》吉米·奧爾森 (Jimmy Olsen)</li>
+    </ul>
+    這反映出影視資本既想展示「多元化改編」的姿態，又不敢輕易撼動「金髮碧眼主流白人（Anglo-Saxon / Nordic）」角色的生態位，最終選擇向本就屬於邊緣弱勢的「紅髮凱爾特符號」開刀，暴露出西方主流文化權力結構內部的矛盾與妥協。
+  </li>
 </ul>
 
-<p>總結來說，紅髮在白種人中雖然罕見，但無論在現實還是虛構作品中，都承載著強烈的文化、視覺和象徵意義。</p>
-<ul id="messages"></ul>
-<div id="social-share" style="margin-top: 20px;">
-  <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
-  <span> | </span>
-  <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
-  <span> | </span>
-  <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+<hr>
+
+<h2 id="section5">五、角色設計工程指南：如何在文學、動漫與遊戲中精確架構紅髮白人</h2>
+
+<p>
+  在進行世界觀架構與遊戲數值、美術設定時，紅髮不該只是一個單純的顏色開關，而是一整套<strong>「遺傳邏輯 + 文化原型 + 視覺對比」</strong>的工程體系：
+</p>
+
+<div class="warning-card">
+  <h3 style="margin-top:0; color:#c0392b;">★ 核心設計法則：避免「生硬貼皮」，落實三層維度</h3>
+  <ol>
+    <li><strong>第一層：生理與環境自洽性（Physical Plausibility）</strong></li>
+    <li><strong>第二層：文化原型與陣營定位（Cultural Archetype & Alignment）</strong></li>
+    <li><strong>第三層：遊戲美術的色彩力學（Chromatic Contrast）</strong></li>
+  </ol>
 </div>
+
+<h3>1. 生理與環境自洽性（拒絕熱帶自然紅髮）</h3>
+<ul>
+  <li>
+    <strong>地理光照邏輯：</strong> 如果你的世界觀是嚴肅奇幻或硬科幻，自然紅髮角色應來自<strong>高緯度、多霧、多雨、森林茂密或終年積雪的北方邊陲</strong>。絕不應在熱帶沙漠或強烈烈日的海島原住民中設定「天生自然紅髮」，否則在演化生物學上完全不成立。
+  </li>
+  <li>
+    <strong>成套體質特徵綁定：</strong>
+    繪製 2D/3D 美術或在小說描寫外貌時，紅髮角色應伴隨<strong>極淡的膚色、鼻樑與雙頰的淡淡雀斑、淺色虹膜（藍、綠、灰或琥珀色）</strong>，以及對高溫、強光的耐受力低下。
+  </li>
+  <li>
+    <strong>數值化機制彩蛋（遊戲數值策劃）：</strong>
+    在 RPG 遊戲中，可為純種紅髮白人角色設計專屬被動天賦：
+    <ul>
+      <li><code>[天賦：維生素汲取]</code>：在陰雨、洞穴或暗處環境下，耐力恢復速度 +10%。</li>
+      <li><code>[弱點：烈日過敏]</code>：在沙漠或直射陽光地形下，受到光屬性傷害 +15%，護甲微幅下降。</li>
+      <li><code>[體質：抗麻醉體質]</code>：受到催眠、麻痺控場狀態的時間縮短 20%，但藥水治療效果起效稍慢。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>2. 文化原型與角色性格定位</h3>
+<ul>
+  <li>
+    <strong>原型 A：狂暴的野性戰士（高地蠻族 / 狂戰士）</strong><br>
+    參考蘇格蘭喀里多尼亞與愛爾蘭蓋爾人。適合設定為雙手斧狂戰士、森林遊俠或部落督軍，性格直接、豪爽、脾氣火爆但忠誠無比，以紅髮呼應其體內澎湃的戰意與原始生命力。
+  </li>
+  <li>
+    <strong>原型 B：操控烈焰與禁忌的自然異端（元素使 / 德魯伊 / 女巫）</strong><br>
+    調用中世紀「紅髮女巫」的歷史集體潛意識。角色可被正統宗教審判庭視為異端孤立，具備極高的火元素或自然變形天賦（如《惡魔城》Sypha、《D&D》Doric），其紅髮成為世俗恐懼與靈性力量並存的雙刃劍。
+  </li>
+  <li>
+    <strong>原型 C：叛逆的非傳統貴族 / 市井神偷</strong><br>
+    在等級森嚴的黑髮或金髮正統宮廷中，紅髮貴族通常是私生子、落魄家族後裔或被排擠的次子（如韋斯理家族），性格玩世不恭、幽默機智，帶有反叛現有體制的革命精神。
+  </li>
+</ul>
+
+<h3>3. 遊戲美術的色彩力學（視覺對比工程）</h3>
+<ul>
+  <li>
+    <strong>經典互補色穿搭（紅配綠 / 紅配藍）：</strong><br>
+    紅髮在色相環上處於強烈暖色端。為了讓角色在畫面中躍然而出，服裝應優先採用<strong>深森林綠（Forest Green）、墨綠、孔雀藍或深海軍藍</strong>。綠色能激發紅髮的最大明度，營造出神秘的德魯伊/自然獵手質感；深藍則能中和紅髮的躁動，帶來法師的沉穩與優雅。
+  </li>
+  <li>
+    <strong>避免髒濁配色：</strong><br>
+    盡量避免大面積使用枯黃色、土棕色或濁橘色服裝，這會使角色的紅髮與背景黏滯混成一團，喪失輪廓辨識度。
+  </li>
+  <li>
+    <strong>UI 與技能特效呼應：</strong><br>
+    角色技能特效以亮橙金、蔚藍冰晶或紫黑暗影為最佳，避免全畫面過載的單調大紅色，讓角色的紅髮在戰鬥施法時始終保持為視覺焦點。
+  </li>
+</ul>
+
+<blockquote>
+  在世界觀架構中，優秀的人設絕不是「選一個好看的顏色」，而是將生物演化的合理性、歷史符號的厚重感與視覺工業的美術對比，收束在角色的一頭紅髮之中。
+</blockquote>
+
+<div id="social-share" style="margin-top: 30px;">
+  <a id="fb-share" href="#" target="_blank">分享到 Facebook</a>
+  <span> | </span>
+  <a id="line-share" href="#" target="_blank">分享到 Line</a>
+  <span> | </span>
+  <a id="twitter-share" href="#" target="_blank">分享到 X</a>
+</div>
+
 <script>
-  // 自動抓取當前頁面的 URL
   var currentUrl = window.location.href;
-  // Facebook 分享
   document.getElementById("fb-share").href =
           "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-  // Line 分享
   document.getElementById("line-share").href =
           "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-  // X (Twitter) 分享
   document.getElementById("twitter-share").href =
-          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
 </script>
-<footer>
-  <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
-  <p>創作日期：2026 年 2 月 1 日</p>
-  <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
-</footer>
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
 </script>
 
 <div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-href="https://chrischou19990904.github.io/redhead_in_caucasians.html"
      data-width="100%"
-     data-numposts="5">
+     data-numposts="5"
+     style="margin-top: 25px;">
 </div>
-<footer style="font-size: 0.9em; text-align: center; margin-top: 2em; color: yellow;">
-  所有頁面均來自同一 GitHub Pages 專案
+
+<footer>
+  <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank">周彥廷</a></p>
+  <p>創作日期：2026 年 2 月 1 日（深度擴充重構）</p>
+  <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400" style="border-radius: 4px;">
+  <p style="font-size: 0.8em; margin-top: 15px;">版權所有 © 2026 同屬 GitHub Pages 人類學與次文化視覺革命專案</p>
 </footer>
+
 </body>
 </html>
