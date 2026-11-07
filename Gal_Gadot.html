@@ -104,15 +104,31 @@
 </header>
 
 <h1>亞裔標籤的視覺革命：從蓋爾·加朵和林正英電影看認知的邏輯盲點</h1>
-<section id="introduction">
+<section>
   <h2>目錄</h2>
   隨便點選下方其中一個主題便能直接跳到該主題的說明區
     <ol>
+      <li><a href="#introduction">前言導讀：當「亞裔」從地理座標淪為外貌色碼</a></li>
         <li><a href="#section1">消失的亞裔：蓋爾·加朵（Gal Gadot）生理與身分悖論</a></li>
         <li><a href="#section2">術語的「定義偏誤」：誰才是亞裔美國人</a></li>
         <li><a href="#section3">林正英電影：影視符號對生理現實的劫持</a></li>
       <li><a href="#section4">台灣社會認知 Bug：外國人定義的「選擇性渲染」</a></li>
     </ol>
+</section>
+<!-- ======= ★ 前言導讀：視覺色碼對地理現實的降維劫持 ======= -->
+<section id="introduction">
+<div class="case-study" style="background: #fff; border-left: 6px solid #d35400; margin-bottom: 30px;">
+  <h2 style="margin-top:0; color:#d35400;">前言導讀：當「亞裔」從地理座標淪為外貌色碼</h2>
+  <p>
+    在當代社會的語言系統中，「亞裔（Asian）」理應是一個<strong>以地理板塊為基準的索引標籤</strong>；然而在主流影視、好萊塢打光系統以及東亞大眾的日常直覺中，這個詞彙卻早已被嚴格<strong>「降維封裝」為單一的東亞面孔（黃種人外貌）</strong>。
+  </p>
+  <p>
+    這種認知錯置帶來了兩極化的荒謬景觀：一方面，生於亞洲西側、擁有黎凡特高加索骨架的<strong>蓋爾·加朵（Gal Gadot）</strong>，因符合大眾對「外國人／白人」的視覺模板，其亞裔身分被系統自動過濾；另一方面，在香港經典殭屍電影中，源自亞洲西部的基督十字架被東亞社會順理成章視為「洋廟」與西洋專屬法力。
+  </p>
+  <p>
+    本專案旨在透過<strong>「體質人類學骨骼硬代碼」</strong>與<strong>「資訊架構中的符號封裝理論」</strong>，拆解影視工業與大眾文化如何聯手劫持生理現實，修復大腦在處理族裔、信仰與地理歸屬時的底層認知 Bug。
+  </p>
+</div>
 </section>
 <section id="section1">
   <h2>一、 消失的亞裔：蓋爾·加朵（Gal Gadot）生理與身分悖論</h2>
@@ -249,24 +265,67 @@
     <br>
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/UZF_zEJQHIE?si=ii2LOi04sdpaQd3f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <div class="case-study" style="background: #2c3e50; color: #ecf0f1; border-left: 10px solid #e67e22;">
-      <h3 style="color: #e67e22;">// 技術報告：命名空間隔離執行結果 (Namespace Isolation Result)</h3>
-      <p>樓南光的「洋廟邏輯」並非單純的誤解，而是一次成功的 <span class="highlight" style="color:#000;">系統封裝（Encapsulation）</span>：</p>
-      <pre style="background: #1a1a1a; padding: 15px; border-radius: 5px; color: #57cc99;">
-IF (Object.Symbols.contains("Cross") || Object.Feature == "Caucasoid") {
-    AssignToNamespace("External/Foreigner");
-    ExecuteAction("Burn");
-} ELSE {
-    AssignToNamespace("Internal/Safe");
+      <h3 style="color: #e67e22;">// 技術報告：大腦認知編譯器的「命名空間封裝錯誤」（Namespace Bug Report）</h3>
+      <p>
+        大腦在解析「外國人」與「異教」時，並非查詢底層資料庫的「地理誕生地（Geographical Origin）」，而是直接透過外層 UI 與文化傳播路徑進行<strong>硬編碼封裝（Hardcoded Encapsulation）</strong>：
+      </p>
+      <pre style="background: #1a1a1a; padding: 15px; border-radius: 5px; color: #57cc99; font-family: 'Consolas', monospace; overflow-x: auto;">
+// 大腦前端 UI 解析偽代碼 (Mental UI-Rendering Logic)
+Class Individual {
+    String GeographicalOrigin; // 實體底層：如 "West Asia / Israel"
+    String CraniofacialBone;    // 生理硬體：如 "Caucasian (高鼻深眶)"
+    String CulturalSymbol;      // 外部協定：如 "Cross / Church"
+
+    Function ResolveIdentity() {
+        // 嚴重 Bug：大腦自動忽略 GeographicalOrigin，僅以骨架與傳播中繼站作條件跳轉
+        IF (this.CraniofacialBone == "Caucasian" || this.CulturalSymbol.isEuropeanRouted()) {
+            AssignNamespace("Western.Mainstream"); // 賦予西方身分豁免權 (如 Gal Gadot)
+            RenderAs("Foreigner / 洋");              // 封裝為舶來品 (如 天主教堂 -> 洋廟)
+        } ELSE IF (this.CraniofacialBone == "Mongoloid") {
+            AssignNamespace("Asian.Default");     // 僅此類別被賦予狹隘的「亞裔」標籤
+            RenderAs("OneOfUs / 本地");
+        }
+    }
 }</pre>
-      <p>這解釋了為何 Gal Gadot 在台灣社會被視為「外國人」，因為系統在讀取到她的生理硬體時，觸發了上述的強制分配邏輯。</p>
+      <p style="font-size: 0.95em; color: #bdc3c7; margin-top: 10px;">
+        <strong>架構審查結論：</strong> 樓南光的「洋廟排他」與台灣大眾將 Gal Gadot 視為「非亞裔外國人」，本質上都是<strong>「傳播中繼站（歐洲）覆寫了源頭數據（亞洲）」</strong>引發的緩衝區溢位。大腦只讀取渲染後的視覺外殼（Skin），徹底遺失了地理與生物學的原始碼。
+      </p>
     </div>
-    <p class="technical-note">※ 技術註解：人類的社交系統傾向於讀取 UI（外貌）來判定對象屬性，而非讀取資料庫底層的來源地欄位。</p>
-    <h4>延伸閱讀（不同GitHub Pages專案）</h4>
+  </div>
+</section>
+<!-- ======= ★ 五、結語與理論總結 ======= -->
+<section id="section5">
+  <h2>五、 結語：穿透符號假象，重構地理與生理的真實光譜</h2>
+  <div class="case-study">
+    <p>
+      回顧從好萊塢巨作《玩命關頭》到香港九叔的《驅魔道長》，文化工業與傳播歷史對人類認知的塑造力令人驚嘆：
+    </p>
     <ul>
-      <li><a style="color:blue" href="https://chrischou19990904.github.io/middle_east_vampire/" target="_blank">《吸血鬼與墮天使：黎凡特的非法代碼》</a>（此網站的內容為本網頁的作者欲開發的開放世界的世界觀設定的介紹，並且該遊戲是以黎凡特地區的高加索人為主角的冒險遊戲。遊戲的故事背景是以聖經人物為藍本加入更多關於黎凡特地區的歷史、文化、宗教等元素，讓玩家能夠更深入地了解這個地區的多樣性和複雜性）
+      <li>
+        <strong>「亞裔」標籤的去窄化：</strong><br>
+        亞洲不是東亞單一群體的專有詞彙。從黎凡特海岸的高加索人種，到內陸平原的東亞人群，廣袤的亞洲大陸自古容納了多元的骨骼幾何與色素光譜。將「亞裔」等同於「單眼皮、平眉骨、黃皮膚」，本質上是全球商業資本為了便於分類管理所進行的<strong>視覺矮化</strong>。
+      </li>
+      <li>
+        <strong>信仰符號的歷史還原：</strong><br>
+        無論是林正英手中的道教桃木劍，還是吳神父高舉的基督教十字架，當我們撕去歐洲兩千年的白人神學包裝與拉丁外衣，兩者皆是在亞洲地理母體中孕育而生的精神產物。看清這一點，才能真正理解「中西合璧」背後那層同源異流的荒謬與深刻。
+      </li>
+      <li>
+        <strong>終結 UI 審判：</strong><br>
+        當我們習慣以「外貌像不像自己人」來決定誰是同胞、誰是外國人時，我們的大腦便永遠停留在樓南光「看見洋建築便喊洋廟」的簡化迴圈中。
       </li>
     </ul>
+
+    <blockquote>
+      地理邊界是實體存在的，演化骨骼是真實銘刻的；唯有那層被影視與政治反覆塗抹的「身分標籤」，不過是一場運行在人類大腦中的集體幻覺。修復這項認知 Bug，我們才能在鏡頭與銀幕的浮光掠影背後，看見真實的世界全貌。
+    </blockquote>
   </div>
+  <!--
+  <h4>延伸閱讀（不同GitHub Pages專案）</h4>
+  <ul>
+    <li><a style="color:blue" href="https://chrischou19990904.github.io/middle_east_vampire/" target="_blank">《吸血鬼與墮天使：黎凡特的非法代碼》</a>（此網站的內容為本網頁的作者欲開發的開放世界的世界觀設定的介紹，並且該遊戲是以黎凡特地區的高加索人為主角的冒險遊戲。遊戲的故事背景是以聖經人物為藍本加入更多關於黎凡特地區的歷史、文化、宗教等元素，讓玩家能夠更深入地了解這個地區的多樣性和複雜性）
+    </li>
+  </ul>
+  -->
 </section>
 <ul id="messages"></ul>
 <div id="social-share" style="margin-top: 20px;">
