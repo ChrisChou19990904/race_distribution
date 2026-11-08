@@ -6,65 +6,212 @@
   <title>高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      margin: 20px;
-      padding-top: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      line-height: 1.9;
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background: #fafafa;
     }
-    h1, h2 {
+    h1, h2, h3 {
+      line-height: 1.4;
       color: #333;
     }
-    p {
-      font-size: 1.1em;
-      color: #555;
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.4em;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
     }
-    ul {
-      font-size: 1.1em;
-      color: #555;
+    h2 {
+      margin-top: 2em;
+      border-left: 6px solid #8e44ad;
+      padding-left: 12px;
     }
-    .quote {
+    h3 {
+      margin-top: 1.2em;
+      color: #444;
+    }
+    p, ul, ol {
+      font-size: 1.05em;
+      color: #333;
+      margin: 1em 0;
+    }
+    ul, ol {
+      margin-left: 1.5em;
+    }
+    li {
+      margin: 0.4em 0;
+    }
+    blockquote, .quote {
+      border-left: 4px solid #8e44ad;
+      padding: 12px 18px;
+      color: #444;
+      background: #fbf7fc;
+      margin: 1.6em 0;
+      font-style: normal;
+      border-radius: 0 4px 4px 0;
+    }
+    .highlight {
+      background: #fff3cd;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .logic-bug {
+      color: #c0392b;
+      font-weight: bold;
+    }
+    .technical-note {
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px dashed #bbb;
+      margin-top: 15px;
+      padding-top: 10px;
       font-style: italic;
-      color: #777;
-      border-left: 4px solid #ccc;
-      padding-left: 20px;
-      margin-left: 20px;
     }
-    #google_translate_element {
-      position:absolute;
-      top: 10px;  /* 距離頁面頂端 10px */
-      left: 10px; /* 距離頁面左側 10px */
-      z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+
+    /* ======= Google Translate 緊湊工具列 ======= */
+    #google-translate-box {
+      background: #f8f9fa;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 12px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      font-size: 0.85em;
+      color: #666;
+      box-sizing: border-box;
     }
-    video{
-        border: 5px solid black;
+    #google-translate-box p {
+      margin: 0;
+      font-size: 0.9em;
+      line-height: 1.2;
     }
+    .goog-te-gadget {
+      height: 28px !important;
+      line-height: 28px !important;
+      font-size: 13px !important;
+      color: transparent !important;
+    }
+    .goog-te-gadget .goog-te-combo {
+      margin: 0 !important;
+      height: 26px !important;
+      padding: 2px 4px !important;
+      font-size: 12px !important;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      color: #333;
+    }
+
     header {
       background-color: pink;
       padding: 10px 0;
-      top: 30px;
+      margin-bottom: 25px;
+      border-radius: 6px;
     }
-    nav a {
+    header ul {
+      list-style-type: none;
+      padding-left: 15px;
+    }
+    header ul li a {
       color: black;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
+    header ul li a:hover {
       text-decoration: underline;
     }
-    nav a:visited{
-      color: black;
+    header ul li ol li a {
+      font-weight: normal;
+      margin: 0;
     }
-    a{
-      text-decoration:none;
+
+    /* ======= 目錄專屬導航樣式 ======= */
+    #catalog-menu {
+      background: #fff;
+      border: 1px solid #eee;
+      border-left: 6px solid #8e44ad;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 1.5em 0;
     }
-    a:hover{
+    #catalog-menu a,
+    #catalog-menu a:link,
+    #catalog-menu a:visited {
+      color: #8e44ad;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #catalog-menu a:hover {
       text-decoration: underline;
     }
-    a:visited{
-      color: blue;
+
+    /* ======= 全站圖片與影音自適應規範 ======= */
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+      margin: 15px auto;
+      border-radius: 4px;
+      box-sizing: border-box !important;
     }
+
+    iframe {
+      width: 100% !important;
+      max-width: 100%;
+      height: auto !important;
+      aspect-ratio: 16 / 9;
+      border-radius: 6px;
+      display: block;
+      margin: 15px auto;
+      border: none;
+      box-sizing: border-box;
+    }
+
+    video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background-color: #000;
+      border-radius: 6px;
+      display: block;
+      margin: 15px auto;
+      box-sizing: border-box;
+      border: 3px solid #333;
+    }
+
+    /* 替代原本語法錯誤的黃底紫框容器 */
+    .showcase-box {
+      display: block;
+      text-align: center;
+      border: 4px solid #8e44ad;
+      background-color: #fffde7;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .image-comparison {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .image-comparison figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+
     #social-share a {
       text-decoration: none;
       font-weight: bold;
@@ -75,87 +222,58 @@
     #social-share span {
       margin: 0 5px;
     }
-    #social-share a#fb-share {
-      color: #4267B2;
-    }
-    #social-share a#line-share {
-      color: #00C300;
-    }
-    #social-share a#twitter-share {
-      color: #1DA1F2;
-    }
+    #social-share a#fb-share { color: #4267B2; }
+    #social-share a#line-share { color: #00C300; }
+    #social-share a#twitter-share { color: #1DA1F2; }
+
     footer {
       text-align: center;
       margin-top: 50px;
       background-color: purple;
-      font-size: 20px;
+      font-size: 18px;
       padding: 20px;
       border-radius: 6px;
+      color: yellow;
     }
-    footer p {
-      color: yellow; /* 確保文字顏色與背景對比鮮明 */
-    }
+    footer p { color: yellow; margin: 8px 0; }
     footer img {
-      display: block; /* 使圖片顯示 */
-      margin: 20px auto; /* 中央對齊 */
+      display: block;
+      margin: 15px auto;
+      border-radius: 4px;
     }
-    .person-profile {
-      padding: 1em;
-      background-color: #f5f5f5;
-      border-radius: 8px;
-      margin-bottom: 2em;
-    }
-    .person-profile h3 {
-      color: #333366;
-    }
-    .image-comparison {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 1em;
-    }
-    .image-comparison figure {
-      text-align: center;
-    }
-    .center {
-      text-align: center;
-    }
+    footer a { color: #ffca28; text-decoration: none; }
+
     @media screen and (max-width: 767px) {
-      iframe{
-        max-width:100%;
-      }
-      video{
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 1rem 0;
-        border: 5px solid black
-      }
+      body { padding: 0 12px; }
+      #google-translate-box { flex-direction: column; align-items: flex-start; gap: 4px; }
+      iframe, video, img { max-width: 100% !important; }
     }
   </style>
 </head>
 <body>
+
 <div id="google-translate-box">
   <div id="google_translate_element"></div>
-  <!-- Google Translate 的自動翻譯功能 -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
-        pageLanguage: 'zh-TW',  // 頁面原語言
-        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
   </script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <p>點擊上方的語言選單以切換語言</p>
+  <p>切換語言</p>
 </div>
+
 <header>
   <nav>
     <ul>
       <li><strong class="guide">本頁內容：</strong><br>
         <a>高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</a></li>
 
-      <li><strong class="guide">其他文章連結：</strong>
+      <li style="margin-top: 10px;"><strong class="guide">其他文章連結：</strong>
         <ol>
           <li><a href="index.html" target="_blank">世界人種分布與歷史原因</a></li>
           <li><a href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
@@ -179,389 +297,361 @@
     </ul>
   </nav>
 </header>
-<h1>高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</h1>
-<h2>目錄</h2>
-隨便點選下方一個主題便能直接跳到該主題的說明區
-<ol>
-  <li><a href="#introduction">前言</a></li>
-  <li><a href="#twilight">以《暮光之城》的黑髮人物為例</a></li>
-  <li><a href="#caucasian_with_black_hair">事實上，黑髮黑眼的高加索人形象在各類影視作品中早已廣泛出現</a></li>
-  <li><a href="#dracula">尤其是德古拉這個角色，更是最佳代表——他幾乎在所有影視版本中都是黑髮</a></li>
-  <li><a href="#creative_logic">創作邏輯深究：遺傳本質、地緣潛規則與外星擬態</a></li>
-  <li><a href="#harry_potter">典型的黑髮高加索人：以哈利·波特為例</a></li>
-  <li><a href="#snowwhite">白雪公主：典型的十九世紀歐洲審美</a></li>
-  <li><a href="#areas_where_caucasians_are_majority">高加索人種的多樣性與範圍</a></li>
-  <li><a href="#lucifer">美劇《魔鬼神探》：以中東高加索人為原型的演繹</a></li>
-  <li><a href="#jesus">耶穌</a></li>
-  <li><a href="#skin_color">膚色並不是區分高加索人與蒙古人的方式</a></li>
-  <li><a href="#diversity_in_caucasoid">高加索人的外貌多樣性</a></li>
-  <li><a href="#mongoloid_and_negroid">蒙古人與尼格羅人外貌的單一性</a></li>
-  <li><a href="#caucasians_with_black_hair_black_eyes_and_yellow_skin">黑髮黑眼黃皮膚的高加索人魅力</a></li>
-  <li><a href="#conclusion">結語</a></li>
-</ol>
-<h2 id="introduction">前言</h2>
-<p>受到好萊塢、<a href="nazi_racial_myth.html" target="_blank">納粹種族主義</a>，和不少<a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">日系動畫與電子遊戲</a>的影響，許多人至今仍對高加索人有個根深蒂固的刻板印象——他們應該是金髮碧眼。但事實上，在現實生活中，尤其是東歐與南歐，黑髮黑眼的高加索人非常常見。</p>
-<h2 id="twilight">以《暮光之城》的黑髮人物為例</h2>
-<p>這樣的族裔多樣性也早已體現在影視作品中。以《暮光之城》為例，Cullen家族的成員Emett Cullen與Alice Cullen為黑髮，而Volturi家族成員也是黑髮居多，例如兩位領導人Aro與Marcus，以及護衛隊成員Felix與Alec。</p>
-註：<ul><li>Felix沒有讀心、預知未來、控制自然元素、麻痺敵人知覺、製造精神痛苦、看穿敵人之間的關係與忠誠度、感知獵物的絕對位置等其他吸血鬼擁有的特殊能力，但其物理能力遠勝其他吸血鬼而為Volturi的重要成員，在和Edward Cullen對決的過程中不到幾十秒就輕鬆將對方制服，其飾演者Daniel Cudmore也出演過X戰警裡的鋼人</li><li>Alec的能力是讓目標失去所有感官，像是視覺、聽覺、觸覺等，讓他們處於一個完全無感的狀態。他的能力就像一團霧，會慢慢向目標蔓延，但他並不是對周遭所有人同時發揮這種能力，而是可以選擇特定的人。這意味著他可以針對某個人使用，而不會影響到其他人。雖然他的能力不會立刻生效，但一旦作用，目標會完全無法感知周圍的一切，就像被封閉在黑暗的空間中一樣。不過，對於像貝拉這樣擁有心靈屏障的人，這種能力是無效的</li><li>他們的能力如下方兩部插入影片所示</li></ul>
-<img loading="lazy" src="emmett_cullen.webp" alt="emmett cullen" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="alice_cullen.jpg" alt="alice cullen" style="width: 100%; max-width: 600px;"><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="felix_vs_edward.mp4"></video><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="Alec.mp4"></video>
-<p>至於另一位金髮領導人Caius，事實上是由飾演他的演員Jamie Campbell Bower為了忠於小說設定而戴上的假髮。</p>
-<img loading="lazy" src="沃爾圖里領導人.jpg" alt="leaders_of_Volturi" style="width: 100%; max-width: 600px;"><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="caius.mp4"></video>
-<p>至於眼睛顏色的部分，和我一樣熟悉《暮光之城》宇宙的網友可能會指出，《暮光之城》中吸血鬼的眼睛只有三種顏色：黑色（飢餓狀態下的吸血鬼）、紅色（剛轉變的吸血鬼、轉變很久但喝人血的吸血鬼）、金色（轉變很久但喝動物血的吸血鬼），並沒有藍色或綠色等現實中的高加索人的眼睛會出現的顏色——吸血鬼和人類的生理狀況完全不一樣，因此無法透過吸血鬼的眼睛顏色判斷高加索人的眼睛顏色比例。</p>
 
-<p>但別忘了，貝拉在人類時期就是黑髮黑眼，狼人雅各布在人類狀態下也是黑髮黑眼，貝拉的父親查理也是黑髮黑眼。飾演貝拉的Kristen Stewart是純種高加索人，飾演雅各布的Taylor Lautner則擁有德國、法國、荷蘭與印地安血統，為高加索與美洲原住民的混血。這些外貌設定與角色背景彼此呼應，符合現實人種多樣性。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-<img loading="lazy" src="bella_swan.jpg" alt="bella" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="jacob.jpg" alt="jacob" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="charlie_swan.jpg" alt="charlie" style="width: 100%; max-width: 600px;">
+<h1>高加索人並非都是金髮碧眼——盤點現實和虛構故事中那些魅力無窮的黑髮高加索人</h1>
+
+<h2>目錄</h2>
+<div id="catalog-menu">
+  <p>隨便點選下方一個主題便能直接跳到該主題的說明區：</p>
+  <ol>
+    <li><a href="#introduction">前言：被好萊塢與二次元壟斷的「金髮碧眼」迷思</a></li>
+    <li><a href="#twilight">以《暮光之城》的黑髮人物為例</a></li>
+    <li><a href="#caucasian_with_black_hair">廣泛出現的黑髮黑眼高加索影視英雄與反派</a></li>
+    <li><a href="#dracula">德古拉（Dracula）：影視史上最標誌性的黑髮高加索霸主</a></li>
+    <li><a href="#creative_logic">創作邏輯深究：遺傳本質、地緣潛規則與外星擬態</a></li>
+    <li><a href="#harry_potter">典型的黑髮高加索人：以哈利·波特為例</a></li>
+    <li><a href="#snowwhite">白雪公主：十九世紀歐洲對「烏木黑髮」的頂級審美</a></li>
+    <li><a href="#areas_where_caucasians_are_majority">高加索人種的真實地理光譜：從南歐、中東到北印度</a></li>
+    <li><a href="#lucifer">美劇《魔鬼神探》：以中東高加索人為原型的演繹</a></li>
+    <li><a href="#jesus">耶穌（Jesus of Nazareth）的真實歷史相貌</a></li>
+    <li><a href="#skin_color">五官骨相才是人種本質：膚色並非劃分人種的絕對方式</a></li>
+    <li><a href="#diversity_in_caucasoid">高加索人種的色素連續分佈</a></li>
+    <li><a href="#mongoloid_and_negroid">全球人種演化選擇與色素適應對比</a></li>
+    <li><a href="#caucasians_with_black_hair_black_eyes_and_yellow_skin">深髮、深瞳、古銅膚色高加索人的現代美學吸引力</a></li>
+    <li><a href="#conclusion">結語：打破刻板色碼，看見真實的人種多樣性</a></li>
+  </ol>
 </div>
-<em>註：根據官方設定，貝拉的頭髮是棕色的，加上棕色頭髮和黑色頭髮也被歸類為深色頭髮（英語：Brunette），且上方的插入影片和圖片中的貝拉的髮色受到光學的影響而呈現黑色，因此我認為說貝拉的頭髮是黑色的並沒有錯。</em>
-<p>《暮光之城》不僅在角色能力設定上有其巧思與深度，也在外型設計上展現族裔的真實樣貌與文化多元性。我們不該再讓過時的刻板印象，限制對角色的理解與欣賞。無論是在電影、動畫、電玩還是文學作品中，角色的族群與外貌從來都不是單一標準，而是一種兼容並蓄的多樣展現。</p>
+
+<h2 id="introduction">前言</h2>
+<p>
+  受到好萊塢商業電影、<a href="nazi_racial_myth.html" target="_blank">納粹種族偽科學</a>，以及大量<a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">日系動畫與電子遊戲</a>的人設簡化策略影響，許多人至今仍對高加索人（白色人種）抱持著根深蒂固的刻板印象——認為他們「理所當然」都該是金髮碧眼。
+</p>
+<p>
+  但事實上，在真實世界的體質人類學光譜中，尤其是在南歐地中海沿岸、巴爾幹半島、東歐平原、高加索山脈以南的中東與西亞，<strong>黑髮、深褐髮、茶褐色瞳孔與深邃黑色眼睛的高加索人，在人口比例上反而佔據了絕對多數</strong>。
+</p>
+
+<h2 id="twilight">以《暮光之城》的黑髮人物為例</h2>
+<p>
+  這種多樣性在近代暢銷影視文本中展露無遺。以全球現象級 IP《暮光之城》為例，卡倫家族（Cullen Family）的成員 Emmett Cullen 與 Alice Cullen 皆為黑髮設定；而掌控吸血鬼世界的佛杜里家族（Volturi），其決策層與核心護衛更是以黑髮居多，例如長老 Aro 與 Marcus，以及武力天花板的 Felix 與 Alec。
+</p>
+<ul>
+  <li><strong>Felix：</strong>雖然沒有讀心或知覺麻痺等超自然異能，但其純粹的肉體力量遠超常規吸血鬼，不到數十秒便能壓制 Edward Cullen（飾演者 Daniel Cudmore 亦在《X戰警》中飾演鋼人）。</li>
+  <li><strong>Alec：</strong>其能力是釋放緩慢擴散的無形感官剝奪霧氣，能精準切斷目標所有的視覺、聽覺與觸覺，將敵人封閉在絕對虛無中任人宰割。</li>
+</ul>
+
+<div class="showcase-box">
+  <img loading="lazy" src="emmett_cullen.webp" alt="emmett cullen">
+  <img loading="lazy" src="alice_cullen.jpg" alt="alice cullen">
+  <video controls><source src="felix_vs_edward.mp4" type="video/mp4"></video>
+  <video controls><source src="Alec.mp4" type="video/mp4"></video>
+</div>
+
+<p>
+  而佛杜里家族中唯一的金髮長老 Caius，其飾演者 Jamie Campbell Bower 本人實際上也是戴上了特製假髮以契合小說描寫。
+</p>
+<div class="showcase-box">
+  <img loading="lazy" src="沃爾圖里領導人.jpg" alt="leaders_of_Volturi">
+  <video controls><source src="caius.mp4" type="video/mp4"></video>
+</div>
+
+<p>
+  吸血鬼的眼睛顏色在作品中被賦予了超自然生理規則（黑瞳代表飢餓、紅瞳代表飲人血、金瞳代表素食）；但回到人類設定中，女主角貝拉（Bella Swan）在身為人類時便是深褐髮（Brunette）搭配深色眼睛，貝拉的父親查理（Charlie Swan）也是典型的深髮深瞳。
+</p>
+<div class="showcase-box">
+  <img loading="lazy" src="bella_swan.jpg" alt="bella">
+  <img loading="lazy" src="jacob.jpg" alt="jacob">
+  <img loading="lazy" src="charlie_swan.jpg" alt="charlie">
+</div>
+<p style="font-size:0.9em; color:#666; text-align:center;">
+  <em>註：飾演貝拉的 Kristen Stewart 為純歐裔高加索人，在鏡頭與光影下呈現深邃的黑褐色髮質；飾演雅各布的 Taylor Lautner 則具備歐裔與美洲原住民混血背景。</em>
+</p>
+
 <h2 id="caucasian_with_black_hair">事實上，黑髮黑眼的高加索人形象在各類影視作品中早已廣泛出現</h2>
 <ul>
-  <li>漫威電影宇宙中的鋼鐵俠Tony Stark（Robert Downey Jr.飾）、蜘蛛俠Peter Parker（Tom Holland飾）、冬兵Bucky Barnes（Sebastian Stan飾）、浩克（Bruce Banner，由Mark Ruffalo飾）、洛基（Tom Hiddleston飾），以及DC電影宇宙中的兩大核心人物超人和蝙蝠俠，皆是黑髮設定，即便漫畫原作中的某些角色曾為金髮。</li>
-  <li>這些例子說明：角色外貌的詮釋彈性極高，遠遠超出對高加索人僅限「金髮碧眼」的舊有認知。</li>
+  <li><strong>超級英雄核心支柱：</strong> 漫威電影宇宙（MCU）中的鋼鐵人 Tony Stark（Robert Downey Jr. 飾）、蜘蛛人 Peter Parker（Tom Holland 飾）、酷寒戰士 Bucky Barnes（Sebastian Stan 飾）、綠巨人浩克 Bruce Banner（Mark Ruffalo 飾）、洛基 Loki（Tom Hiddleston 飾），以及 DC 宇宙的蝙蝠俠 Bruce Wayne，全數鎖定黑髮或深棕髮形象。</li>
+  <li><strong>格鬥與動作動作巨作：</strong> 《李小龍傳奇》裡的歐美武術家、《葉問》系列中的經典白人對手（如第二集拳擊冠軍 Twister、第四集空手道黑帶教練 Colin Frater、海軍陸戰隊長官 Barton Geddes），皆由深髮白人武術演員出演。</li>
+  <li><strong>遊戲神作主角：</strong> 全球銷量霸主《俠盜獵車手 V》（GTA 5）的兩大核心主角 Michael De Santa 與 Trevor Philips，均為典型的深色毛髮白人中年男子。</li>
 </ul>
-<p>P.S.提到超人，可能有的網友會反駁說他是外星人，所以不能算是黑髮高加索人，因為高加索人是地球上的分類而不是氪星上的。但要搞清楚飾演超人的男演員都是黑髮的白種男子，就連超人的死敵<a href="https://en.wikipedia.org/wiki/Michael_Shannon" target="_blank">薩德將軍</a>和其部下<a href="https://en.wikipedia.org/wiki/Antje_Traue" target="_blank">Faora UI</a>均是由黑髮白人飾演。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-<img loading="lazy" src="ironman.png" alt="ironman" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="spiderman.webp" alt="spiderman" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="winter_soldier.avif" alt="winter_soldier" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="hulk.jpg" alt="hulk" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="loki.webp" alt="loki" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="superman.avif" alt="superman" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="薩德將軍.jpg" alt="superman" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="Faora_UI.webp" alt="superman" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="bat_man.jpeg" alt="batman" style="width: 100%; max-width: 600px;">
+
+<div class="showcase-box">
+  <img loading="lazy" src="ironman.png" alt="ironman">
+  <img loading="lazy" src="spiderman.webp" alt="spiderman">
+  <img loading="lazy" src="winter_soldier.avif" alt="winter_soldier">
+  <img loading="lazy" src="hulk.jpg" alt="hulk">
+  <img loading="lazy" src="loki.webp" alt="loki">
+  <img loading="lazy" src="superman.avif" alt="superman">
+  <img loading="lazy" src="薩德將軍.jpg" alt="薩德將軍">
+  <img loading="lazy" src="Faora_UI.webp" alt="Faora UI">
+  <img loading="lazy" src="bat_man.jpeg" alt="batman">
 </div>
-  <p>這樣的形象在其他作品中也屢見不鮮——從經典吸血鬼角色德古拉，到《李小龍傳奇》裡的空手道高手，以及《葉問》系列的白人反派例如Twister（第二集登場的拳擊手）、在第四集於餐廳外和李小龍切磋的一大群空手道黑帶、Colin Frater（第四集登場的空手道教練）、Barton Geddes（第四集登場的陸戰隊軍官，同時也是《Undisputed》系列與《意外殺手》的男主角），再到熱門開放世界《GTA V》的兩位主角Michael De Santa和Trevor Philips，這些黑髮的高加索人形象早已深入人心。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/P1aOy1RAdCw?si=kRv4w_yDmz1Ln50C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8ylfxHSip58?si=Rdwm_6akoKOy--ff" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/_rcRotCerc4?si=9FbQBLapPTrlZsgv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Mj3RhfxkpnQ?si=i1GaK0txq_WuMGsb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/giRADSr_SWg?si=KhB35ANEYzfZSfBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/moqqESqCPBw?si=LT4MfARRdWIGRGLP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/JWsbsjJzxl0?si=emSMHyA0H6PbG5L3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe src="https://www.facebook.com/plugins/video.php?height=310&href=https%3A%2F%2Fwww.facebook.com%2F100088816304311%2Fvideos%2F1152304233483856%2F&show_text=false&width=560&t=0" width="560" height="310" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-  <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uLS4XaQZz4k?si=Necb8L0NgwXzw46p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/FBVB7FkdxXw?si=3pZN0GQiP8k5z5Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="showcase-box">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/P1aOy1RAdCw?si=kRv4w_yDmz1Ln50C" title="影視剪輯 1" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/8ylfxHSip58?si=Rdwm_6akoKOy--ff" title="影視剪輯 2" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/_rcRotCerc4?si=9FbQBLapPTrlZsgv" title="影視剪輯 3" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/Mj3RhfxkpnQ?si=i1GaK0txq_WuMGsb" title="影視剪輯 4" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/giRADSr_SWg?si=KhB35ANEYzfZSfBw" title="影視剪輯 5" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/moqqESqCPBw?si=LT4MfARRdWIGRGLP" title="影視剪輯 6" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/JWsbsjJzxl0?si=emSMHyA0H6PbG5L3" title="影視剪輯 7" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/uLS4XaQZz4k?si=Necb8L0NgwXzw46p" title="影視剪輯 8" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/FBVB7FkdxXw?si=3pZN0GQiP8k5z5Gs" title="影視剪輯 9" allowfullscreen></iframe>
 </div>
-  <p>甚至在英國喜劇中，豆豆先生（Mr. Bean，由Rowan Atkinson飾演）也是標準的黑髮白人，形象經典。</p>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8NS5rJbjvPg?si=Vxgo7Oy5MXYrYc4l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>甚至在英國全民喜劇中，舉世聞名的豆豆先生（Mr. Bean，Rowan Atkinson 飾）也是最純正的黑髮白人形象。</p>
+<iframe loading="lazy" src="https://www.youtube.com/embed/8NS5rJbjvPg?si=Vxgo7Oy5MXYrYc4l" title="豆豆先生經典畫面" allowfullscreen></iframe>
+
 <h2 id="dracula">尤其是德古拉這個角色，更是最佳代表——他幾乎在所有影視版本中都是黑髮</h2>
-<p>從不同時代與媒介的改編來看，「黑髮」幾乎已成為德古拉不可動搖的視覺標誌。無論是經典貴族形象、戰士化詮釋，甚至是現代解構版本，這一特徵都被高度保留，並不斷被重新詮釋：</p>
+<p>
+  在西方哥德式文學與恐怖電影百年史中，「深黑後梳髮型（Slicked-back Black Hair）」已成為德古拉不可撼動的視覺代碼：
+</p>
 <ul>
-  <li>《德古拉2000》中由Gerard Butler飾演德古拉，他的黑髮形象充滿野性與現代感，電影設定中他其實是猶大·伊斯加略（背叛耶穌的門徒），這種結合聖經神話與吸血鬼傳說的創意讓他成為一位兼具宗教象徵與悲劇色彩的現代德古拉</li>
-  <li>《刀鋒戰士3》中的德古拉（由Dominic Purcell飾演）形象壯碩兇殘，黑色短髮，戰士風格鮮明</li>
-  <li>《凡赫辛》版（Richard Roxburgh飾）則是經典貴族吸血鬼，黑髮高瘦，極具哥德氣質</li>
-  <li>《德古拉元年》的Luke Evans是戰士型悲情英雄，黑髮披風形象讓人印象深刻</li>
-  <li>BBC與Netflix合作的英劇《德古拉》（Claes Kasper Bang飾）則賦予角色更深層的人性與哲思，他的黑髮外型延續了德古拉的經典視覺風格，同時透過現代敘事展現角色的聰明、危險與魅力</li>
-  <li>港劇《殭屍道長》中，德古拉是由李道洪飾演，雖然李道洪和我們一樣是蒙古人種（也就是黃種人），但他所飾演的德古拉形象並不違和，尤其是黑髮造型與經典的德古拉形象非常契合，呈現出該角色的陰險與神秘感</li>
-  <li>在《吸血鬼特助：雷菲爾》（Nicolas Cage 飾）中，尼可拉斯·凱吉飾演的德古拉將經典的黑髮背梳形象發揮到極致，造型上致敬了 1931 年貝拉·路格西的經典風格。他的演出充滿了誇張的表現主義與黑色幽默，將德古拉塑造成一個自戀、情緒勒索且極具壓迫感的「毒性上司」。這部電影打破了以往德古拉作為主角的敘事，改以從屬者的視角來解構這位黑髮魔王，展現了角色既荒誕又恐怖的現代化面向</li>
-  <li>Netflix動畫《惡魔城》裡的德古拉（由Graham McTavish配音）則兼具貴族風範與內心戲劇張力，是個黑髮的高加索悲劇反派</li>
-  <li>《Hellsing》中的Alucard（由Steven Blum配音），其實就是傳說中的德古拉。這個角色以黑髮、高貴而邪魅的外貌以及無敵的力量著稱。作為英國Hellsing家族的秘密武器，Alucard 其實是德古拉的轉世或再生，並且以一種超越時間的形式存在。儘管Alucard的形象和能力與經典德古拉相似，但他更具現代化的黑暗英雄特色。他冷酷、無情，又帶有一絲自我毀滅的悲劇色彩，對人性的掙扎和過去的罪行有著深刻的反思。這部作品以獨特的視覺風格和扣人心弦的故事將他從一個傳說中的吸血鬼轉變成了一位充滿矛盾的反派角色，並且打破了傳統德古拉故事中的固定模式</li>
-  <li>就連動畫喜劇《尖叫旅社》中的德古拉（由Adam Sandler / Brian Hull配音）也是黑髮造型，儘管風格幽默，但角色設定仍然保有其經典吸血鬼形象</li>
-  <!--
-  <li>在本網頁的作者欲開發的開放世界<a href="https://chrischou19990904.github.io/dracula/" target="_blank">《神權崩壞》</a>中，德古拉被重新詮釋為一位跨越歷史與神話的悲劇存在。作為本遊戲的主角的他生於十五世紀的歐洲，原為身處宗教與權力衝突中的人類，因質疑教會權威與揭露腐敗而被視為異端並遭處決。死後，他於地獄與魔鬼相遇，並以自身的苦難換取重返人間的機會，最終以吸血鬼之姿復活。此一設定呼應了德古拉在歷史與傳說之間的雙重來源，使角色在現實與虛構之間產生連結。外型上，他延續經典的黑髮與高挑俊美形象，帶有冷冽而疏離的貴族氣質；而在動機上，則從傳統的掠食者轉變為對抗神權體制的存在，其行動不僅出於復仇，更指向對信仰正當性與人類自由意志的質疑。玩家將扮演他和另外兩位女角（紅髮綠眼的女巫Isolde與金髮藍眼的狼人Freya）一起推翻教會的統治</li>
--->
+  <li><strong>《德古拉 2000》：</strong> Gerard Butler 飾演的德古拉狂野邪魅，劇中設定其原身為背叛耶穌的門徒「猶大」，完美契合了黎凡特中東高加索的黑髮背景。</li>
+  <li><strong>《刀鋒戰士 3》：</strong> Dominic Purcell 飾演的始祖德古拉剛毅壯碩，黑色短髮展現遠古戰士的純粹暴力。</li>
+  <li><strong>《凡赫辛》：</strong> Richard Roxburgh 飾演的德古拉高瘦優雅，披散黑髮散發經典巴爾幹貴族氣場。</li>
+  <li><strong>《德古拉：未知之祖》：</strong> Luke Evans 飾演穿梭戰場的悲情英雄弗拉德三世，黑色披甲與黑髮融為一體。</li>
+  <li><strong>BBC / Netflix 影集《德古拉》：</strong> 丹麥演員 Claes Bang 完美重現了狡黠、優雅且壓迫感十足的黑髮紳士形象。</li>
+  <li><strong>港劇《殭屍道長》：</strong> 演員李道洪飾演的西洋吸血鬼告魯斯（即德古拉），即便由東亞面孔演繹，其黑髮披風與西洋燕尾服的結合依然高度契合，展現出該符號的跨文化包容力。</li>
+  <li><strong>《吸血鬼特助：雷菲爾》：</strong> 尼可拉斯·凱吉（Nicolas Cage）致敬 1931 年貝拉·路格西的黑髮油頭，以黑色幽默解構自戀狂上司。</li>
+  <li><strong>《惡魔城》動畫與《Hellsing》：</strong> 無論是 McTavish 配音的悲劇伯爵，還是平野耕太筆下無敵的黑髮紅衣死神 Alucard，黑髮始終是這項吸血鬼始祖符號的核心視覺基底。</li>
 </ul>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/WyMDJB4ty2w?si=d_ZdYIJ5uYKkRooA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/7aLXkClSJXM?si=C8RKqXcf53J7512Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/pJgsc5UCggw?si=pX7ehj2YBysqiGy3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PqGHqt0qeBk?si=u5F74PN854ah0NX5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uY4U-vozu78?si=E22Sg5YQl-AIuINY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/m_A5ba9cYZY?si=xixhkrhbt1RoW_RW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4zkXyF5_0Sg?si=HSxhUy5Yz--YyX2q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/lywBYvGAFlo?si=YhxfjTbaaYwuQtSq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/kSTeYn7HnWc?si=yKivWWHLpSCR8C_v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Hk5z4tnhC_A?si=71-IAyVN9R8T92fJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="showcase-box">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/WyMDJB4ty2w?si=d_ZdYIJ5uYKkRooA" title="德古拉剪輯 1" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/7aLXkClSJXM?si=C8RKqXcf53J7512Y" title="德古拉剪輯 2" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/pJgsc5UCggw?si=pX7ehj2YBysqiGy3" title="德古拉剪輯 3" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/PqGHqt0qeBk?si=u5F74PN854ah0NX5" title="德古拉剪輯 4" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/uY4U-vozu78?si=E22Sg5YQl-AIuINY" title="德古拉剪輯 5" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/m_A5ba9cYZY?si=xixhkrhbt1RoW_RW" title="德古拉剪輯 6" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/4zkXyF5_0Sg?si=HSxhUy5Yz--YyX2q" title="德古拉剪輯 7" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/lywBYvGAFlo?si=YhxfjTbaaYwuQtSq" title="德古拉剪輯 8" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/kSTeYn7HnWc?si=yKivWWHLpSCR8C_v" title="德古拉剪輯 9" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/Hk5z4tnhC_A?si=71-IAyVN9R8T92fJ" title="德古拉剪輯 10" allowfullscreen></iframe>
 </div>
-  <p>從哥德式驚悚到動作英雄，從恐怖片反派到親子向動畫，德古拉的形象跨越風格，卻幾乎始終保留「黑髮高加索人」的核心視覺印象。這也再次印證：金髮碧眼並不是高加索人的唯一模板。</p>
-<h3>補充說明——港產片《殭屍道長》中的吸血鬼的名字雖然是「告魯斯」，但劇中許多暗示告知我們告魯斯和德古拉其實是同一人</h3>
-<p>首先，他具備典型的吸血鬼能力，例如能夠變身為蝙蝠，這正是德古拉在各種影視作品中最常見的能力之一。當香港警探柯探長向毛小方求助時對他說：「第一隻西洋殭屍出現在羅馬尼亞。」。接著當他們一行人在森林中見到告魯斯時，柯探長又驚恐地說出：「書上說的西洋殭屍和他一模一樣，就是他！」這句台詞不僅反映出角色的害怕情緒，也明確暗示了告魯斯與西方經典吸血鬼形象的密切關聯。<br><br>此外，當道士毛小方誓言要剷除他時，告魯斯自豪地表示：「我偉大的尼古拉家族這幾百年來向來是所向無敵的。」這裡的「尼古拉」其實就是「德古拉」的另一種翻譯變體，在早期華語翻譯中常見。這句話進一步表明，告魯斯與德古拉之間的關係並非巧合，而是明確的文化指涉。<br><br>雖然德古拉並非歷史上最早的吸血鬼傳說角色，但自1897年布蘭姆·斯托克的小說《德古拉》問世以來，他成為了現代流行文化中最具代表性的吸血鬼形象。許多後來的影視作品都以他為模板，延伸出「吸血會傳染」、「怕陽光、十字架、大蒜」、「能化為蝙蝠」等特徵。因此，即便不是從歷史角度來看第一個吸血鬼，德古拉依然被普遍視為「第一位西方吸血鬼」的代表。這也是為什麼《殭屍道長》中的柯探長會在驚恐中說出那句話——因為在觀眾的文化記憶中，吸血鬼就是德古拉。<br><br>《殭屍道長》將這樣的角色與中國傳統道士、殭屍文化融合，正是90年代港片獨特的創意方式之一。告魯斯不僅是外來威脅的象徵，也是一種文化混血角色，將東西方超自然形象巧妙結合，形成了令人印象深刻的對抗格局。</p>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/OWwB5dAUXPg?si=g0kEUpAvpEy_5S2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/nF7bmWNmOHw?si=Fe119hYj5xoJ8zrJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/K-lljv-Qmco?si=wRvCydsFTsPtNVKi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vmSAuzqw89k?si=LjUc3n3XVyH5MjMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/23kHqdcvDMA?si=uitStPkFhtNy1WJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/CeaqsoRdK9w?si=U9IsyzEnBEyn0fK3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <h2 id="creative_logic">創作邏輯深究：遺傳本質、地緣潛規則與外星擬態</h2>
-  <p>在遊戲開發、文學創作與視覺設計中，如何定義一個角色是否為「黑髮高加索人」，背後存在一套嚴謹的邏輯邊界。我們不能僅看「UI（外貌像素）」，更要看其「底層代碼（遺傳與地理起源）」。</p>
+<p>
+  在角色設計與世界觀建構中，判定一個角色是否為真正的「黑髮高加索人」，需要從資訊架構的角度區分其**「底層代碼（Genetic Base Class）」**與**「渲染介面（Rendered UI）」**：
+</p>
 
-  <h3>1. 德古拉與神力女超人：穩定的遺傳本質</h3>
-  <p>這兩個角色是「黑髮高加索人」最正統的代表，因為他們的生理特徵與地球的地理座標具有高度的一致性：</p>
-  <ul>
-    <li><strong>德古拉（Dracula）：</strong> 他的底層代碼是出生於羅馬尼亞特蘭西瓦尼亞（東歐/巴爾幹半島）的人類。在創作邏輯中，「吸血鬼」只是他後天的<strong>突變狀態（State Mutation）</strong>，不影響他身為東歐高加索支系的遺傳本質。</li>
-    <li><strong>神力女超人（Wonder Woman）：</strong> 原型為希臘神話，屬於南歐地中海支系。在業界開發中，將國籍或背景為希臘的角色設計為深色頭髮是一項<strong>「業界潛規則」</strong>，這反映了地緣演化的真實質感。蓋爾·加朵飾演此角毫無違和感，正是因為她與南歐高加索人在生理特徵上具備「底層代碼兼容性」。</li>
-  </ul>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Zu6g4hGtiV8?si=6NIgmZLpYrOkW8Xh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <h3>2. 超人（Superman）：跨物種的「視覺擬態」</h3>
-  <p>相對於前兩者，超人雖然在視覺上呈現出典型的黑髮高加索男性形象，但在嚴謹的考據邏輯中，他卻不能被歸類為高加索人：</p>
-  <ul>
-    <li><span class="logic-bug">類型不匹配（Type Mismatch）：</span> 超人是氪星人（Kryptonian），他的外貌並非地球地理環境演化的產物，而是一種外星生物的<strong>視覺擬態</strong>。</li>
-    <li><strong>開發者視角：</strong> 將超人歸類為「白人種」是邏輯上的誤植。他只是剛好「長得像」黑髮高加索人，但其背後缺乏德古拉與神力女超人那種深刻的地緣遺傳邏輯與文化演化根源。</li>
-  </ul>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/3LnRbhjA-JA?si=c_yIGe87TIy3XfGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <p class="technical-note">※ 總結：真實的考據必須追溯至地理源頭與遺傳本質，而非僅僅讀取 UI 層面的黑髮像素數據。這也是為何德古拉能代表亞洲高加索人的歷史連結（經由西亞基督教），而超人僅能代表流行文化的符號。</p>
+<h3>1. 德古拉與神力女超人：穩定的地緣遺傳本質</h3>
+<ul>
+  <li><strong>德古拉（Dracula）：</strong> 歷史原型為羅馬尼亞瓦拉幾亞大公弗拉德三世，屬於東歐巴爾幹半島的高加索支系。在世界觀架構中，「吸血鬼」僅為後天的狀態突變（State Mutation），其底層肉體代碼自始至終皆為黑髮高加索人。</li>
+  <li><strong>神力女超人（Wonder Woman）：</strong> 源自古希臘神話，屬於南歐地中海高加索支系。地中海周邊人群自古以深色毛髮為普遍特徵，由以色列裔演員蓋爾·加朵（Gal Gadot）飾演毫無違和感，正是因為兩人共享了相同的地中海/黎凡特骨骼幾何。</li>
+</ul>
+<iframe loading="lazy" src="https://www.youtube.com/embed/Zu6g4hGtiV8?si=6NIgmZLpYrOkW8Xh" title="神力女超人解析" allowfullscreen></iframe>
+
+<h3>2. 超人（Superman）：跨物種的「視覺擬態（Visual Mimicry）」</h3>
+<ul>
+  <li><span class="logic-bug">類型不匹配（Type Mismatch）：</span> 超人本體為氪星外星人（Kryptonian）。雖然其視覺渲染採用了黑髮白人男性的像素，但其生理本質並非地球演化的產物，屬於跨物種擬態。</li>
+  <li><strong>符號功能：</strong> 飾演超人、薩德將軍與其副手 Faora 的演員皆為歐美黑髮高加索人，這證明了即便在表現神性與超凡外星力量時，好萊塢也長年依賴黑髮白人的莊嚴感，而非單一的金髮碧眼。</li>
+</ul>
+<iframe loading="lazy" src="https://www.youtube.com/embed/3LnRbhjA-JA?si=c_yIGe87TIy3XfGs" title="超人解析" allowfullscreen></iframe>
+<p class="technical-note">※ 系統架構結論：真正的體質人類學判定應查詢底層資料庫的演化源頭，而非僅讀取表層的外貌像素。這也是為何德古拉與神力女超人具備深厚的地緣真實感，而超人則屬於流行符號的擬態封裝。</p>
+
 <h2 id="harry_potter">典型的黑髮高加索人：以哈利·波特為例</h2>
-<p>說到黑髮高加索人的經典形象，我們也不得不提到《哈利·波特》系列的主角哈利·波特。J.K. 羅琳在小說中明確描述哈利有「黑髮和明亮綠眼」，這不僅是外貌特徵，更與他的家族背景息息相關。哈利的黑髮遺傳自父親詹姆·波特，而明亮的綠眼則源自母親莉莉·波特。</p>
-<p>值得一提的是，電影版雖因演員丹尼爾·雷德克里夫本身的髮色和眼睛顏色而有些許調整（例如電影中哈利的眼睛並非綠色，因為丹尼爾對隱眼過敏），但哈利作為一名典型的英國高加索青少年，絕非金髮碧眼的傳統刻板印象。</p>
-<p>哈利的形象是跨文化奇幻文學中「白人多元外貌」的一個明顯證據：即便是經典西方故事的英雄，黑髮也是主流之一，說明白人種的外貌多樣性早已被廣泛接受且深入人心。</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/agJEeJc0VIM?si=MZXsoSnBVQ02e9Wu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>當然，除了哈利以外，《哈利·波特》系列裡也有不少頭髮是黑色的白種人角色，像是詹姆·波特、西弗勒斯·石內普、達利·德斯禮。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-  <img loading="lazy" src="james_potter.webp" alt="james potter" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="severus_snape.jpg" alt="snape" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="達利表哥.webp" alt="dali" style="width: 100%; max-width: 600px;">
+<p>
+  在風靡全球的英國奇幻文學《哈利·波特》中，J.K. 羅琳將主角哈利明確設定為「一頭凌亂黑髮與明亮綠眼」。這項特徵精確體現了大不列顛群島古老凱爾特人與盎格魯-撒克遜人融合後的真實多樣性——黑髮並非外來基因，而是英國本土高加索青少年的常見常態。
+</p>
+<iframe loading="lazy" src="https://www.youtube.com/embed/agJEeJc0VIM?si=MZXsoSnBVQ02e9Wu" title="哈利波特影片" allowfullscreen></iframe>
+<p>
+  在該系列作品中，西弗勒斯·石內普（Severus Snape）、詹姆·波特（James Potter）、小天狼星布萊克（Sirius Black）、達利·德斯禮（Dudley Dursley）等核心角色亦清一色為深黑毛髮。
+</p>
+<div class="showcase-box">
+  <img loading="lazy" src="james_potter.webp" alt="james potter">
+  <img loading="lazy" src="severus_snape.jpg" alt="snape">
+  <img loading="lazy" src="達利表哥.webp" alt="dali">
 </div>
-<h2 id="snowwhite">白雪公主：典型的十九世紀歐洲審美</h2>
-<p>白雪公主（Snow White）是迪士尼經典動畫中的主角，她的形象深受十九世紀歐洲童話故事的影響。根據格林兄弟的原著，白雪公主被描述為「皮膚如雪、嘴唇如血、頭髮如烏木」，這些特徵使她成為一個典型的黑髮高加索人形象。她的黑髮與蒼白的皮膚形成鮮明對比，這種視覺效果在當時的歐洲審美中被認為是極具吸引力和純潔的象徵。</p>
-<video controls width="560" height="315"><source src="snowwhite.mp4"></video>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/u6mEQXqmlWQ?si=aUq8BZvVjVKn0-qn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h2 id="areas_where_caucasians_are_majority">高加索人種的多樣性與範圍</h2>
-<p>現代人類學定義的「高加索人種」（Caucasoid）涵蓋範圍遠超出歐洲，還包括中東（<a href="https://en.wikipedia.org/wiki/Arab_world" target="_blank">阿拉伯世界</a>、以色列、伊朗、<a href="https://tkturkey.com/%E6%84%8F%E6%83%B3%E4%B8%8D%E5%88%B0%E7%9A%84%E5%9C%9F%E8%80%B3%E5%85%B6%E4%BA%BA/" target="_blank">土耳其</a>、亞美尼亞、亞塞拜然）、南亞的印度北方地區，</p>
-<video controls style="width: 100%; max-width: 600px;"><source src="伊朗人是白人.mp4"></video><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="阿拉伯人是白人.mp4"></video>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-<img loading="lazy" src="土耳其人是白人.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="土耳其人是白種人.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="亞塞拜然.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="亞美尼亞.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="以色列人.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="白人分布1.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="白人分布.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="土耳其帥哥.png" alt="阿米爾罕" style="width: 100%; max-width: 600px;">
+
+<h2 id="snowwhite">白雪公主：十九世紀歐洲對「烏木黑髮」的頂級審美</h2>
+<p>
+  格林童話經典《白雪公主》（Snow White）的原著開篇即奠定了德語區傳統的最高美學標準：「皮膚如雪、雙唇如血、<strong>頭髮黑如烏木（Ebony Wood）</strong>」。
+</p>
+<p>
+  在十九世紀的歐洲浪漫主義審美中，極致蒼白的象牙膚色與深邃純黑的髮絲所產生的強烈明暗反差（Chiaroscuro），被視為純潔、神聖與貴族氣質的極致展現。這項童話原型本身就是黑髮高加索女性美學的傳世豐碑。
+</p>
+<video controls><source src="snowwhite.mp4" type="video/mp4"></video>
+<iframe loading="lazy" src="https://www.youtube.com/embed/u6mEQXqmlWQ?si=aUq8BZvVjVKn0-qn" title="白雪公主短片" allowfullscreen></iframe>
+
+<h2 id="areas_where_caucasians_are_majority">高加索人種的真實地理光譜：從南歐、中東到北印度</h2>
+<p>
+  現代體質人類學所定義的「高加索人種（Caucasoid）」，其地理版圖遠非侷限於西北歐一隅，而是橫跨：
+</p>
+<ul>
+  <li><strong>南歐地中海區：</strong> 義大利、西班牙、葡萄牙、希臘。</li>
+  <li><strong>西亞與中東腹地：</strong> 以色列、伊朗、阿拉伯半島、土耳其、亞美尼亞、亞塞拜然。</li>
+  <li><strong>南亞印歐語群：</strong> 北印度（旁遮普、克什米爾、北方邦等雅利安後裔）。</li>
+  <li><strong>中國西部走廊：</strong> 塔吉克族、塔塔爾族等具備高加索骨相特徵的少數族群。</li>
+</ul>
+
+<video controls><source src="伊朗人是白人.mp4" type="video/mp4"></video>
+<video controls><source src="阿拉伯人是白人.mp4" type="video/mp4"></video>
+
+<div class="showcase-box">
+  <img loading="lazy" src="土耳其人是白人.png" alt="土耳其人是白人">
+  <img loading="lazy" src="土耳其人是白種人.png" alt="土耳其人是白種人">
+  <img loading="lazy" src="亞塞拜然.png" alt="亞塞拜然">
+  <img loading="lazy" src="亞美尼亞.png" alt="亞美尼亞">
+  <img loading="lazy" src="以色列人.png" alt="以色列人">
+  <img loading="lazy" src="白人分布1.png" alt="白人分布1">
+  <img loading="lazy" src="白人分布.png" alt="白人分布">
+  <img loading="lazy" src="土耳其帥哥.png" alt="土耳其帥哥">
 </div>
-<iframe loading="lazy" style="height:400px; width: 100%; max-width: 600px;" src="https://www.youtube.com/embed/45xdJHSE8aQ?si=b_EjggP0xhCL7SAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>在中國西部的少數民族中，如塔吉克族、塔塔爾族等，亦有高加索人種特徵，顯示高加索人種分布之廣泛。</p>
-<video controls style="width: 100%; max-width: 600px;"><source src="caucasian_in_mainland_china.mp4"></video><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="塔吉克族.mp4"></video><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="塔塔爾族.mp4"></video>
-<p>除了印度與中東之外，以色列的猶太裔白人也是中東高加索人的重要代表。例如，飾演神力女超人的 Gal Gadot，就是來自以色列的阿什肯納茲猶太人。她膚色偏橄欖、五官深邃，是典型中東型高加索人，她在大銀幕上所展現的古典美與現代力量感，完全突破了「白人＝金髮碧眼」的刻板印象。</p>
-<img loading="lazy" src="wonder_woman.webp" alt="harry_potter" style="width: 100%; max-width: 600px;">
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uC9qU3X1JgM?si=DYLaPkUbC3trguXy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>南亞的北印度人群，如旁遮普、克什米爾與北方邦地區，也大多屬於雅利安後裔，語言屬於印歐語系，外貌特徵包括挺鼻、濃眉、深眼窩、黑髮黑眼等。他們與歐洲人一樣屬於高加索人種，只是因地理與文化差異在膚色上略深。</p>
-<video controls style="width: 100%; max-width: 600px;"><source src="印度人是白人2.mp4"></video><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="印度人是白種人3.mp4"></video><br>
-<video controls style="width: 100%; max-width: 600px;"><source src="印地人是白人4.mp4"></video>
-<p>像寶萊塢明星 Mohammed Aamir Hussain Khan、Hrithik Roshan、Deepika Padukone，都是這類南亞高加索人的代表。他們不是黃種人，而是在基因與體質上，與歐洲高加索人共享相同人種源頭。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-  <img loading="lazy" src="阿米爾罕.webp" alt="阿米爾罕" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="indian_handsome.webp" alt="indian_handsome" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="indian_beauty.jpg" alt="indian_beauty" style="width: 100%; max-width: 600px;">
-</div>
-<h2 id="lucifer">美劇《<a href="https://zh.wikipedia.org/zh-tw/%E8%B7%AF%E8%A5%BF%E6%B3%95_(%E9%9B%BB%E8%A6%96%E5%8A%87)" target="_blank">魔鬼神探</a>》：以中東高加索人為原型的演繹</h2>
+
+<iframe loading="lazy" src="https://www.youtube.com/embed/45xdJHSE8aQ?si=b_EjggP0xhCL7SAg" title="YouTube video player" allowfullscreen></iframe>
+
+<video controls><source src="caucasian_in_mainland_china.mp4" type="video/mp4"></video>
+<video controls><source src="塔吉克族.mp4" type="video/mp4"></video>
+<video controls><source src="塔塔爾族.mp4" type="video/mp4"></video>
 
 <p>
-  長久以來，西方影視作品中的 Lucifer（路西法）形象多半受到歐洲審美與文化偏見的影響，往往以金髮碧眼、膚色白皙的模樣登場，這樣的塑造忽略了其神話原型與歷史背景中更真實的族群與地理特徵。實際上，無論從宗教來源、地理分布或人類學角度來看，Lucifer 所屬的角色背景應更貼近中東地區的高加索人，而非北歐或西歐型白人。
+  南亞與寶萊塢的殿堂級巨星（如 Aamir Khan、Hrithik Roshan、Deepika Padukone 等），在解剖學與基因系譜上均屬於印歐雅利安高加索支系。他們高挺的鼻樑、深邃的眼窩與濃密的黑睫黑髮，正是古印歐人群在地緣陽光下適應後的真實樣貌。
 </p>
 
-<p>
-  中東地區雖位於亞洲西部，但當地居民多屬高加索人種，與歐洲白人同屬一支。由於長期生活在陽光強烈的環境中，這些中東高加索人為了適應氣候，會分泌較多黑色素以保護皮膚，因此呈現出黑髮、黑眼與偏黃或古銅色膚色的外觀。這與蒙古人種的黑髮黑眼黃皮膚完全無關，兩者在人類學上的骨骼結構與 DNA 譜系皆有明顯差異，並非同一人種的變異體。
-</p>
+<video controls><source src="印度人是白人2.mp4" type="video/mp4"></video>
+<video controls><source src="印度人是白種人3.mp4"></video>
+<video controls><source src="印地人是白人4.mp4"></video>
 
-<p>
-  此外，基督教本身即源自中東地區，從歷史與地理根源來看，聖經人物理當具備中東高加索人的典型外貌。這一點在許多現代聖經改編動畫與繪本中也能見到，角色多以黑頭髮、黑眼睛與橄欖色或偏黃膚色呈現，貼近歷史背景的視覺設計正是為了避免將聖經人物誤讀為歐洲人。
-</p>
-<img loading="lazy" src="少年聖經.jpg" alt="少年聖經" style="width: 100%; max-width: 600px;">
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/aZcT-WoHdZU?si=VipmQ0S1jcrsRElH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>
-  在這樣的脈絡下，由英國演員湯姆·艾利斯（Tom Ellis）飾演的 Lucifer Morningstar 是一個相當貼切的選角。他本人為典型的黑髮高加索白人，兼具深邃五官與現代魅力，視覺上與許多聖經改編作品中的人物相符，也不會過度歐化角色形象，進而扭曲角色的文化根源。
-</p>
-
-<div class="center">
-  <video controls width="560" height="700" ><source src="路西法.mp4"></video>
+<div class="showcase-box">
+  <img loading="lazy" src="阿米爾罕.webp" alt="阿米爾罕">
+  <img loading="lazy" src="indian_handsome.webp" alt="indian_handsome">
+  <img loading="lazy" src="indian_beauty.jpg" alt="indian_beauty">
 </div>
 
+<h2 id="lucifer">美劇《魔鬼神探》：以中東高加索人為原型的演繹</h2>
 <p>
-  Lucifer 作為象徵墮落的天使，本質上仍是天使族群的一員，而天使在原始宗教語境中，多是源自中東神話結構中的超自然存在。若以金髮碧眼、膚白如雪的北歐形象來詮釋，反而容易與西歐貴族式的審美綁在一起，失去來自中東宗教文本的真實感與神聖距離。Tom Ellis 以深髮、深瞳、沉穩氣質詮釋 Lucifer，不僅更具現代感，也更貼合角色的文化根源，為角色帶來難得的深度與說服力。
+  在長期的西歐繪畫與世俗影視中，墮天使 Lucifer 常被過度美化為北歐式的金髮碧眼；然而追溯亞伯拉罕一神教的文本源頭，無論是天使抑或惡魔，其神話母體皆深植於中東黎凡特地區。
 </p>
-  <h2 id="jesus">耶穌（Jesus of Nazareth）</h2>
-  <p>
-    雖然許多西方藝術作品中，耶穌常被描繪為膚色白皙、金髮或棕髮的形象，
-    但根據歷史與考古學研究，他作為1世紀出生於加利利地區的猶太人，
-    外貌更接近現代中東人，通常具有黑髮、深眼與橄欖色或中等膚色。
-  </p>
-  <p>
-    從人類學分類角度來看，耶穌所屬的閃米特族群屬於高加索人種（Caucasoid）的一支，
-    說明高加索人並不僅限於金髮碧眼的形象，實際上黑髮黑眼的人在此人種中反而占多數。
-  </p>
-  <!-- Optional: 插入圖片對比（真實推測 vs 傳統形象） -->
-  <div class="image-comparison">
-    <figure>
-      <img loading="lazy" src="realistic-jesus.jpg" alt="歷史推測的耶穌形象" style="width: 45%; margin-right: 5%;">
-      <figcaption>歷史學家與考古學家模擬的耶穌樣貌</figcaption>
-    </figure>
-    <figure>
-      <img loading="lazy" src="european-jesus.jpg" alt="傳統歐洲畫風耶穌" style="width: 45%;">
-      <figcaption>西方藝術中的傳統耶穌形象</figcaption>
-    </figure>
-  </div>
-  <h2 id="skin_color">膚色並不是區分高加索人與蒙古人的方式</h2>
-<p>膚色並不是區分「白人」與「黃種人」的依據。判斷一個人屬於哪一族群，不應該僅憑膚色，而要看其五官輪廓與骨骼結構。</p>
+<p>
+  美劇《魔鬼神探》（Lucifer）由英國男星湯姆·艾利斯（Tom Ellis）飾演路西法，其標誌性的英挺黑髮、深邃瞳孔與修整精緻的鬍渣，反而更自然地契合了黎凡特與地中海古典男性的深邃骨架，成功打破了將神聖或墮落角色單一「雅利安化」的審美惰性。
+</p>
 
-<p>舉例來說，生活在陽光強烈地區（如美國佛州、洛杉磯、義大利南部、希臘）的白人可能膚色偏黃或偏深，但其五官如高鼻樑、深眼窩、較薄的眼皮與唇形，仍與蒙古人種（東亞人）明顯不同。而反觀中國東北、華北、南韓、日本等高緯度地區的東亞人，由於紫外線少，膚色通常偏白，但在頭骨結構、眼形、顴骨等方面，仍屬東亞類型。</p>
-<video style="width: 100%; max-width: 600px;" controls><source src="黃種人.mp4"></video>
-<p>中國演員例如吳建飛、郭帥、柏栩栩、秦炎仕、張超、楊亞、盧潔雲、唐禹哲、李巍、吳昊澤、張亞男、張維娜、沈人杰、龔小鈞、許峰、曾祥呈、劉睿麟、曹曦月、賴藝、王唱暢等人，日本藝人例如石黑英雄、濱田龍臣、山本千尋、平野宏周、寺坂賴我、豐田留妃、加藤嶽美、竹內實生、長澤奈央、山本梓、甲斐麻美、木下亞由美、菊地美香、中村知世、末永遙、松坂桃李、高梨臨、千葉雄大、佐藤里香、至尊淳、小田切讓、松田悟志、小田井涼平、杉山彩乃、佐藤健、清水明日香、磯山沙也加、伊藤久美子等人，皆擁有非常白皙的膚色，但其五官依舊展現東亞人的典型特徵。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-<img loading="lazy" src="吳建飛.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="郭帥.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="柏栩栩.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="秦炎仕.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="張超.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="楊亞.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="盧潔雲.jpeg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="唐禹哲.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="李崴.png" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="吳昊澤.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="張亞男.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="張維娜.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="沈人杰.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="龔小鈞.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="許峰.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="曾祥程.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="劉睿麟.jpeg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="曹曦月.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="賴藝.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="王暢唱.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="石黑英雄.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="濱田龍臣.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="山本千尋.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="平野宏周.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="寺坂賴我.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="豐田留妃.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="加藤岳美.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="竹內實生.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="長澤奈央.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="山本梓.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="富田翔.avif" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="伊藤愛子.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="田中幸太朗.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="木下亞由美.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="菊地美香.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="甲斐麻美.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="中村知世.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="末永遙.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="松坂桃李.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="高梨臨.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="千葉雄大.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="佐藤里香.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="至尊淳.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="小田切讓.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="松田悟志.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="小田井涼平.jpeg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="杉山彩乃.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="佐藤健.jpg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="清水明日香.jpeg" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="磯山沙也加.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="伊藤久美子.jpg" alt="" style="width: 100%; max-width: 600px;">
-</div>
-<h2 id="diversity_in_caucasoid">高加索人的外貌多樣性</h2>
-<p>高加索人種在外貌上擁有極為豐富的多樣性，這主要是由於他們生活在各種不同的氣候和地理環境中，這使得他們的髮色、眼睛顏色、膚色等特徵顯示出不同的變化。</p>
-<p>例如，生活在陽光強烈地區的高加索人，膚色可能偏黃或偏深，而生活在較冷的地區則膚色較白。髮色方面，高加索人不僅有金色、紅色、棕色，還有黑色的髮色；眼睛顏色也從藍色、綠色、灰色、棕色到深邃的黑色都有。</p>
+<img loading="lazy" src="少年聖經.jpg" alt="少年聖經" style="max-width: 600px;">
+<iframe loading="lazy" src="https://www.youtube.com/embed/aZcT-WoHdZU?si=VipmQ0S1jcrsRElH" title="聖經改編影視" allowfullscreen></iframe>
 
-<h2 id="mongoloid_and_negroid">蒙古人與尼格羅人外貌的單一性</h2>
-<p>與此同時，蒙古人和尼格羅人群的外貌特徵相對較為單一。蒙古人群大多擁有黑色的頭髮、黑色的眼睛以及較為黃的膚色，這是人類進化中對極端氣候的適應結果。類似地，尼格羅人群的外貌也在一定程度上集中於黑色的髮色和眼睛，膚色則普遍較深。這樣的外貌特徵雖然比較統一，但並不代表缺乏魅力，相反，它們在特定的文化和自然環境中，也表現出了各自的優勢。</p>
+<video controls style="max-width: 450px;"><source src="路西法.mp4" type="video/mp4"></video>
 
-<h2 id="caucasians_with_black_hair_black_eyes_and_yellow_skin">黑髮黑眼黃皮膚的高加索人魅力</h2>
-<p>黑髮黑眼黃皮膚的高加索人群，如神力女超人蓋兒·加朵（Gal Gadot），往往帶有強烈的異國情調，這讓他們在影視界中獨樹一幟。蓋兒·加朵來自以色列，擁有深邃的五官和偏橄欖色的膚色，她的外貌特徵代表了中東型高加索人的魅力。</p>
-<p>同樣的，寶萊塢的明星們，如迪皮卡·帕度孔（Deepika Padukone）和卡特莉娜·凱芙（Katrina Kaif）等，雖然也擁有黑色頭髮和黑色眼睛，但她們的外貌充滿了神秘的東方韻味。這些特徵不僅使她們在全球影迷中擁有廣泛的粉絲，也讓她們的形象更加多樣化，從而挑戰了傳統的金髮碧眼高加索人形象。</p>
-<p>這樣的形象不僅在電影圈有著獨特魅力，甚至在時尚界，這些黑髮黑眼的高加索人也展現出獨特的文化風格，無論是高端品牌代言人還是影視角色，都為我們帶來了不同的視覺享受。</p>
-<div style="display:block; text-align:center; border-color: purple; background-color:yellow; border-width: 5px;>
-        border-style: solid;">
-<img loading="lazy" src="gal_gadot.webp" alt="" style="width: 100%; max-width: 600px;"><br>
-  <img loading="lazy" src="indian_beauty_caucasian.avif" alt="" style="width: 100%; max-width: 600px;"><br>
-<img loading="lazy" src="katrina-kaif-wallpapers.jpg" alt="" style="width: 100%; max-width: 600px;">
-</div>
-<video controls style="width: 100%; max-width: 600px;"><source src="indian_celebrity.mp4"></video>
-  <h2 id="conclusion">結語</h2>
-<p>總的來說，不同的外貌特徵並不是衡量魅力的唯一標準，更多的是反映了多元文化和人類對環境的適應。金髮碧眼的高加索人和黑髮黑眼的高加索人各自擁有其獨特的魅力，而這些多樣性不僅是自然選擇的結果，也是全球文化交流的產物。在今天這個多元化的世界，無論是來自哪個文化背景的人，他們都能以自己獨特的方式，展現出非凡的魅力。</p>
-<div class="quote">
-  <p>「白人不一定金髮碧眼，東亞人不等於黃皮膚。」文化與外貌皆有無限多樣性，我們需要的是更開放、多元且有知識背景的觀看方式。電影、文學、動畫、電玩，這些作品中的角色設計，是文化表達的延伸，也反映了現實族群的複雜性。</p>
+<h2 id="jesus">耶穌（Jesus of Nazareth）的真實歷史相貌</h2>
+<p>
+  文藝復興時期的歐洲畫家常將耶穌描繪為膚白金髮的西北歐青年，但現代法醫人類學與聖經考古學證實：西元一世紀生活於加利利地區的猶太匠人耶穌，其生理特徵必然具備黎凡特高加索人的典型樣貌——橄欖小麥肌、濃密捲曲的黑髮、深褐色瞳孔與結實粗獷的戶外骨骼。
+</p>
+
+<div class="image-comparison">
+  <figure>
+    <img loading="lazy" src="realistic-jesus.jpg" alt="歷史推測的耶穌形象" style="border: 2px solid #333;">
+    <figcaption style="font-size:0.9em; color:#555; margin-top:6px;">▲ 法醫人類學家與 BBC 團隊模擬之一世紀黎凡特猶太男性面孔</figcaption>
+  </figure>
+  <figure>
+    <img loading="lazy" src="european-jesus.jpg" alt="傳統歐洲畫風耶穌" style="border: 2px solid #333;">
+    <figcaption style="font-size:0.9em; color:#555; margin-top:6px;">▲ 歐洲文藝復興時期被高度日耳曼化的傳統耶穌畫像</figcaption>
+  </figure>
 </div>
 
-<p>理解這一點，不只是看清現實，也是看見世界的豐富與可能性。</p>
-<video controls style="width: 100%; max-width: 600px;"><source src="黑髮才是多數.mp4"></video>
-<br>
-影片背景音樂來源：<a href="https://www.facebook.com/share/v/1JQnvwsovp/" target="_blank">好想大聲說喜歡你 馬林巴琴模擬器版</a>
+<h2 id="skin_color">五官骨相才是人種本質：膚色並非劃分人種的絕對方式</h2>
+<p>
+  判斷人種歸屬的核心是<strong>顱骨形態、眼眶深度、鼻根點與顴骨發育等「硬代碼」</strong>，而非易隨環境日曬而改變的表層「膚色像素」：
+</p>
+<ul>
+  <li>義大利南部、希臘或中東的高加索人，在強烈陽光下常曬出古銅或深褐色皮膚，但其高鼻深眶的立體骨相依舊不變。</li>
+  <li>反觀中日韓等東亞人群，在高緯度或室內避光環境下膚色往往白皙勝雪，但其扁平顴骨與內眥贅皮依然清晰體現東亞生理硬體。</li>
+</ul>
+
+<video controls><source src="黃種人.mp4" type="video/mp4"></video>
+
+<div class="showcase-box">
+  <img loading="lazy" src="吳建飛.jpg" alt="東亞藝人展示">
+  <img loading="lazy" src="加藤岳美.jpg" alt="加藤岳美">
+  <img loading="lazy" src="長澤奈央.jpg" alt="長澤奈央">
+  <img loading="lazy" src="山本梓.webp" alt="山本梓">
+  <img loading="lazy" src="許峰.jpg" alt="許峰">
+  <img loading="lazy" src="松坂桃李.jpg" alt="松坂桃李">
+  <img loading="lazy" src="佐藤健.jpg" alt="佐藤健">
+</div>
+
+<h2 id="diversity_in_caucasoid">高加索人種的色素連續分佈</h2>
+<p>
+  高加索人種的演化擴散橫跨了地中海、近東平原、阿爾卑斯山區直至北歐低日照地帶。這種劇烈的環境天擇使得高加索群體的色素表現呈現連續光譜：
+</p>
+<ul>
+  <li><strong>毛髮：</strong> 涵蓋了深黑、栗褐、紅髮（MC1R 突變）、金髮至亞麻白。</li>
+  <li><strong>虹膜：</strong> 從高黑色素的深褐、茶黑，到散射形成的琥珀色、綠色、灰色與碧藍色。</li>
+</ul>
+
+<h2 id="mongoloid_and_negroid">全球人種演化選擇與色素適應對比</h2>
+<p>
+  在傳統人類學刻板印象中，常認為東亞人群（蒙古人種）的外貌高度一致；然而深入遺傳學便會發現，東亞人群內部同樣具有深淺膚色光譜、天然栗棕髮色，以及北亞少數人群的獨立突變。
+</p>
+<p>
+  高加索人種之所以在毛髮與眼色上呈現更為顯眼的斑斕光譜，本質上是高緯度低紫外線選擇壓力下，黑色素調控基因（如 <code>SLC24A5</code>、<code>HERC2/OCA2</code>）歷經多次突變與基因流動的結果。這是一種純粹的中性演化適應，從不代表任何道德或階級上的優越。
+</p>
+
+<h2 id="caucasians_with_black_hair_black_eyes_and_yellow_skin">深髮、深瞳、古銅膚色高加索人的現代美學吸引力</h2>
+<p>
+  在當代國際時尚界與好萊塢商業電影中，具備黑髮、深瞳與健康橄欖小麥肌的高加索巨星，早已打破了「白人必須金髮碧眼」的狹隘審美：
+</p>
+<ul>
+  <li>以色列國寶演員<strong>蓋爾·加朵（Gal Gadot）</strong>以健康的深色調與深邃雙眸，成為當代最具力量感的女性英雄標竿。</li>
+  <li>寶萊塢巨星<strong>迪皮卡·帕度孔（Deepika Padukone）</strong>與<strong>卡特莉娜·凱芙（Katrina Kaif）</strong>，以深髮濃眉與神秘大氣的五官，席捲全球時尚伸展台與國際影展。</li>
+</ul>
+
+<div class="showcase-box">
+  <img loading="lazy" src="gal_gadot.webp" alt="gal gadot">
+  <img loading="lazy" src="indian_beauty_caucasian.avif" alt="indian_beauty_caucasian">
+  <img loading="lazy" src="katrina-kaif-wallpapers.jpg" alt="katrina kaif">
+</div>
+<video controls><source src="indian_celebrity.mp4" type="video/mp4"></video>
+
+<h2 id="conclusion">結語</h2>
+<p>
+  外貌特徵從來都不是衡量美醜或階級高低的尺度，它忠實記錄了人類祖先遷徙至各大板塊時，對氣候、日照與風土環境的生存適應歷程。
+</p>
+
+<blockquote>
+  「白人不必然金髮碧眼，東亞人也不等於蠟黃單一。」穿透影視工業刻意營造的符號假象，還原真實的人類學多樣性，我們才能在鏡頭與銀幕的虛構想像中，看見世界原本那幅斑斕且無限豐富的生命光譜。
+</blockquote>
+
+<video controls><source src="黑髮才是多數.mp4" type="video/mp4"></video>
+<p style="font-size:0.9em; color:#666; text-align:center;">
+  影片背景音樂來源：<a href="https://www.facebook.com/share/v/1JQnvwsovp/" target="_blank" style="color:#8e44ad; font-weight:bold;">好想大聲說喜歡你 馬林巴琴模擬器版</a>
+</p>
+
 <ul id="messages"></ul>
-<div id="social-share" style="margin-top: 20px;">
-  <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+
+<div id="social-share" style="margin-top: 25px;">
+  <a id="fb-share" href="#" target="_blank">分享到 Facebook</a>
   <span> | </span>
-  <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+  <a id="line-share" href="#" target="_blank">分享到 Line</a>
   <span> | </span>
-  <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+  <a id="twitter-share" href="#" target="_blank">分享到 X</a>
 </div>
+
 <script>
-  // 自動抓取當前頁面的 URL
   var currentUrl = window.location.href;
-  // Facebook 分享
   document.getElementById("fb-share").href =
           "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-  // Line 分享
   document.getElementById("line-share").href =
           "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-  // X (Twitter) 分享
   document.getElementById("twitter-share").href =
-          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+          "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
 </script>
-<footer>
-  <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
-  <p>創作日期：2025 年 7 月 7 日</p>
-  <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
-</footer>
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
 </script>
 
 <div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-href="https://chrischou19990904.github.io/brunette_in_caucasian.html"
      data-width="100%"
-     data-numposts="5">
+     data-numposts="5"
+     style="margin-top: 20px;">
 </div>
-<footer style="font-size: 0.9em; text-align: center; margin-top: 2em; color: yellow;">
-  所有頁面均來自同一 GitHub Pages 專案
+
+<footer>
+  <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
+  <p>創作日期：2025 年 7 月 7 日（架構與影音響應式重構）</p>
+  <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
+  <p style="font-size: 0.75em; margin-top: 15px; color: yellow;">所有頁面均來自同一 GitHub Pages 專案</p>
 </footer>
+
 </body>
 </html>
