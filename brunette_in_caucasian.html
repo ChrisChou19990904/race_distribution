@@ -242,7 +242,19 @@
       border-radius: 4px;
     }
     footer a { color: #ffca28; text-decoration: none; }
+    /* 專門控制前言參考文章超連結：點擊前後永遠固定為標準藍色，不變紫色 */
+    a.ref-blue-link,
+    a.ref-blue-link:link,
+    a.ref-blue-link:visited {
+      color: #2980b9 !important; /* 標準藍色（若喜歡原生網頁藍可改用 #0000ee） */
+      text-decoration: underline;
+      font-weight: 500;
+    }
 
+    a.ref-blue-link:hover {
+      color: #1a5276 !important;
+      text-decoration: underline;
+    }
     @media screen and (max-width: 767px) {
       body { padding: 0 12px; }
       #google-translate-box { flex-direction: column; align-items: flex-start; gap: 4px; }
@@ -329,11 +341,22 @@
 
 <h2 id="introduction">前言</h2>
 <p>
-  受到好萊塢商業電影、<a href="nazi_racial_myth.html" target="_blank">納粹種族偽科學</a>，以及大量<a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">日系動畫與電子遊戲</a>的人設簡化策略影響，許多人至今仍對高加索人（白色人種）抱持著根深蒂固的刻板印象——認為他們「理所當然」都該是金髮碧眼。
+  受到好萊塢商業電影、<a class="ref-blue-link" href="nazi_racial_myth.html" target="_blank">納粹種族偽科學</a>，以及大量<a class="ref-blue-link" href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">日系動畫與電子遊戲</a>的人設簡化策略影響，許多人至今仍對高加索人（白色人種）抱持著根深蒂固的刻板印象——認為他們「理所當然」都該是金髮碧眼。
 </p>
 <p>
   但事實上，在真實世界的體質人類學光譜中，尤其是在南歐地中海沿岸、巴爾幹半島、東歐平原、高加索山脈以南的中東與西亞，<strong>黑髮、深褐髮、茶褐色瞳孔與深邃黑色眼睛的高加索人，在人口比例上反而佔據了絕對多數</strong>。
 </p>
+<p>
+  當我們穿透流行文化與二次元的人設迷思，從全球影視文本、神怪改編到演化生物學時，會看到一連串清晰的視覺事實：
+</p>
+<ul>
+  <li><strong>黑髮白人的霸主地位：</strong> 從西方哥德始祖德古拉、十九世紀白雪公主的「烏木黑髮」，到現代超英巨作的鋼鐵人與蝙蝠俠，黑髮高加索始終是莊嚴、神秘與強大力量的核心符號。</li>
+  <li><strong>底層代碼與視覺擬態的解耦：</strong> 德古拉代表了巴爾幹的地緣突變，神力女超人映射了地中海古典骨相，超人展現了外星跨物種擬態，而《尖叫旅社》則揭示了獨立奇幻種族對高加索黑髮 UI 的牢固錨定。</li>
+  <li><strong>骨骼架構顛覆「膚色標籤」：</strong> 長年生活在強光下的地中海與中東高加索人常有小麥古銅膚色，而數十位東亞特攝明星則擁有極致白皙的皮膚；這證明了五官骨骼才是人種本質，膚色從不是劃分族群的絕對方式。</li>
+</ul>
+<blockquote>
+  本書面報告將從各類經典影視、文學文本與體質人類學出發，逐一拆解這場關於高加索人的「金髮碧眼迷思」。
+</blockquote>
 
 <h2 id="twilight">以《暮光之城》的黑髮人物為例</h2>
 <p>
@@ -808,7 +831,7 @@
   <ul>
     <li>
       <strong>解耦 UI 像素與底層遺傳代碼：</strong><br>
-      正如本文在創作邏輯中所剖析，超人頂著黑髮白人外貌純屬外星生物的「跨物種視覺擬態（Visual Mimicry）」；反觀德古拉身處的巴爾幹半島、神力女超人所屬的南歐地中海、以及西元一世紀加利利地區的歷史耶穌，他們的黑髮與深瞳，才是深植於地球氣候與地理演化環境的「原生遺傳硬代碼」。
+      正如本文在創作邏輯中所剖析，超人頂著黑髮白人外貌純屬外星生物的「跨物種視覺擬態（Visual Mimicry）」；反觀德古拉身處的巴爾幹半島、神力女超人所屬的南歐地中海、以及西元一世紀加利利地區的歷史耶穌，他們的黑髮與深瞳，才是深植於地球氣候與地理演化環境的「原生遺傳硬代碼」。即便到了《尖叫旅社》中，將吸血鬼重構為具備生育世系、能與人類產生荷爾蒙共鳴的「獨立天生物種」，其外貌依然毫無動搖地鎖定布拉姆·斯托克筆下的東歐高加索黑髮模板，再次印證了該符號不可替代的文化統治力。
     </li>
     <li>
       <strong>打破膚色與人種的刻板枷鎖：</strong><br>
