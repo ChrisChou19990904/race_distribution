@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</title>
     <style>
         body {
@@ -20,8 +21,18 @@
             padding-bottom: 10px;
             line-height: 1.3;
         }
-        h2 { margin-top: 2.5em; color: #8b0000; border-left: 8px solid #8b0000; padding-left: 15px; }
-        h3 { margin-top: 1.5em; color: #444; border-bottom: 1px solid #ccc; display: inline-block; }
+        h2 {
+            margin-top: 2.5em;
+            color: #8b0000;
+            border-left: 8px solid #8b0000;
+            padding-left: 15px;
+        }
+        h3 {
+            margin-top: 1.5em;
+            color: #444;
+            border-bottom: 1px solid #ccc;
+            display: inline-block;
+        }
         p { margin: 1em 0; }
         ul { margin: 1em 0 1em 1.5em; }
         li { margin: 0.5em 0; }
@@ -41,6 +52,7 @@
             margin: 20px auto;
             max-width: 100%;
             height: auto;
+            border-radius: 4px;
         }
 
         .img-caption {
@@ -58,7 +70,7 @@
             color: #333;
             background: #f9f9f9;
             margin: 2em 0;
-            font-size: 1.1em;
+            font-size: 1.05em;
         }
 
         table {
@@ -77,56 +89,126 @@
         .highlight-red { background: #ffdada; padding: 2px 6px; font-weight: bold; border-radius: 3px; }
         .highlight-blue { background: #e3f2fd; padding: 2px 6px; font-weight: bold; border-radius: 3px; }
 
-        nav {
+        /* 導航樣式重構：點擊前與點擊後均維持深紅，Hover 產生底線 */
+        nav#table-of-contents {
             background: #eee;
-            padding: 15px;
+            padding: 15px 20px;
             border-radius: 5px;
             margin-bottom: 30px;
+            line-height: 2.2;
         }
-        nav a { color: #8b0000; text-decoration: none; font-weight: bold; margin-right: 15px; }
-        nav a:hover { text-decoration: underline; }
+        nav#table-of-contents a,
+        nav#table-of-contents a:link,
+        nav#table-of-contents a:visited {
+            color: #8b0000;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 15px;
+            display: inline-block;
+        }
+        nav#table-of-contents a:hover {
+            text-decoration: underline;
+        }
+
+        /* ======= 響應式影音與 iframe 自適應容器修復 ======= */
+        .video-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        .video-container.horizontal iframe {
+            width: 100% !important;
+            max-width: 100%;
+            height: auto !important;
+            aspect-ratio: 16 / 9;
+            border-radius: 6px;
+            border: none;
+            display: block;
+        }
+        .video-container.shorts {
+            max-width: 420px;
+            margin: 20px auto;
+        }
+        .video-container.shorts iframe {
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 9 / 16;
+            border-radius: 6px;
+            border: none;
+            display: block;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            border-radius: 6px;
+            display: block;
+            background: #000;
+        }
+
+        #social-share a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #social-share a:hover {
+            text-decoration: underline;
+        }
+        #social-share span {
+            margin: 0 5px;
+        }
+        #social-share a#fb-share { color: #4267B2; }
+        #social-share a#line-share { color: #00C300; }
+        #social-share a#twitter-share { color: #1DA1F2; }
 
         footer {
             text-align: center;
             margin-top: 50px;
             background-color: purple;
-            font-size: 20px;
-            padding: 20px;
+            font-size: 18px;
+            padding: 25px;
             border-radius: 6px;
+            color: yellow;
         }
-        footer p {
-            color: yellow; /* 確保文字顏色與背景對比鮮明 */
-        }
+        footer p { color: yellow; margin: 8px 0; }
+        footer a { color: white; text-decoration: underline; }
         footer img {
-            display: block; /* 使圖片顯示 */
-            margin: 20px auto; /* 中央對齊 */
+            display: block;
+            margin: 15px auto;
+            border-radius: 4px;
         }
-        footer a { color: #ffca28; text-decoration: none; }
+
+        @media screen and (max-width: 767px) {
+            body { padding: 15px; }
+            table { display: block; overflow-x: auto; }
+        }
     </style>
 </head>
 <body>
+
 <div id="google-translate-box">
     <div id="google_translate_element"></div>
-    <!-- Google Translate 的自動翻譯功能 -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',  // 頁面原語言
-                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                pageLanguage: 'zh-TW',
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <p>點擊上方的語言選單以切換語言</p>
+    <p style="font-size: 0.85em; color: #666;">點擊上方選單切換語言</p>
 </div>
-<header style="background-color: pink; padding: 10px 0;">
-    <nav style="background-color: pink; padding: 10px 0;">
-        <ul>
-            <li><strong class="guide">本頁內容：</strong><br>
-                <a style="color:black">金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</a></li>
 
-            <li><strong class="guide">其他文章連結：</strong>
+<header style="background-color: pink; padding: 10px 0; margin-bottom: 25px; border-radius: 4px;">
+    <nav style="background-color: pink; padding: 10px 15px;">
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong class="guide">本頁內容：</strong><br>
+                <a style="color:black; font-weight: bold;">金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</a></li>
+
+            <li style="margin-top: 10px;"><strong class="guide">其他文章連結：</strong>
                 <ol>
                     <li><a href="index.html" target="_blank" style="color:black">世界人種分布與歷史原因</a></li>
                     <li><a href="race_distribution_in_asia.html" target="_blank" style="color:black">亞洲各地人種與膚色對照表</a></li>
@@ -144,24 +226,26 @@
                     <li><a href="Gal_Gadot.html" target="_blank" style="color:black">視覺認知除錯：從蓋爾·加朵到林正英電影看亞裔定義的邏輯盲點</a></li>
                     <li><a href="diversity_of_european_caucasian.html" target="_blank" style="color:black">歐洲奇幻文化分類系統（視覺與文化模板整理）</a></li>
                     <li><a href="why_angels_are_always_blondes_with_blue_eyes.html" target="_blank" style="color:black">從西亞沙漠到西北歐雪造的「神話修正」：地理演化、歷史權力與 AI 時代的天使形象演變報告</a></li>
-                    <li><a style="color:black" href="aesthetic_power_matrix.html" target="_blank">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
+                    <li><a href="aesthetic_power_matrix.html" target="_blank" style="color:black">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
                 </ol>
             </li>
         </ul>
     </nav>
 </header>
+
 <header>
     <h1>金髮碧眼的集體幻想：破解納粹「雅利安超人」的種族偽科學與視覺矛盾</h1>
-    <nav>
-        <strong>快速跳轉：</strong>
-        <a href="#intro">前言</a>
-        <a href="#section1">視覺標籤</a>
-        <a href="#section-science">科學真相</a>
-        <a href="#section2">高層矛盾</a>
-        <a href="#section-friendly-fire">被誤傷的同胞</a>
-        <a href="#section3">1936奧運</a>
-        <a href="#section4">影視解構</a>
-        <a href="#conclusion">結論</a>
+    <nav id="table-of-contents">
+        <strong>章節導航：</strong>
+        <a href="#intro">前言：生存通行證</a>
+        <a href="#section1">一、被綁架的雅利安標籤</a>
+        <a href="#section-science">二、金髮碧眼的演化真相</a>
+        <a href="#section2">三、納粹高層的生理反差</a>
+        <a href="#section-slap">四、宣傳機器的世紀打臉</a>
+        <a href="#section-friendly-fire">五、被誤傷的深髮德國人</a>
+        <a href="#section3">六、1936 柏林奧運的真相</a>
+        <a href="#section4">七、現代影視的去魅解構</a>
+        <a href="#conclusion">八、結語：穿透色彩幻覺</a>
     </nav>
 </header>
 
@@ -169,11 +253,11 @@
     <div class="case">
         <h2>前言：當「金髮碧眼」成為生存的通行證</h2>
         <p>
-            在 1930 年代的德國，一個人的命運不再由他的靈魂決定，而是取決於他是否擁有<span class="highlight-red">「金色的頭髮」</span>與<span class="highlight-blue">「碧藍的雙眼」</span>。
-            納粹黨透過極端化的視覺標籤，宣稱只有符合這種特定樣貌的人才是「雅利安超人」。
+            在 1930 年代的德國，一個人的社會命運與生死存亡，不再由他的道德或才智決定，而是荒謬地取決於他是否擁有<span class="highlight-red">「金色的頭髮」</span>與<span class="highlight-blue">「碧藍的雙眼」</span>。
+            納粹政權透過極端簡化的視覺色碼，宣稱只有符合北歐體型樣貌的人才是純粹的「雅利安超人（Herrenmensch）」。
         </p>
         <p>
-            然而，這場追求「純粹視覺」的運動，背後卻隱藏著深刻的科學荒謬與人性悲劇。
+            然而，這場追求「極致純血視覺」的政治狂熱，背後卻充斥著體質人類學的深刻荒謬、宣傳高層自身的長相打臉，以及無數令人啼笑皆非的歷史諷刺。
         </p>
     </div>
 </section>
@@ -182,190 +266,239 @@
     <h2>一、什麼是「雅利安人」？被綁架的視覺標籤</h2>
     <div class="case">
         <p>
-            納粹宣傳中理想的雅利安人（Aryan）必須具備：<strong>金髮、碧眼、高大、長頭型。</strong>
+            納粹帝國宣傳部所構建的理想雅利安人（Aryan）公式極其僵化：<strong>金髮、碧眼、高大體魄、狹長頭型。</strong>
         </p>
         <ul>
-            <li><strong>學術真相：</strong> 「雅利安」原意指古印歐語系族群，橫跨歐洲到印度，跟「金髮碧眼」沒有必然關係。</li>
-            <li><strong>政治挪用：</strong> 納粹強行將這個詞與北歐人的外貌掛鉤，並利用這種「鮮明的色彩標籤」來進行社會分級。</li>
+            <li><strong>語言學與人類學真相：</strong> 「雅利安（Aryan）」一詞最初純屬比較語言學用語，指的是古代印歐語系的一支支系，其歷史擴散橫跨歐洲、伊朗高原乃至北印度，歷史上的雅利安人種群體涵蓋了各種膚色、髮色與瞳色，<strong>根本與「金髮碧眼」沒有必然的生物學因果連結</strong>。</li>
+            <li><strong>意識形態的霸權挪用：</strong> 納粹偽科學將語言學概念強行閹割並移花接木，將其縮限為「斯堪地那維亞／北歐日耳曼」的體質特徵，藉由高飽和度的視覺標籤打造政治神話，作為剝奪他者公民權乃至生命權的排他工具。</li>
         </ul>
 
         <img src="nazi_eye_color_chart.jpg" class="img-border" alt="納粹時期使用的眼睛顏色對照表">
-        <p class="img-caption">註：納粹遺傳學家使用的物理測量工具。在當時，如果你的眼睛「不夠藍」，就可能被標記為血統不純。</p>
+        <p class="img-caption">▲ 納粹種族優生學者使用的虹膜顏色比對盤（Augenfarbentafel）。在當時，如果個體的眼睛被判定「不夠藍」，就可能在血統檔案中被劃歸為劣化階層。</p>
     </div>
 </section>
 
 <section id="section-science">
     <h2>二、科學教室：為何白種人會有「金髮碧眼」？</h2>
     <div class="case">
-        <p>納粹視為優越象徵的生理特徵，在現代科學眼中僅僅是基因的適應性變化。</p>
+        <p>被納粹視為「優越神聖」的生理特徵，在現代遺傳學與演化生物學眼中，只不過是高緯度環境天擇下的適應性突變代價：</p>
 
-        <h3>1. 碧藍眼睛的由來</h3>
+        <h3>1. 碧藍眼睛的由來：光的物理散射</h3>
         <p>
-            人類虹膜中並沒有藍色色素。藍眼人是因為虹膜黑色素極少，光線進入後產生了<span class="highlight-blue">瑞利散射</span>（Rayleigh scattering）。研究發現，全球藍眼人可能都源自數千年前一個共同的基因突變祖先。
+            人類虹膜中根本不存在任何「藍色色素」。藍眼個體的虹膜基質缺乏真黑素沉積，進入眼球的光線短波長部分在基質中產生了<span class="highlight-blue">瑞利散射（Rayleigh Scattering）</span>，反射出藍色視覺效果。遺傳學研究證實，全球所有的藍眼人群，都源自約六千至一萬年前近黑海地區單一祖先身上 <code>HERC2/OCA2</code> 基因調控區的突變，純屬中性演化特徵。
         </p>
 
-        <h3>2. 金色頭髮的成因</h3>
+        <h3>2. 金色頭髮的成因：維生素 D 的生存代價</h3>
         <p>
-            在陽光稀少的歐洲北部，淺色頭髮與皮膚有利於吸收更多紫外線以合成維生素 D。這是一種進化上的生存策略，而非智力或道德的優劣證明。
+            在終年陰雨、紫外線（UVB）極其稀微的歐洲中高緯度地區，極度減少黑色素（包括皮膚、毛髮與眼睛）是為了最大程度吸收微弱陽光以合成足夠的維生素 D，防止佝僂病與骨骼畸形。這是一種極端緯度下的生存代價，代價則是對紫外線極其脆弱、極易曬傷與罹患皮膚癌。
         </p>
 
         <blockquote>
-            <strong>科學結論：</strong> 基因多樣性（混血）才是物種強韌的關鍵。納粹追求的「視覺單一化」，在生物學上反而會導致物種的衰弱。
+            <strong>演化生物學結論：</strong> 自然界從未有過「單一純種優越」的法則。基因庫的高度多樣性（混血與基因流動）才是物種抵禦疾病與環境劇變的強韌根基；納粹企圖以政治篩檢追求的「視覺單一化」，在遺傳演化上無異於自掘墳墓的近親弱化。
         </blockquote>
     </div>
 </section>
 
 <section id="section2">
-    <h2>三、納粹高層的視覺矛盾：希特勒達標了嗎？</h2>
+    <h2>三、納粹高層的生理反差：希特勒達標了嗎？</h2>
     <div class="case">
-        <p>最諷刺的是，瘋狂推崇金髮碧眼的納粹高層，自己往往都不符合標準。</p>
+        <p>最反諷的是：瘋狂在全國推行「金髮碧眼、高大壯碩」標準的納粹決策核心，其自身長相幾乎全軍覆沒，無一人能通過他們自己頒布的審查尺標：</p>
 
         <table>
             <thead>
             <tr>
-                <th>人物</th>
-                <th>「理想雅利安」標準</th>
-                <th>實際生理特徵</th>
-                <th>視覺矛盾</th>
+                <th>歷史人物</th>
+                <th>官方鼓吹之「理想雅利安」</th>
+                <th>真實生理硬體</th>
+                <th>荒謬的視覺矛盾</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td><strong>希特勒</strong></td>
-                <td>金髮、高大</td>
-                <td>棕髮、中等身材</td>
-                <td>身為元首，卻完全沒有他推崇的「金髮英雄」樣貌。</td>
+                <td><strong>阿道夫·希特勒</strong><br>(Adolf Hitler)</td>
+                <td>金髮、高挑、北歐長頭型</td>
+                <td>深棕髮、中等身材 (約 173 cm)</td>
+                <td>身為帝國元首，完全不具備自己手下海報所宣傳的「金色雄壯英雄」樣貌。</td>
             </tr>
             <tr>
-                <td><strong>戈培爾</strong></td>
-                <td>壯碩、戰士體魄</td>
-                <td>黑髮、身材矮小、足部殘疾</td>
-                <td>宣傳部長的生理狀態，在納粹優生法下甚至屬於「被改良」對象。</td>
+                <td><strong>約瑟夫·戈培爾</strong><br>(Joseph Goebbels)</td>
+                <td>體魄健美、日耳曼戰士體魄</td>
+                <td>黑髮、身材矮小 (約 165 cm)、天生右足內翻跛行</td>
+                <td>帝國宣傳部長的生理特徵，若按照納粹優生絕育法案，甚至符合「劣質肉體」的改良處置標準。</td>
             </tr>
             <tr>
-                <td><strong>希姆萊</strong></td>
-                <td>北歐勇士外貌</td>
-                <td>圓臉、高度近視</td>
-                <td>親衛隊首領更像是一名平庸的小公務員。</td>
+                <td><strong>海因里希·希姆萊</strong><br>(Heinrich Himmler)</td>
+                <td>冷酷北歐神話狂戰士外型</td>
+                <td>圓臉、溜肩微胖、高度近視配厚眼鏡</td>
+                <td>親衛隊（SS）最高領袖的外形更接近一名刻板平庸的小文員，全無戰士氣概。</td>
             </tr>
             </tbody>
         </table>
+
         <img src="希特勒.webp" class="img-border" alt="希特勒的照片">
-        <br>
-        <em style="display:block;text-align: center">上方為希特勒的照片</em>
-        <br><br>
+        <p class="img-caption">▲ 阿道夫·希特勒：深棕色頭髮與平庸身材，與宣傳畫中的金髮戰士截然相反。</p>
+
         <img src="戈培爾.jpg" class="img-border" alt="戈培爾的照片">
-        <br>
-        <em style="display:block;text-align: center">上方為戈培爾的照片</em>
-        <br><br>
+        <p class="img-caption">▲ 約瑟夫·戈培爾：黑髮、矮小且右腿跛行，親手打造了自己完全無法符合的審美神話。</p>
+
         <img src="希姆萊.jpg" class="img-border" alt="希姆萊的照片">
-        <br>
-        <em style="display:block;text-align: center">上方為希姆萊的照片</em>
-        <br>
-        <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/WrZWil070z0" title="希特勒魔性演講影像，聲音激昂宛若有魔力，全程太「洗腦」 #真實影像 #歷史事件 #近代史 #希特勒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/JSVC0zV6c2U" title="帝国的毁灭：一个真正的演员为了出演角色，究竟要付出多大的努力" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1qojB_u0-LI?si=W42pmDwRzC7VxiFn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/zH7o1bOok_g?si=t6dWBzegAOAewuo7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/_SjkZgDT9iY?si=1DMMYURMEEcPHyIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/QndBTjs4srU?si=6wGPMfL0vyjzuhSO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/TpXifMPoVuY?si=M8YD38wJnu0Z00xp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="img-caption">▲ 海因里希·希姆萊：親衛隊人種純潔性的審查者，本人卻頂著一張毫無北歐稜角的微胖圓臉。</p>
+
+        <!-- 影音解析網格：採用自適應 Shorts 與 16:9 容器包裹 -->
+        <div class="video-container shorts">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/WrZWil070z0" title="希特勒魔性演講影像" allowfullscreen></iframe>
+        </div>
+        <div class="video-container shorts">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/JSVC0zV6c2U" title="帝國的毀滅演員解析" allowfullscreen></iframe>
+        </div>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/1qojB_u0-LI?si=W42pmDwRzC7VxiFn" title="歷史紀錄片" allowfullscreen></iframe>
+        </div>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/zH7o1bOok_g?si=t6dWBzegAOAewuo7" title="歷史影像" allowfullscreen></iframe>
+        </div>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/_SjkZgDT9iY?si=1DMMYURMEEcPHyIE" title="紀錄片片段" allowfullscreen></iframe>
+        </div>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/QndBTjs4srU?si=6wGPMfL0vyjzuhSO" title="歷史檔案" allowfullscreen></iframe>
+        </div>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/TpXifMPoVuY?si=M8YD38wJnu0Z00xp" title="戰時宣傳分析" allowfullscreen></iframe>
+        </div>
+
         <blockquote>
-            當時民間笑話：「真正的雅利安人應該像希特勒一樣金髮，像戈培爾一樣高大。」這直接點出了標籤的荒謬。
+            二戰時期流傳於柏林民間的政治嘲弄：<br>
+            <strong>「真正的雅利安人應該像希特勒一樣金髮，像戈培爾一樣高大，像戈林一樣苗條！」</strong><br>
+            這句庶民笑話用最精準的黑色幽默，戳穿了納粹體系自欺欺人的視覺遮羞布。
+        </blockquote>
+    </div>
+</section>
+
+<!-- ======= ★ 第四章：新增之宣傳機器被徹底打臉的世紀鐵證 ======= -->
+<section id="section-slap">
+    <h2>四、宣傳機器的世紀打臉：納粹連自己的標準都分不清</h2>
+    <div class="case">
+        <p>
+            種族主義最深層的破產，不僅在於高層長相的矛盾，更在於<strong>其種族審查專家在面對真實人臉時，完全無法區分「雅利安人」與「猶太人」</strong>，留下了兩起載入史冊的傳世笑柄：
+        </p>
+
+        <h3>1. 戈培爾親選的「最美雅利安嬰兒」，竟是全猶太血統（Hessy Taft 案）</h3>
+        <p>
+            1935 年，宣傳部長戈培爾發起全德競賽，要選出代表帝國未來的「最完美雅利安嬰兒（The Perfect Aryan Baby）」。最終獲獎的照片被印製成大量宣傳明信片、海報，甚至直接登上納粹家庭雜誌《Sonne ins Haus》的封面。
+        </p>
+        <p>
+            <strong>殘酷真相：</strong>這名被全納粹德國奉為純血典範的嬰兒<strong>黑斯·塔夫特（Hessy Levinsons Taft）</strong>，其父母是來自拉脫維亞的<strong>正統猶太聲樂家</strong>！當時柏林的攝影師 Hans Ballin 明知嬰兒是猶太人，故意將照片寄去參賽以嘲弄納粹的種族偽科學。納粹審查委員會與戈培爾本人反覆過濾了成千上萬名嬰兒，最終挑選了一名純種猶太嬰兒作為帝國純潔性的圖騰。
+        </p>
+
+        <h3>2. 登上頭版的「理想德國士兵」，竟是猶太後裔（Werner Goldberg 案）</h3>
+        <p>
+            1939 年二戰爆發初期，納粹官方報紙《柏林日報》（Berliner Tageblatt）在頭版刊登了一名英挺英俊、金髮立體、頭戴鋼盔的國防軍士兵特寫，斗大標題寫著：<strong>「理想的德國士兵（The Ideal German Soldier）」</strong>。該照片隨後被國防軍廣泛印作徵兵海報與樣板教材。
+        </p>
+        <p>
+            <strong>殘酷真相：</strong>這位「完美日耳曼戰士」名叫<strong>維爾納·戈德堡（Werner Goldberg）</strong>，他的父親是一名<strong>純種猶太人</strong>。按照紐倫堡法案，戈德堡在法律上是第一級混血兒（Mischling）。納粹宣傳機器在全國鋪天蓋地張貼這張面孔，卻絲毫未意識到他們正在向全歐洲推崇一位猶太青年的五官。
+        </p>
+
+        <blockquote>
+            這兩起世紀打臉事件從事實層面證明：<strong>人類的外貌特徵是連續分佈的幾何光譜，根本不存在所謂封閉、純粹、可肉眼驗證的「優等雅利安臉」</strong>。納粹的眼睛測量儀與頭骨卡尺，本質上只是一場自我催眠的政治巫術。
         </blockquote>
     </div>
 </section>
 
 <section id="section-friendly-fire">
-    <h2>四、當標籤成為獵巫：被誤傷的黑髮德國人</h2>
+    <h2>五、當標籤成為獵巫：被誤傷的深髮德國人</h2>
     <div class="case">
         <p>
-            納粹的悲劇在於：當「金髮碧眼」變成唯一正解，剩下的德國人也活在恐懼中。
+            納粹視覺恐怖主義的悲劇在於：當「金髮碧眼」被推上唯一的神壇，剩下的龐大深髮日耳曼同胞立刻陷入自危。
         </p>
         <ul>
-            <li><strong>視覺審查：</strong> 許多黑髮、深色眼睛的純血德國人，在社會晉升中遭遇無形阻礙，必須拿著家譜證明自己不是猶太人。</li>
-            <li><strong>隨機盤查：</strong> 只要你的五官（如鼻子形狀）不符合納粹宣傳的「標準」，隨時可能被警察攔下質疑。</li>
+            <li><strong>日常生活的視覺恐慌：</strong>德國中南部（巴伐利亞、萊茵蘭）人口本就以阿爾卑斯人種（Alpine）及地中海人種混血為主，擁有深棕髮與深褐色瞳孔。在校園與公職審查中，無數純種德國人因長相「不夠北歐」而遭遇無端刁難，必須隨身攜帶家族族譜（Ahnenpass）以證明自己沒有猶太血統。</li>
+            <li><strong>頭骨測量與肢體羞辱：</strong>巡迴種族專家手持測顱卡鉗與色號板在街頭與學校隨機盤查，只要市民的鼻樑角度、眼眶深度不合公式，便隨時面臨被送入集中營的審查風險。</li>
         </ul>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/YTwleIBoiW8?si=UTONVe_60jQeNZZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p class="img-caption">當時的「科學家」正用測量儀器對市民進行頭骨測量，將活生生的人簡化為數據。</p>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/YTwleIBoiW8?si=UTONVe_60jQeNZZk" title="歷史頭骨測量紀錄片" allowfullscreen></iframe>
+        </div>
+        <p class="img-caption">▲ 當時的所謂「人類學家」正用機械儀器對市民進行頭骨測量，將活生生的人性與尊嚴簡化為冰冷的意識形態數字。</p>
     </div>
 </section>
 
 <section id="section3">
-    <h2>五、1936 柏林奧運：打破「金髮優越論」的黑人選手</h2>
+    <h2>六、1936 柏林奧運：打破「體質神話」的歷史交鋒</h2>
     <div class="case">
         <p>
-            1936 年奧運是希特勒展示「雅利安體質優越性」的舞台，卻被非裔選手<strong>傑西·歐文斯</strong>徹底粉碎。
+            1936 年柏林奧運原本被希特勒視為向全球展示「雅利安體質絕對優越」的國家級櫥窗，然而這個耗費巨資搭設的種族主義舞台，卻被非裔美國選手<strong>傑西·歐文斯（Jesse Owens）</strong>一舉擊得粉碎。
         </p>
         <ul>
-            <li><strong>四面金牌：</strong> 歐文斯的速度，證明了才華與運動能力不與「金髮碧眼」掛鉤。</li>
-            <li><strong>元首的尷尬：</strong> 希特勒為了避開接見這位黑人選手，選擇提前離場。這反映了種族主義者在面對「事實」時的視覺崩潰。</li>
+            <li><strong>四面金牌的無聲耳光：</strong>歐文斯在 100 米、200 米、4x100 米接力與跳遠項目中狂攬四面金牌，他在賽道上的疾速與爆發力，直接宣告體能才華與「金髮碧眼」毫無關聯。</li>
+            <li><strong>希特勒與國際奧委會的交鋒真相：</strong>坊間常傳希特勒因歐文斯奪冠而憤而離場。歷史實情更具制度諷刺性：奧運首日希特勒僅接見了獲勝的德國與芬蘭選手，國際奧委會主席亨利·德·巴耶-拉圖爾隨即向其提出嚴正抗議，要求元首<strong>「要嘛平等接見每一位奪冠選手，要嘛全體不接見」</strong>。為了避免在公開場合與黑人選手握手打破種族神話，希特勒在後續賽程乾脆拒絕接見任何國家的冠軍。</li>
+            <li><strong>大西洋兩岸的雙重諷刺：</strong>最令人唏噓的是，歐文斯戳破了柏林的納粹神話，卻逃不過本國的體制性隔離。當時的美國總統羅斯福甚至未曾發出一封賀電或接見他；在紐約為歐文斯舉辦的盛大慶功宴上，這位奧運四金得主甚至被華爾道夫酒店強制要求<strong>「不得搭乘大廳客梯，必須走後門的貨梯上樓」</strong>。這證明了種族偏見並非單一獨裁者的瘋狂，而是近代西方世界普遍存在的系統性認知潰爛。</li>
         </ul>
-        <img src="jesse_owens_berlin_1936.webp" class="img-border" alt="傑西·歐文斯在柏林奧運">
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4N5aV7QDs_U?si=_xWBKDl97vyKHLDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p class="img-caption">歐文斯的勝利，是 20 世紀對種族偽科學最響亮的耳光。</p>
+        <img src="jesse_owens_berlin_1936.webp" class="img-border" alt="傑西·歐文斯在柏林奧運領獎">
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/4N5aV7QDs_U?si=_xWBKDl97vyKHLDo" title="傑西歐文斯歷史回顧" allowfullscreen></iframe>
+        </div>
+        <p class="img-caption">▲ 歐文斯在柏林最高頒獎台上的致敬，是 20 世紀體育史對種族優生學最響亮的一記耳光。</p>
     </div>
 </section>
 
 <section id="section4">
-    <h2>六、影視作品的解構：當「標籤」成為笑柄</h2>
+    <h2>七、現代影視的解構：當「神聖標籤」成為荒誕笑柄</h2>
     <div class="case">
-        <p>現代影視持續拆解納粹的視覺執著：</p>
+        <p>二戰結束後的當代影視工業，不斷以黑色幽默與解構主義撕開納粹視覺宣傳的虛偽外衣：</p>
         <ul>
-            <li><strong>《惡棍特工》：</strong> 昆汀讓猶太女性在滿場納粹官員的影院中取得最後勝利，奪回了敘事權。</li>
-            <li><strong>《兔嘲男孩》：</strong> 用小孩視角諷刺洗腦教育，小孩竟然相信猶太人有尾巴。這種將人「妖魔化」的標籤，正是納粹宣傳的遺毒。</li>
+            <li><strong>《惡棍特工》（Inglourious Basterds）：</strong> 昆汀·塔倫提諾將最後的毀滅舞台設定在電影院。猶太女性蘇珊娜用易燃膠卷將滿場納粹政要送入火海，反向奪回了影像與視覺的最高審判權。</li>
+            <li><strong>《兔嘲男孩》（Jojo Rabbit）：</strong> 導演塔伊加·維迪提以天真孩童的視角直視洗腦宣傳的荒誕——在納粹宣傳讀本中，猶太人被描繪成「長著犄角、尾巴與舌頭帶毒的怪物」。當主角在家中發現真實的猶太女孩時，標籤崩解後的真相使所有盲信瞬間化為笑柄。</li>
         </ul>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PBNYAAmtOHQ?si=buL_OnQbl9nooLJO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/STuRv-ucQLc?si=qR8SNkhrFADTnRGB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/PBNYAAmtOHQ?si=buL_OnQbl9nooLJO" title="惡棍特工片段" allowfullscreen></iframe>
+        </div>
+        <div class="video-container horizontal">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/STuRv-ucQLc?si=qR8SNkhrFADTnRGB" title="兔嘲男孩片段" allowfullscreen></iframe>
+        </div>
     </div>
 </section>
 
 <section id="conclusion">
-    <h2>七、結論：從歷史看清標籤的虛假</h2>
+    <h2>八、結論：從歷史看清標籤的虛假本質</h2>
     <div class="case">
         <p>
-            無論是納粹的「金髮碧眼迷思」，還是我們上一篇文章討論的「黃種人」刻板印象，核心都是一樣的：<strong>用極簡的視覺標籤，掩蓋複雜的人性。</strong>
+            無論是第三帝國狂熱打造的「金髮碧眼雅利安神話」，還是近現代全球影視中對「非歐裔高加索人」的視覺忽視，抑或是布盧門巴赫政治性發明的「黃種人色碼」，其運作底層皆如出一轍：<strong>試圖用極度簡化、非黑即白的扁平視覺標籤，暴力掩蓋生物多樣性與人類經驗的真實複雜度。</strong>
         </p>
         <ul>
-            <li>標籤是脆弱的：希特勒不夠金髮，甄子丹其實比很多西方人更白。</li>
-            <li>內核才是關鍵：髮色與眼色不代表靈魂。</li>
+            <li><strong>色碼標籤是脆弱的：</strong>宣傳神話的元首自己長著深色毛髮，而歷史上被歸為「劣等」的猶太嬰兒與士兵卻屢屢被納粹當作純種典範。</li>
+            <li><strong>硬體與精神的脫鉤：</strong>基因色素只是高緯度低紫外線環境下的生存代價，虹膜的散射波長無法決定智商，毛髮的黑色素多寡更無法界定靈魂的高貴。</li>
         </ul>
         <blockquote>
-            「真正定義你的不是眼球的顏色，而是你觀察世界的視角。」
+            「真正定義一個人的，從來不是他眼球中瑞利散射的波長，而是他在看透歷史與權力的虛妄之後，用何種視角審視這個真實、多樣且不容簡化的世界。」
         </blockquote>
     </div>
 </section>
+
 <ul id="messages"></ul>
-<div id="social-share" style="margin-top: 20px;">
-    <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+
+<div id="social-share" style="margin-top: 25px;">
+    <a id="fb-share" href="#" target="_blank">分享到 Facebook</a>
     <span> | </span>
-    <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+    <a id="line-share" href="#" target="_blank">分享到 Line</a>
     <span> | </span>
-    <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+    <a id="twitter-share" href="#" target="_blank">分享到 X</a>
 </div>
+
 <script>
-    // 自動抓取當前頁面的 URL
     var currentUrl = window.location.href;
-    // Facebook 分享
     document.getElementById("fb-share").href =
         "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-    // Line 分享
     document.getElementById("line-share").href =
         "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-    // X (Twitter) 分享
     document.getElementById("twitter-share").href =
-        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
 </script>
+
 <footer>
-    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
-    <p>創作日期：2026 年 3 月 26 日</p>
+    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank">周彥廷</a></p>
+    <p>創作日期：2026 年 3 月 26 日（深度考據與架構重構）</p>
     <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
+    <p style="font-size: 0.85em; margin-top: 15px;">版權所有 © 2026 全球人類學數據可視化與跨文化符號分析系統</p>
 </footer>
 
 </body>
