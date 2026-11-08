@@ -61,27 +61,146 @@
       padding: 10px 0;
       top: 30px;
     }
-    nav a {
+    header ul {
+      list-style-type: none;
+      padding-left: 15px;
+    }
+    header ul li a {
       color: black;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
+    header ul li a:hover {
       text-decoration: underline;
     }
-    nav a:visited{
+    header ul li a:visited {
       color: black;
     }
-    a{
-      text-decoration:none;
+    header ul li ol li a {
+      font-weight: normal;
     }
-    a:hover{
+    /* 讓證物網格內的影片與截圖保持相同大小與視覺佔比 */
+    .evidence-grid video {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: auto !important; /* 解除 16:9 限制，讓高度隨直立畫面自然伸展 */
+      display: block;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+
+    /* ======= 目錄專屬導航樣式 ======= */
+    #catalog-menu {
+      background: #fff;
+      border: 1px solid #eee;
+      border-left: 6px solid #2980b9;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 1.5em 0;
+    }
+    #catalog-menu a,
+    #catalog-menu a:link,
+    #catalog-menu a:visited {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #catalog-menu a:hover {
       text-decoration: underline;
     }
-    a:visited{
-      color: blue;
+    #catalog-menu ul {
+      list-style-type: disc;
+      margin: 10px 0 0 20px;
+      padding: 0;
     }
+    #catalog-menu ul li {
+      margin: 6px 0;
+    }
+    #catalog-menu ul li ul {
+      list-style-type: circle;
+      margin-top: 4px;
+      margin-left: 20px;
+    }
+
+    /* ======= 全站影音與圖片比例一致化規範 ======= */
+    iframe {
+      width: 100% !important;
+      max-width: 100%;
+      height: auto !important;
+      aspect-ratio: 16 / 9;
+      border-radius: 6px;
+      display: block;
+      margin: 15px auto;
+      border: none;
+      box-sizing: border-box;
+    }
+
+    /* 垂直 Shorts 播放專用容器：保持 9:16 比例 */
+    .vertical-embed-wrapper {
+      max-width: 410px;
+      margin: 15px auto;
+    }
+    .vertical-embed-wrapper iframe {
+      aspect-ratio: 9 / 16 !important;
+      border: none;
+    }
+
+    video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background-color: #000;
+      border-radius: 6px;
+      display: block;
+      margin: 15px auto;
+      box-sizing: border-box;
+    }
+    /* 垂直錄影影片：保持 9:16 比例 */
+    video.vertical-video {
+      max-width: 350px;
+      aspect-ratio: 9 / 16;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 15px auto;
+      border-radius: 4px;
+    }
+    .white-bg-img {
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+
+    .video-grid-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .video-grid-box iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 5px red solid;
+      box-sizing: border-box;
+    }
+
+    code {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      background: #f1f1f1;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #c0392b;
+    }
+
     #social-share a {
       text-decoration: none;
       font-weight: bold;
@@ -92,15 +211,10 @@
     #social-share span {
       margin: 0 5px;
     }
-    #social-share a#fb-share {
-      color: #4267B2;
-    }
-    #social-share a#line-share {
-      color: #00C300;
-    }
-    #social-share a#twitter-share {
-      color: #1DA1F2;
-    }
+    #social-share a#fb-share { color: #4267B2; }
+    #social-share a#line-share { color: #00C300; }
+    #social-share a#twitter-share { color: #1DA1F2; }
+
     footer {
       text-align: center;
       margin-top: 50px;
@@ -109,45 +223,32 @@
       padding: 20px;
       border-radius: 6px;
     }
-    footer p {
-      color: yellow;
-    }
+    footer p { color: yellow; }
     footer img {
       display: block;
       margin: 20px auto;
     }
-    .white-bg-img {
-      border: 1px solid #ddd;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
-      border-radius: 4px;
+    footer a { color: #ffca28; text-decoration: none; }
+    /* 專門控制彈奏樂曲與天狗衛視 YouTube 外部連結：點擊前後皆維持藍色 */
+    a.yt-link,
+    a.yt-link:link,
+    a.yt-link:visited {
+      color: #2980b9 !important; /* 標準藍色（若喜歡原生網頁藍可改用 #0000ee） */
+      text-decoration: none;
+      font-weight: bold;
     }
-    .video-grid-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      margin: 20px 0;
-    }
-    code {
-      word-break: break-all;
-      overflow-wrap: anywhere;
-      font-family: Consolas, Monaco, "Courier New", monospace;
-    }
-    .video-grid-box iframe {
-      width: 100%;
-      height: 220px;
-      border: 5px red solid;
-      box-sizing: border-box;
+
+    /* 滑鼠懸停時保持藍色並出現底線 */
+    a.yt-link:hover {
+      color: #2980b9 !important;
+      text-decoration: underline;
     }
     @media screen and (max-width: 767px) {
-      iframe{
-        max-width:100%;
-      }
-      img{
-        max-width:100%;
-      }
-      video{
-        max-width:100%;
-      }
+      iframe { max-width: 100%; }
+      img { max-width: 100%; }
+      video { max-width: 100%; }
+      video.vertical-video { max-width: 100%; }
+      .vertical-embed-wrapper { max-width: 100%; }
       code {
         word-break: break-all;
         overflow-wrap: anywhere;
@@ -177,7 +278,7 @@
       <li><strong class="guide">本頁內容：</strong><br>
         <a>被政治性發明的「黃種人」色碼：從布盧門巴赫偽科學到《葉問4》膚色反轉的視覺除錯報告</a></li>
 
-      <li><strong class="guide">其他文章連結：</strong>
+      <li style="margin-top: 10px;"><strong class="guide">其他文章連結：</strong>
         <ol>
           <li><a href="index.html" target="_blank">世界人種分布與歷史原因</a></li>
           <li><a href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
@@ -195,21 +296,30 @@
           <li><a href="Gal_Gadot.html" target="_blank">視覺認知除錯：從蓋爾·加朵到林正英電影看亞裔定義的邏輯盲點</a></li>
           <li><a href="diversity_of_european_caucasian.html" target="_blank">歐洲奇幻文化分類系統（視覺與文化模板整理）</a></li>
           <li><a href="why_angels_are_always_blondes_with_blue_eyes.html" target="_blank">從西亞沙漠到西北歐雪造的「神話修正」：地理演化、歷史權力與 AI 時代的天使形象演變報告</a></li>
-          <li><a href="aesthetic_power_matrix.html" target="_blank">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
+          <li><a style="color:black" href="aesthetic_power_matrix.html" target="_blank">全球商業審美權力矩陣：高加索與東亞人群的「Namespace 雙頭壟斷」與邊緣族群的視覺閹割報告</a></li>
         </ol>
       </li>
     </ul>
   </nav>
 </header>
+
 <h1>被政治性發明的「黃種人」色碼：從布盧門巴赫偽科學到《葉問4》膚色反轉的視覺除錯報告</h1>
+
 <h2>目錄</h2>
-<div class="case">
+<div id="catalog-menu">
   <p>隨便點選下方其中一個主題便能快速跳到該主題的說明區</p>
   <ul>
     <li><a href="#introduction">前言</a></li>
     <li><a href="#section1">一、 生理硬體明明很白，為何我們被稱為「黃種人」？——一場歷史與人種色碼的洗產地騙局</a></li>
     <li><a href="#section2">二、 審美反轉：為何白人追求小麥色？</a></li>
-    <li><a href="#section3">三、 東亞的相反邏輯：越白越好</a></li>
+    <li>
+      <a href="#section3">三、 東亞的相反邏輯：越白越好</a>
+      <ul>
+        <li><a href="#section3-1">3.1 東亞社會的「白皙即階級」審美偏好</a></li>
+        <li><a href="#section3-2">3.2 演算法盲測審計：無提示詞下的「觀音菩薩」預設著色劑穿幫現場</a></li>
+        <li><a href="#section3-3">3.3 歷史底層 Data 考據：原始印度男身觀音的「膚色反轉」視覺對抗</a></li>
+      </ul>
+    </li>
     <li><a href="#section4">四、 影視案例：《葉問4》的膚色反轉與電影台詞的翻譯符號對抗</a></li>
     <li><a href="#section5">五、 黑髮與黑眼的迷思：天然棕髮以及染髮文化與隱眼文化的視覺革命</a></li>
     <li><a href="#section6">六、 緯度不低，為何東亞沒有天生金髮藍眼</a></li>
@@ -218,12 +328,13 @@
     <li><a href="#conclusion">九、 結論：從矛盾中看清現實</a></li>
   </ul>
 </div>
+
 <h2 id="introduction">前言</h2>
 <div class="case">
   <p>
     「黑眼睛、黑頭髮、黃皮膚」這樣的描述，長久以來被視為東亞人的典型特徵。然而，只要稍微觀察現實，就會發現這種說法與實際情況存在明顯落差。
   </p>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/L8kLPuBSruc?si=ye4khFNtuaPY0yAn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/L8kLPuBSruc?si=ye4khFNtuaPY0yAn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <p>
     當我們再進一步把視角放到影視作品與全球審美，就會看到更多耐人尋味的矛盾：
   </p>
@@ -238,6 +349,7 @@
     這些矛盾指向同一件事：外貌的意義，並不是自然的，而是被文化與社會所建構。
   </blockquote>
 </div>
+
 <h2 id="section1">一、 生理硬體明明很白，為何我們被稱為「黃種人」？——一場歷史與人種色碼的洗產地騙局</h2>
 <div class="case">
   <p>
@@ -261,6 +373,7 @@
     「黃種人」這個詞，從來都不是一個基於演化生物學的客觀事實描述，而是一個為了服務西方殖民權力與審美金字塔，被強行發明、洗產地出來的<strong>政治美學使用者介面（UI）</strong>。大眾消費了幾百年的標籤，本身就是一個嚴重的認知系統錯誤（Type Mismatch）。
   </blockquote>
 </div>
+
 <h2 id="section2">二、 審美反轉：為何白人追求小麥色？</h2>
 <div class="case">
   <h3>1. 歷史轉變</h3>
@@ -298,8 +411,11 @@
     這種膚色不僅不被視為「變黑」，反而是一種吸引力的象徵。
   </p>
 </div>
+
 <h2 id="section3">三、 東亞的相反邏輯：越白越好</h2>
 <div class="case">
+  <!-- 3.1 子標題 -->
+  <h3 id="section3-1">3.1 東亞社會的「白皙即階級」審美偏好</h3>
   <p>
     在東亞文化中，審美標準長期走向另一個方向：
   </p>
@@ -325,33 +441,36 @@
   <img loading="lazy" src="加藤岳美.webp" alt="">
   <br>
   <em>上圖為日本女藝人加藤岳美，她的膚色非常白皙，這也是她在日本娛樂圈中被視為美麗的原因之一。她在西元2001年唱的日文歌《響の調べ》（中文：響之調）是我的拿手曲目之一（如下插入影片所示）</em>
-  <iframe loading="lazy" width="560" height="750" src="https://www.youtube.com/embed/iJExM7vMjZ4?si=wYtn6FpQ5G9px-CC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/iJExM7vMjZ4?si=wYtn6FpQ5G9px-CC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br><br>
   <img loading="lazy" src="長澤奈央與山本梓.jpg" width="460" height="415" alt="">
   <br>
   <em>註：上圖為日本女藝人山本梓（紅色衣服）與長澤奈央（白色衣服），她們和加藤岳美一樣是典型的膚白東亞美女。她們在西元2002年合唱的日文歌《幸せShaking Hands》也是我的拿手曲目之一（如下插入影片所示）</em><br>
-  <iframe loading="lazy" width="560" height="750" src="https://www.youtube.com/embed/oGfwQa3xXFE?si=v8PhwVZjUEmy_vuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/oGfwQa3xXFE?si=v8PhwVZjUEmy_vuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/1wHIDiuFh0M" title="《Shiawase Shaking Hands》 Ending Part Piano Cover #特撮ソング #悲傷情歌 #sadsong #sadsongs #supersentaiseries" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="vertical-embed-wrapper">
+    <iframe loading="lazy" src="https://www.youtube.com/embed/1wHIDiuFh0M" title="《Shiawase Shaking Hands》 Ending Part Piano Cover #特撮ソング #悲傷情歌 #sadsong #sadsongs #supersentaiseries" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   <br><br>
   <img loading="lazy" src="陳致逸.webp" width="450" height="675" alt="">
   <br>
   <em>註：上圖為中國的作曲家陳致逸，在打光效果下他的皮膚很蒼白，完全不是《龍的傳人》裡描述的黃皮膚。他在西元2009年創作的旋律《淡淡的愛意》是我的拿手曲目之一（如下插入影片所示）
   </em>
   <br>
-  <video controls width="560" height="750" style="border:red solid 5px"><source src="淡淡的愛意_實體鋼琴.mp4"></video>
+  <video controls style="border:red solid 5px"><source src="淡淡的愛意_實體鋼琴.mp4" type="video/mp4"></video>
   <br><br>
   <img src="英文課本.jpg" loading="lazy" width="435" height="941" class="white-bg-img" alt="" style="border: 10px solid black;">
   <br>
   <em>註：上方的謎因向我們呈現美國的族群多樣性，不過圖片中的東亞裔美國人的膚色很明顯與歐裔美國人一樣白，這也說明膚色不是判斷人種的唯一根據</em>
   <br><br>
-  <video width="350" height="700" controls style="border:red 5px solid"><source src="japanese_girl_chinese_girl_korean_girl_asian_girl_ai.mp4"></video>
+  <video controls class="vertical-video" style="border:red 5px solid"><source src="japanese_girl_chinese_girl_korean_girl_asian_girl_ai.mp4" type="video/mp4"></video>
   <br>
   <em>上方的插入影片為本網頁的作者在網路上輸入「Japanese Girl AI」、「Chinese Girl AI」、「Korean Girl AI」、「Asian Girl AI」後所出現的搜尋結果。儘管沒有加上「pale skin」、「white skin」等關鍵字，各位還是可以看到這些AI生成的東亞女性角色中，皮膚白皙的女性還是佔大多數，這也說明了在東亞文化中，白皙的膚色是被視為美麗的標準之一。
   </em>
-  <p><strong>補充說明</strong>：插入影片的背景音樂分別為<a href="https://www.youtube.com/shorts/yOkp6VOj_kY?feature=share" target="_blank">《戰鬥-通往勝利》</a>、<a href="https://www.youtube.com/shorts/aY8gg1soR1Q?feature=share" target="_blank">《帝皇再臨》</a>，皆為本網頁的作者親自彈奏。</p>
+  <p><strong>補充說明</strong>：插入影片的背景音樂分別為<a class="yt-link" href="https://www.youtube.com/shorts/yOkp6VOj_kY?feature=share" target="_blank">《戰鬥-通往勝利》</a>、<a class="yt-link" href="https://www.youtube.com/shorts/aY8gg1soR1Q?feature=share" target="_blank">《帝皇再臨》</a>，皆為本網頁的作者親自彈奏。</p>
+  <!-- 3.2 子標題 -->
   <div class="audit-note" style="background-color: #fafafa; border-left: 4px solid #b89d6c; padding: 18px; margin: 25px 0; border-radius: 0 8px 8px 0; box-shadow: inset 0 0 4px rgba(0,0,0,0.02);">
-    <h3 style="margin-top: 0; color: #222; font-size: 1.2em;">💡 演算法盲測審計：無提示詞下的「觀音菩薩」預設著色劑穿幫現場</h3>
+    <h3 id="section3-2" style="margin-top: 0; color: #222; font-size: 1.2em;">💡 3.2 演算法盲測審計：無提示詞下的「觀音菩薩」預設著色劑穿幫現場</h3>
     <p>
       為了驗證東亞社會對「白皙」的追求是否已內化為某種集體無意識，本網頁作者在主流大模型 SuperGrok 中進行了一項極端的變因控制盲測。
     </p>
@@ -399,29 +518,31 @@
         <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 G：特徵特寫审計 3</span>
       </div>
       <div style="text-align: center;">
-        <video controls class="white-bg-img" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;"><source src="guan_yin.mp4"></video>
+        <video controls class="white-bg-img" style="width: 100%; height: auto; aspect-ratio: auto; display: block; border: 1px solid #ddd; border-radius: 4px; margin: 0;"><source src="guan_yin.mp4" type="video/mp4"></video>
         <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 H：實際影片 1</span>
       </div>
       <div style="text-align: center;">
-        <video controls class="white-bg-img" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;"><source src="guan_yin2.mp4"></video>
+        <video controls class="white-bg-img" style="width: 100%; height: auto; aspect-ratio: auto; display: block; border: 1px solid #ddd; border-radius: 4px; margin: 0;"><source src="guan_yin2.mp4" type="video/mp4"></video>
         <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 I：實際影片 2</span>
       </div>
       <div style="text-align: center;">
-        <video controls class="white-bg-img" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;"><source src="guan_yin3.mp4"></video>
+        <video controls class="white-bg-img" style="width: 100%; height: auto; aspect-ratio: auto; display: block; border: 1px solid #ddd; border-radius: 4px; margin: 0;"><source src="guan_yin3.mp4" type="video/mp4"></video>
         <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 J：實際影片 3</span>
       </div>
       <div style="text-align: center;">
-        <video controls class="white-bg-img" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;"><source src="guan_yin4.mp4"></video>
+        <video controls class="white-bg-img" style="width: 100%; height: auto; aspect-ratio: auto; display: block; border: 1px solid #ddd; border-radius: 4px; margin: 0;"><source src="guan_yin4.mp4" type="video/mp4"></video>
         <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 K：實際影片 4</span>
       </div>
       <div style="text-align: center;">
-        <video controls class="white-bg-img" style="width: 100%; height: auto; display: block; border: 1px solid #ddd; border-radius: 4px;"><source src="guan_yin5.mp4"></video>
+        <video controls class="white-bg-img" style="width: 100%; height: auto; aspect-ratio: auto; display: block; border: 1px solid #ddd; border-radius: 4px; margin: 0;"><source src="guan_yin5.mp4" type="video/mp4"></video>
         <span style="font-size: 11px; color: #777; display: block; margin-top: 4px;">證物 L：實際影片 5</span>
       </div>
     </div>
   </div>
+
+  <!-- 3.3 子標題 -->
   <div class="audit-note" style="background-color: #fafafa; border-left: 4px solid #4a6b82; padding: 18px; margin: 25px 0; border-radius: 0 8px 8px 0; box-shadow: inset 0 0 4px rgba(0,0,0,0.02);">
-    <h3 style="margin-top: 0; color: #222; font-size: 1.2em;">💡 歷史底層 Data 考據：原始印度男身觀音的「膚色反轉」視覺對抗</h3>
+    <h3 id="section3-3" style="margin-top: 0; color: #222; font-size: 1.2em;">💡 3.3 歷史底層 Data 考據：原始印度男身觀音的「膚色反轉」視覺對抗</h3>
     <p>
       為了打破東亞文化圈對該宗教符號的單一認知 Bug，作者進一步調用控制組，在 SuperGrok 中輸入了還原觀音菩薩（Avalokiteśvara）在西元元年前後，源自古印度半島、高鼻深目、蓄鬍、體格挺拔的雅利安男性特徵提示詞。
     </p>
@@ -456,6 +577,7 @@
     </div>
   </div>
 </div>
+
 <h2 id="section4">四、 影視案例：《葉問4》的膚色反轉與電影台詞的翻譯符號對抗</h2>
 <div class="case">
   <p>
@@ -466,9 +588,9 @@
     <li>白人空手道教練（Chris Collins 飾）在唐人街對在場的所有中國人說：「I'm here to show you yellow bitches the taste of real combat. Fight me, with your hokey pokey Kung Fu, I dare you.」</li>
     <li>美軍軍官巴頓（Scott Adkins 飾）在軍中對葉問施加暴虐，並說出帶有強烈種族歧視的台詞：「You are nothing but another little yellow chink.」</li>
   </ul>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/giRADSr_SWg?si=vtoE52jgrh3O9GUJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/giRADSr_SWg?si=vtoE52jgrh3O9GUJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4-oesthRiAg?si=KbRXJBxDtm9z3YxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/4-oesthRiAg?si=KbRXJBxDtm9z3YxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   <p>
     妙就妙在，當我們以冷酷的物理光譜去審計畫面時，會驚覺一場極其荒謬的<strong>「膚色反轉」</strong>：
@@ -482,11 +604,12 @@
     <strong>文化對抗與翻譯黑幕：</strong><br>
     更黑色幽默的是，當劇中羅師傅一行人以帶有地緣自衛、甚至排外貶義的標籤通報葉問<em>「有一位鬼佬剛剛進來感覺像尋仇一樣」</em>時，第三方影音平台（如小鴨平台）在輸出英文字幕時，卻本能地將<strong>「鬼佬（Gwei Lo）」</strong>這個文化防禦標籤，防禦性地對齊轉譯為 <code>whitey</code>（對白人的歧視性蔑稱），試圖在台詞的傷害力上強行達成系統平衡。
   </blockquote>
-  <video controls width="560" height="315" style="border:red solid 5px"><source src="葉問4.mp4"></video>
+  <video controls style="border:red solid 5px"><source src="葉問4.mp4" type="video/mp4"></video>
   <p style="margin-top: 15px;">
     這精準戳破了種族主義者的盲點：在他們的權力結構裡，大腦早就裝載了傲慢的 UI 鋼印，即使自己曬得比華人還黑、即使華人長得比他們更白，他們依然要教條式地使用 "yellow" 來進行政治定罪。畫面上的「物理顏色深淺（Data）」，與強權口中的「種族命名空間（Namespace）」，在這裡徹底發生了毀滅性的脫鉤。
   </p>
 </div>
+
 <h2 id="section5">五、 黑髮與黑眼的迷思：天然棕髮以及染髮文化與隱眼文化的視覺革命</h2>
 <div class="case">
   <p>
@@ -508,31 +631,33 @@
   </ul>
   <img loading="lazy" src="螢幕擷取畫面%202026-03-25%20213554.png" style="border:10px red solid" alt="">
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/_TjItGP04mg?si=m7oSUsqdDDra8pg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/_TjItGP04mg?si=m7oSUsqdDDra8pg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <img loading="lazy" src="端木將軍.jpg" width="456" height="897"style="border:10px red solid" alt="">
+  <img loading="lazy" src="端木將軍.jpg" width="456" height="897" style="border:10px red solid" alt="">
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/XGbnxgNusUc?si=iG5ov44hElST2y-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/XGbnxgNusUc?si=iG5ov44hElST2y-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1C2nzuZA48M?si=A4Br8YUWWxtiD8zL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/1C2nzuZA48M?si=A4Br8YUWWxtiD8zL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6aBiyMfPlz8?si=Y5xoHnFFpcibs9N4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/6aBiyMfPlz8?si=Y5xoHnFFpcibs9N4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/qqm1Wqwovvc?si=dxpYTLPzIskRdh71" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/qqm1Wqwovvc?si=dxpYTLPzIskRdh71" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/eOId8-osUJY?si=uPaGi5-sZ8YVrkJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/eOId8-osUJY?si=uPaGi5-sZ8YVrkJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/aGHIMTJ8rXQ?si=w3_XfqJdcOCcPbj6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/aGHIMTJ8rXQ?si=w3_XfqJdcOCcPbj6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/dakyAT38n9w?si=pJqCoexbxfzrlOam" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/dakyAT38n9w?si=pJqCoexbxfzrlOam" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Y55TFG_BjRw?si=b-t1ANMYYgqxfJnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/Y55TFG_BjRw?si=b-t1ANMYYgqxfJnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/LcV0eAgCSgw?si=pmCMhyjHSbw6KshB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/LcV0eAgCSgw?si=pmCMhyjHSbw6KshB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/cMzGuRieo-8?si=ZEkNBnavG1yRiCRO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe loading="lazy" src="https://www.youtube.com/embed/cMzGuRieo-8?si=ZEkNBnavG1yRiCRO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <br>
-  <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/CWAKU40kH5I" title="子瑜「粉紅髮」新造型亮相 芭比造型粉絲誤認：以為是AI｜NOWNEWS #TWICE #韓國 #造型 #女團 #子瑜 #染髮" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="vertical-embed-wrapper">
+    <iframe loading="lazy" src="https://www.youtube.com/embed/CWAKU40kH5I" title="子瑜「粉紅髮」新造型亮相 芭比造型粉絲誤認：以為是AI｜NOWNEWS #TWICE #韓國 #造型 #女團 #子瑜 #染髮" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   <br><br>
   <img src="畢業典禮.jpg" loading="lazy" style="border:5px red solid" width="400" height="500" alt="皮膚白皙且染金髮的韓國女留學生和一群有著深膚色與黑髮的印度留學生一起參加畢業典禮">
   <br>
@@ -548,6 +673,7 @@
     當歌詞還在傳唱「黑眼睛、黑頭髮」時，現代亞洲人早已透過隱眼和染髮劑，重新奪回了定義自己形象的主控權。
   </blockquote>
 </div>
+
 <h2 id="section6">六、 緯度不低，為何東亞沒有天生金髮藍眼？</h2>
 <div class="case">
   <p>
@@ -592,7 +718,7 @@
     這說明了演化的美妙與大眾認知的集體盲區：我們常常被「名字」和「二次元線條」牽著鼻子走，誤把虛擬世界裡的西方混血常態當成作怪染髮；卻又在現實的統計學傲慢下，把生物學上萬中選一的「純東亞獨立突變奇蹟」誤判為違反校規的不良少年。
   </blockquote>
   相關連結：<br>
-  <a href="https://youtu.be/eXpv93-pomY" target="_blank">金髮碧眼蒙古人！</a>（此影片禁止在第三方網站播放所以只能使用超連結）
+  <a class="yt-link" href="https://youtu.be/eXpv93-pomY" target="_blank">金髮碧眼蒙古人！</a>（此影片禁止在第三方網站播放所以只能使用超連結）
 </div>
 
 <h2 id="section7">七、 外貌其實是「被解讀的訊號」與虛構的完全解放</h2>
@@ -622,6 +748,7 @@
     <iframe loading="lazy" src="https://www.youtube.com/embed/xvjOUN_bF9U?si=85AwiOqfAhb_chvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
+
 <h2 id="section8">八、 次文化視覺編譯：東亞面孔與非黑髮 UI 組件的防碰撞除錯報告</h2>
 <div class="case">
   <p>
@@ -648,16 +775,16 @@
       <br>
       <img src="小白龍.png" alt="" loading="lazy" style="border:5px red solid">
       <br>
-      <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/9Lhq3XSwc3E?si=7wJYg4PAzyKt7qIf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe loading="lazy" src="https://www.youtube.com/embed/9Lhq3XSwc3E?si=7wJYg4PAzyKt7qIf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <br>
-      <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/mjWkUgAg1HQ?si=ldN9qTRK_aPNhC6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe loading="lazy" src="https://www.youtube.com/embed/mjWkUgAg1HQ?si=ldN9qTRK_aPNhC6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </li>
     <li>
       <strong>絕對力量的色彩對齊：</strong> 同樣地，許多水族妖怪在化形時，髮色皆偏向淡藍、青色或純白（如《哪吒之魔童降世》中的<strong>敖丙</strong>、以及《十萬個冷笑話》哪吒篇裡的<strong>海龍王</strong>），這在業界早就成了強化物種辨識度的標準底層代碼（Base Class）。
       <br>
-      <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/KnV__800DEI?si=HPHW9gamP2wFEiKn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe loading="lazy" src="https://www.youtube.com/embed/KnV__800DEI?si=HPHW9gamP2wFEiKn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <br>
-      <iframe loading="lazy" width="560" height="315" src="//player.bilibili.com/player.html?isOutside=true&aid=940866673&bvid=BV1dW4y127uS&cid=771125431&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+      <iframe loading="lazy" src="//player.bilibili.com/player.html?isOutside=true&aid=940866673&bvid=BV1dW4y127uS&cid=771125431&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
     </li>
   </ul>
 
@@ -709,18 +836,19 @@
   <p style="margin-top: 20px; color: #555;"><strong>▼ 本網頁作者親自利用 SuperGrok 演算法編譯之「虛構完全解放」動態反差劇場（證物）：</strong><br>
     <em>以下四部影片真實渲染了在充滿蓮花蓮葉、涼亭與月橋的深山家庭院中，身穿蕾絲聖衣的粉白東亞觀音，與外掛傲骨金髮、神獸角的爆發性腹肌型男金毛犼（賽太歲），打破宗教階級鋼印、手牽手漫步約會並溫柔調情的博弈過程。</em></p>
 
-  <video controls width="400" height="700" style="border:5px red solid"><source src="觀音與金毛犼.mp4"></video>
+  <video controls class="vertical-video" style="border:5px red solid"><source src="觀音與金毛犼.mp4" type="video/mp4"></video>
   <br>
-  <video controls width="400" height="700" style="border:5px red solid"><source src="觀音與金毛犼2.mp4"></video>
+  <video controls class="vertical-video" style="border:5px red solid"><source src="觀音與金毛犼2.mp4" type="video/mp4"></video>
   <br>
-  <video controls width="400" height="700" style="border:5px red solid"><source src="觀音與金毛犼3.mp4"></video>
+  <video controls class="vertical-video" style="border:5px red solid"><source src="觀音與金毛犼3.mp4" type="video/mp4"></video>
   <br>
-  <video controls width="400" height="700" style="border:5px red solid"><source src="觀音與金毛犼4.mp4"></video>
+  <video controls class="vertical-video" style="border:5px red solid"><source src="觀音與金毛犼4.mp4" type="video/mp4"></video>
   <blockquote>
     <strong>次文化美學除錯結論（Code Merge）：</strong><br>
     謝遜的金毛、敖丙的淡藍水族髮、殺生丸的白犬空靈銀絲，以及本網頁作者用 AI 搓出來的「東亞英俊骨骼 ＋ 傲骨金髮 ＋ 神獸角」的混血賽太歲。這些鐵證一致昭告天下：<strong>東亞人的身體與面孔，在虛擬與現實的世界線裡，從來都不是一張只能填上「黑毛黃皮」的劣質單色畫布。</strong> 在大自然演化的獨立突變與創作者想像力的完全解放下，東亞面孔有權利、更有能力流淌光譜上的任何一種斑斕色彩。
   </blockquote>
 </div>
+
 <h2 id="conclusion">九、 結論：從矛盾中看清現實</h2>
 <div class="case">
   <p>
@@ -741,14 +869,17 @@
     我們在這個專案中所看到的從來不是矛盾，而是一場重新奪回身體認同、戳破偽科學思想鋼印，並利用代碼與想像力大聲宣告「我是誰」的終極視覺革命。
   </p>
 </div>
+
 <ul id="messages"></ul>
+
 <div id="social-share" style="margin-top: 20px;">
-  <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+  <a id="fb-share" href="#" target="_blank">分享到 Facebook</a>
   <span> | </span>
-  <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+  <a id="line-share" href="#" target="_blank">分享到 Line</a>
   <span> | </span>
-  <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+  <a id="twitter-share" href="#" target="_blank">分享到 X</a>
 </div>
+
 <script>
   var currentUrl = window.location.href;
   document.getElementById("fb-share").href =
@@ -758,6 +889,7 @@
   document.getElementById("twitter-share").href =
           "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=被政治性發明的「黃種人」色碼：從布盧門巴赫偽科學到《葉問4》膚色反轉的視覺除錯報告";
 </script>
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
@@ -768,11 +900,13 @@
      data-width="100%"
      data-numposts="5">
 </div>
+
 <footer>
   <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
   <p>創作日期：2026 年 3 月 20 日</p>
   <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
   <p style="font-size: 0.7em; margin-top: 2em; color: yellow;">所有頁面均來自同一 GitHub Pages 專案</p>
 </footer>
+
 </body>
 </html>
