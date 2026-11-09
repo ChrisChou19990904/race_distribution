@@ -2,40 +2,118 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>全球影視 IP 改編：種族與膚色政治分析報告</title>
     <style>
-        body { font-family: "Microsoft JhengHei", sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px; }
-        h1 { color: #2c3e50; border-bottom: 3px solid #2c3e50; padding-bottom: 10px; }
-        h2 { color: #e67e22; margin-top: 30px; border-left: 5px solid #e67e22; padding-left: 10px; }
-        .highlight { background-color: #fcf3cf; padding: 15px; border-radius: 5px; margin: 10px 0; border: 1px solid #f1c40f; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f2f2f2; color: #2c3e50; }
-        .anthropology-box { border: 2px dashed #3498db; padding: 20px; background-color: #ebf5fb; margin-top: 20px; }
-        .map-correction { background-color: #fdf2f2; border: 1px solid #e74c3c; padding: 15px; margin: 20px 0; }
-        .summary-footer { background-color: #2c3e50; color: white; padding: 20px; margin-top: 40px; border-radius: 8px; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e67e22;
+            margin-top: 30px;
+            border-left: 5px solid #e67e22;
+            padding-left: 10px;
+            scroll-margin-top: 25px; /* 避免錨點跳轉時貼頂遮擋 */
+        }
+        .highlight {
+            background-color: #fcf3cf;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: 1px solid #f1c40f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #2c3e50;
+        }
+        .anthropology-box {
+            border: 2px dashed #3498db;
+            padding: 20px;
+            background-color: #ebf5fb;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+        .map-correction {
+            background-color: #fdf2f2;
+            border: 1px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .summary-footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            scroll-margin-top: 25px;
+        }
+        .summary-footer h3 {
+            margin-top: 0;
+            color: #f39c12;
+        }
         header {
             background-color: pink;
             padding: 10px 0;
-            top: 30px;
+            margin-bottom: 20px;
         }
-        nav a {
+        nav.global-nav a {
             color: black;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        nav.global-nav a:hover {
             text-decoration: underline;
         }
-        nav a:visited{
-            color: black;
+        /* 本頁章節導航盒樣式 */
+        nav.catalog-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px 25px;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
-        a{
-            text-decoration:underline;
+        nav.catalog-box a {
+            display: block;
+            margin: 6px 0;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: 500;
         }
-        a:visited{
-            color: blue;
+        nav.catalog-box a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            max-width: 100%;
+            border-radius: 6px;
+            margin: 10px 0;
         }
         footer {
             text-align: center;
@@ -43,6 +121,8 @@
             font-size: 0.9em;
             color: yellow;
             background-color: purple;
+            padding: 20px;
+            border-radius: 6px;
         }
         #social-share a {
             text-decoration: none;
@@ -68,21 +148,21 @@
 <body>
 <div id="google-translate-box">
     <div id="google_translate_element"></div>
-    <!-- Google Translate 的自動翻譯功能 -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',  // 頁面原語言
-                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                pageLanguage: 'zh-TW',
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <p>點擊上方的語言選單以切換語言</p>
+    <p style="font-size: 0.85em; color: #666;">點擊上方的語言選單以切換語言</p>
 </div>
+
 <header>
-    <nav>
+    <nav class="global-nav">
         <ul>
             <li><strong class="guide">本頁內容：</strong><br>
                 <a>全球影視改編之「種族置換」現象深度報告</a></li>
@@ -92,7 +172,7 @@
                     <li><a href="index.html" target="_blank">世界人種分布與歷史原因</a></li>
                     <li><a href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
                     <li><a href="diversity_of_caucasian_in_europe.html" target="_blank">歐洲高加索人外觀特徵對照表</a></li>
-                    <li><a style="color: black;" href="brunette_in_caucasian.html" target="_blank">高加索人並非皆為金髮碧眼：從體質骨相、地緣演化到影視神話的「黑髮白人」視覺除錯報告</a></li>
+                    <li><a href="brunette_in_caucasian.html" target="_blank">高加索人並非皆為金髮碧眼：從體質骨相、地緣演化到影視神話的「黑髮白人」視覺除錯報告</a></li>
                     <li><a href="race_distribution_in_africa.html" target="_blank">非洲人種分布與外貌特徵對照表</a></li>
                     <li><a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</a></li>
                     <li><a href="why_european_caucasians_can_be_diverse_while_mongolians_and_negroes_are_simple.html" target="_blank">角色髮色與眼睛色設計策略探討</a></li>
@@ -111,12 +191,24 @@
         </ul>
     </nav>
 </header>
+
 <h1>全球影視改編之「種族置換」現象深度報告</h1>
 <p><strong>摘要：</strong> 本報告探討歐美、東亞及南亞在影視創作中對種族設定的不同處理邏輯，並結合人類學基因根源校正視覺分類的誤區。</p>
 
-<section>
+<!-- 章節導航盒 -->
+<nav class="catalog-box">
+    <h3 style="margin-top:0; color:#2c3e50;">章節導航</h3>
+    <a href="#section1">一、 歐美地區：多民族國家的「代議制」壓力</a>
+    <a href="#section2">二、 東亞地區：文化單一性與「原味輸出」策略</a>
+    <a href="#section3">三、 南亞地區：階級翻轉與「去殖民化」敘事</a>
+    <a href="#section4">四、 關鍵辨析：關於「南亞紅色區塊」的真相</a>
+    <a href="#section5">五、 全球族群根源對照表</a>
+    <a href="#summary">六、 結論總結</a>
+</nav>
+
+<section id="section1">
     <h2>一、 歐美地區：多民族國家的「代議制」壓力</h2>
-    <p>代表作品：<em>《惡魔城》裡的Isaac</em>、<em>《夜訪吸血鬼》裡的Louis與Claudia</em>、<em>《暮光之城》裡的Laurent</em></p>
+    <p>代表作品：<em>《惡魔城》裡的 Isaac</em>、<em>《夜訪吸血鬼》裡的 Louis 與 Claudia</em>、<em>《暮光之城》裡的 Laurent</em></p>
     <ul>
         <li><strong>政治背景：</strong> 為了反映現代移民社會的多元性，並修正歷史上對非裔角色的忽視。</li>
         <li><strong>邏輯：</strong> 將既有 IP 的角色從白人改為黑人，藉此提供「族裔代表性」（Representation），讓少數族裔觀眾產生認同。</li>
@@ -130,7 +222,7 @@
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/KM8Oa39C2rs?si=5MTp2lanV2AIvGzt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
-<section>
+<section id="section2">
     <h2>二、 東亞地區：文化單一性與「原味輸出」策略</h2>
     <p>代表作品：<em>中日韓武俠、仙俠、忍者、動漫 IP</em></p>
     <div class="highlight">
@@ -147,7 +239,7 @@
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/xvjOUN_bF9U?si=G-502ZBZKp-SLmWX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
-<section>
+<section id="section3">
     <h2>三、 南亞地區：階級翻轉與「去殖民化」敘事</h2>
     <p>代表作品：<em>印度神話改編劇</em></p>
     <ul>
@@ -159,7 +251,7 @@
 
 <hr>
 
-<section class="map-correction">
+<section id="section4" class="map-correction">
     <h2>四、 關鍵辨析：關於「南亞紅色區塊」的真相</h2>
     <p>針對<a href="index.html#global" target="_blank">《世界人種分布圖》</a>中將南亞標為「黑色人種」的解讀：</p>
     <p><strong>視覺陷阱：</strong> 該圖基於「表現型」（膚色）分類。雖然南亞達羅毗荼人皮膚黝黑，但在人類學上與撒哈拉以南的黑人（尼格羅人）<strong>完全不同根源</strong>。</p>
@@ -167,7 +259,7 @@
     <p><strong>科學事實：</strong> 達羅毗荼人的深膚色是<strong>「趨同演化」</strong>的結果（適應強烈紫外線），其遺傳基因與骨骼結構更接近歐亞人群。因此，南亞的「換色」是內部演化分支的調整，與歐美的「跨種族置換」性質不同。</p>
 </section>
 
-<section class="anthropology-box">
+<section id="section5" class="anthropology-box">
     <h2>五、 全球族群根源對照表</h2>
     <table>
         <thead>
@@ -195,15 +287,15 @@
         </tr>
         </tbody>
     </table>
-
 </section>
 
-<div class="summary-footer">
+<div id="summary" class="summary-footer">
     <h3>結論總結：</h3>
     <p>1. <strong>歐美：</strong> 是跨越基因根源的「社會修補工程」。</p>
     <p>2. <strong>南亞：</strong> 是同區域膚色深淺的「階級覺醒運動」。</p>
     <p>3. <strong>東亞：</strong> 是基於民族同質性的「文化美學守護」。</p>
 </div>
+
 <ul id="messages"></ul>
 <div id="social-share" style="margin-top: 20px;">
     <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
@@ -213,35 +305,31 @@
     <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
 </div>
 <script>
-    // 自動抓取當前頁面的 URL
     var currentUrl = window.location.href;
-    // Facebook 分享
     document.getElementById("fb-share").href =
         "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-    // Line 分享
     document.getElementById("line-share").href =
         "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-    // X (Twitter) 分享
     document.getElementById("twitter-share").href =
-        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
 </script>
 <footer>
     <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
     <p>創作日期：2025 年 12 月 31 日</p>
-    <img src="理平頭.jpg" alt="作者照片" width="300" height="400">
+    <img src="理平頭.jpg" alt="作者照片" width="300" height="400" style="border-radius: 4px;">
+    <p style="margin-top: 15px;">所有頁面均來自同一 GitHub Pages 專案</p>
 </footer>
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
 </script>
 
 <div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-href="https://chrischou19990904.github.io/white_turns_black.html"
      data-width="100%"
      data-numposts="5">
 </div>
-<footer>
-    所有頁面均來自同一 GitHub Pages 專案
-</footer>
+
 </body>
 </html>
