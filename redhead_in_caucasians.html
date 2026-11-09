@@ -108,15 +108,6 @@
     }
 
     /* 2. YouTube iframe 與第三方嵌入：強制自適應容器寬度並保持 16:9 比例 */
-    iframe {
-      width: 100% !important;
-      max-width: 100%;
-      height: auto !important;
-      aspect-ratio: 16 / 9;       /* 自動計算 16:9 高度，不管在電腦還是手機都不會切邊 */
-      border-radius: 6px;
-      display: block;
-      margin: 10px auto;
-    }
 
     /* 若有使用響應式容器包裹也可以加上這條 */
     .video-wrapper {
@@ -189,7 +180,17 @@
       text-decoration: underline;
     }
 
-
+    iframe {
+      width: 100% !important;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto !important;
+      border: 0;
+      border-radius: 6px;
+      display: block;
+      margin: 10px auto;
+      background-color: #000;
+    }
     @media screen and (max-width: 767px) {
       body {
         padding: 12px;
@@ -201,7 +202,7 @@
       .video-grid {
         grid-template-columns: 1fr;
       }
-      .video-grid iframe, .video-grid video {
+      .video-grid video {
         height: 220px;
       }
     }
@@ -763,10 +764,10 @@
   </div>
 
   <div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cPnAWcI62i8?si=xVsnVloJrTQUAtf-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <p style="font-size:0.88em; color:#444; text-align:center; margin-top:8px; line-height: 1.5;">
+    <iframe src="https://www.youtube.com/embed/cPnAWcI62i8?si=xVsnVloJrTQUAtf-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p style="font-size:0.88em; color:#444; text-align:center; margin-top:8px; line-height: 1.5;">
       <strong>7. 德魯伊靜態輪播圖：</strong><br>
-        將 Super Grok 生成的德魯伊女祭司的紅髮、白皙膚質、墨綠法袍、鹿角權杖與森林背景進行靜態輪播展示，呈現角色在不同光影與角度下的細節特徵，為遊戲或動畫角色設計提供多角度參考。
+      將 Super Grok 生成的德魯伊女祭司的紅髮、白皙膚質、墨綠法袍、鹿角權杖與森林背景進行靜態輪播展示，呈現角色在不同光影與角度下的細節特徵，為遊戲或動畫角色設計提供多角度參考。
     </p>
   </div>
 
