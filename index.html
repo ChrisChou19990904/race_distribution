@@ -18,46 +18,56 @@
         h1, h2, h3 {
             color: #004d66;
         }
-        nav {
+        header {
+            background-color: pink;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        header nav ul {
+            list-style-type: none;
+            padding-left: 15px;
+        }
+        header nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        header nav ol li a {
+            font-weight: normal;
+        }
+        nav.quick-nav {
             background: #cce7e8;
-            padding: 10px;
+            padding: 15px 20px;
             border-radius: 8px;
             margin-bottom: 20px;
         }
-        nav a {
+        nav.quick-nav a {
             margin-right: 15px;
             text-decoration: none;
             color: #004466;
             font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
         }
-        nav a:hover {
+        nav.quick-nav a:hover {
             text-decoration: underline;
         }
         section {
             background: #fff;
-            padding: 15px;
+            padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 5px #ccc;
             scroll-margin-top: 25px;
         }
-        img {
+        img, video, iframe {
             max-width: 100%;
-            border: 1px solid #ddd;
             border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        video {
-            max-width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        iframe {
-            max-width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            display: block;
         }
         footer {
             text-align: center;
@@ -67,16 +77,6 @@
             background-color: purple;
             padding: 15px;
             border-radius: 8px;
-        }
-        header a {
-            color: black;
-            text-decoration: none;
-        }
-        header a:hover {
-            text-decoration: underline;
-        }
-        header a:visited {
-            color: black;
         }
         #social-share a {
             text-decoration: none;
@@ -111,32 +111,32 @@
 <body>
 <div id="google-translate-box">
     <div id="google_translate_element"></div>
-    <!-- Google Translate 的自動翻譯功能 -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',  // 頁面原語言
-                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                pageLanguage: 'zh-TW',
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <p>點擊上方的語言選單以切換語言</p>
+    <p style="font-size: 0.85em; color: #666;">點擊上方的語言選單以切換語言</p>
 </div>
-<header style="background-color: pink; padding: 10px 0; margin-bottom: 20px; color: black;">
-    <nav style="background-color: pink; padding: 10px 0; margin-bottom: 20px; color: black;">
+
+<header>
+    <nav>
         <ul>
             <li><strong class="guide">本頁內容：</strong><br>
-                <a style="color: black;">世界人種分布與歷史原因</a></li>
+                <a>世界人種分布與歷史原因</a></li>
 
             <li><strong class="guide">其他文章連結：</strong>
                 <ol>
-                    <li><a style="color: black;" href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
-                    <li><a style="color: black;" href="diversity_of_caucasian_in_europe.html" target="_blank">歐洲高加索人外觀特徵對照表</a></li>
-                    <li><a style="color: black;" href="brunette_in_caucasian.html" target="_blank">高加索人並非皆為金髮碧眼：從體質骨相、地緣演化到影視神話的「黑髮白人」視覺除錯報告</a></li>
-                    <li><a style="color: black;" href="race_distribution_in_africa.html" target="_blank">非洲人種分布與外貌特徵對照表</a></li>
-                    <li><a style="color: black;" href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</a></li>
+                    <li><a href="race_distribution_in_asia.html" target="_blank">亞洲各地人種與膚色對照表</a></li>
+                    <li><a href="diversity_of_caucasian_in_europe.html" target="_blank">歐洲高加索人外觀特徵對照表</a></li>
+                    <li><a href="brunette_in_caucasian.html" target="_blank">高加索人並非皆為金髮碧眼：從體質骨相、地緣演化到影視神話的「黑髮白人」視覺除錯報告</a></li>
+                    <li><a href="race_distribution_in_africa.html" target="_blank">非洲人種分布與外貌特徵對照表</a></li>
+                    <li><a href="why_euporean_caucasians_in_animations_where_mongolians_are_majority_are_blondes_with_blue_eyes.html" target="_blank">為何許多日系動畫和遊戲刻意把歐裔角色設計成金髮碧眼</a></li>
                     <li><a href="why_european_caucasians_can_be_diverse_while_mongolians_and_negroes_are_simple.html" target="_blank">角色髮色與眼睛色設計策略探討</a></li>
                     <li><a href="white_turns_black.html" target="_blank">全球影視改編之「種族置換」現象深度報告</a></li>
                     <li><a href="why_overseas_indians_are_always_tanned_in_pop_culture.html" target="_blank">跨文化視覺的「雙向閹割」：古 DNA 遺傳光譜、好萊塢深膚刻板印記與南亞族群認知除錯報告</a></li>
@@ -154,10 +154,11 @@
         </ul>
     </nav>
 </header>
+
 <h1>世界人種分布與歷史原因</h1>
-<nav>
-    <h2>目錄：</h2>
-    隨便點選下方一個主題便能快速跳到該主題的說明區
+
+<nav class="quick-nav">
+    <h2 style="margin-top:0; color:#004d66;">目錄導航：</h2>
     <ol>
         <li><a href="#intro-foreword">前言：專案定位與文化影響力</a></li>
         <li><a href="#overview">全球概覽</a></li>
@@ -170,7 +171,7 @@
     </ol>
 </nav>
 
-<section id="intro-foreword" style="background-color: #f0f7f9; border-left: 5px solid #004d66; padding: 20px; margin-bottom: 25px; border-radius: 8px;">
+<section id="intro-foreword" style="background-color: #f0f7f9; border-left: 5px solid #004d66;">
     <h2 style="margin-top: 0; color: #004d66;">前言：世界人種地圖與當代影視娛樂的視覺考據</h2>
 
     <div style="background-color: #ffffff; border: 1px solid #bce8f1; border-radius: 6px; padding: 12px 15px; margin-bottom: 15px; font-size: 0.95em; line-height: 1.6;">
@@ -224,7 +225,7 @@
 <section id="overview">
     <h2>全球概覽</h2>
     <p>以下地圖顯示了不同人種在世界的分布情況：</p>
-    <img id="global" src="世界人種分佈圖.jpg" alt="世界人種分布圖">
+    <img id="global" src="世界人種分佈圖.jpg" alt="世界人種分布圖" style="border: 1px solid #ddd;">
     <p>顏色標記說明：綠色（白色人種）、黃色（黃色人種）、紅色（黑色人種）。</p>
 </section>
 
@@ -255,9 +256,9 @@
     </p>
     <em>註：下方的影片和GIF分別為AI生成的聖經人物和暮光之城的埃及家族角色</em>
     <br>
-    <video controls style="width:300px;height:700px"><source src="用AI生成的聖經人物.mp4"></video>
+    <video controls style="width:300px; height:auto; aspect-ratio: 9/16; border: 1px solid #ddd;"><source src="用AI生成的聖經人物.mp4"></video>
     <br>
-    <img loading="lazy" src="egyptian_coven.gif" alt="">
+    <img loading="lazy" src="egyptian_coven.gif" alt="埃及吸血鬼家族" style="border: 1px solid #ddd;">
     <h3>非洲（撒哈拉以南）</h3>
     <p>以黑人種為主，擁有適應熱帶強烈紫外線的深色皮膚與獨特的生理特徵。</p>
     <h3>歐洲</h3>
@@ -333,20 +334,20 @@
         影片說明：這段影片向各位說明印度人為何是白種人，並且說明了印度人與歐洲人的共同祖先是來自中亞的雅利安人。
     </em>
     <br>
-    <video controls><source src="人種分布.mp4"></video>
-    <br><br>
+    <video controls style="width: 100%; max-width: 560px; aspect-ratio: 16/9; border: 1px solid #ddd;"><source src="人種分布.mp4"></video>
+    <br>
     <em>
         影片說明：根據暮光之城的設定，狼人是印地安人，各位也可以看到影片中的印第安人長得像東亞人，<br>這是因為他們的祖先來自東亞，並在冰河時期穿越白令陸橋進入美洲的緣故。
     </em>
     <br>
     <video controls width="560" height="315" style="border:10px red solid"><source src="暮光之城裡的印第安人長得像中國人.mp4"></video>
-    <br><br>
+    <br>
     <em>
         影片說明：新疆的維吾爾族、哈薩克族等民族，因為歷史上與中亞、東亞族群的交流與融合，<br>所以他們的外貌特徵同時具有高加索人種與蒙古人種的特徵，呈現出與歐洲人相似的外貌。
     </em>
     <br>
     <video controls width="560" height="315" style="border:10px red solid"><source src="新疆人長得像歐洲人的真相.mp4"></video>
-    <br><br>
+    <br>
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/puch6RESkME?si=nZulYKeGk3TRzljj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <br>
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/75Mh-KHyrCg?si=8CLn_xTOXnGI6dxp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -369,11 +370,11 @@
 
 <ul id="messages"></ul>
 <div id="social-share" style="margin-top: 20px;">
-    <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+    <a id="fb-share" href="#" target="_blank">分享到 Facebook</a>
     <span> | </span>
-    <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+    <a id="line-share" href="#" target="_blank">分享到 Line</a>
     <span> | </span>
-    <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+    <a id="twitter-share" href="#" target="_blank">分享到 X</a>
 </div>
 <script>
     var currentUrl = window.location.href;
@@ -388,7 +389,7 @@
 <div class="author-section">
     <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: #004d66; font-weight: bold;">周彥廷</a></p>
     <p>創作日期：2025 年 9 月 5 日</p>
-    <img src="理平頭.jpg" alt="作者照片" width="300" height="400" style="margin-top: 10px;">
+    <img src="理平頭.jpg" alt="作者照片" width="300" height="400" style="margin: 10px auto 0; border: 1px solid #ddd;">
 </div>
 
 <div id="fb-root"></div>
