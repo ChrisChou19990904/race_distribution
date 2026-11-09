@@ -87,6 +87,30 @@
     nav.catalog-box a:hover {
       text-decoration: underline;
     }
+    /* 子標題導航樣式：縮排並以較淡色彩區隔層級 */
+    nav.catalog-box .sub-catalog {
+      margin-left: 18px;
+      padding-left: 10px;
+      border-left: 2px solid #e2e8f0;
+      margin-bottom: 8px;
+    }
+    nav.catalog-box .sub-catalog a {
+      font-size: 0.92em;
+      font-weight: normal;
+      color: #4a5568;
+      margin: 4px 0;
+    }
+    nav.catalog-box .sub-catalog a:hover {
+      color: #c0392b;
+      text-decoration: underline;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    h2, h3 {
+      scroll-margin-top: 20px; /* 跳轉時頂部預留 20px 距離 */
+    }
     /* ======= 修復：讓所有影片網格與第三方 iframe 完整顯示、不裁剪、不變形 ======= */
     .video-grid {
       display: grid;
@@ -262,14 +286,26 @@
 </header>
 
 <h1>紅髮白種人科普說明：遺傳演化、文化符號與角色設計策略</h1>
-
 <nav class="catalog-box">
   <h3 style="margin-top:0;">章節導航</h3>
   <a href="#section1">一、體質人類學與遺傳機制：MC1R 雙隱性基因的演化代價</a>
+
   <a href="#section2">二、現實明星與流行文化除錯：天生紅髮 vs. 好萊塢染髮符號</a>
+  <div class="sub-catalog">
+    <a href="#section2-1">2.1 主流影視與流行文化名人考據</a>
+    <a href="#section2-2">2.2 成人娛樂工業中的紅髮符號學與體質對照</a>
+  </div>
+
   <a href="#section3">三、經典虛構角色與文本考據表</a>
   <a href="#section4">四、文化歷史的雙向投影：從中世紀「女巫獵殺」到當代「Gingercide」</a>
+
   <a href="#section5">五、角色設計工程指南：如何在文學、動漫與遊戲中精確架構紅髮白人</a>
+  <div class="sub-catalog">
+    <a href="#section5-1">5.1 生理與環境自洽性（拒絕熱帶自然紅髮）</a>
+    <a href="#section5-2">5.2 文化原型與角色性格定位</a>
+    <a href="#section5-3">5.3 遊戲美術的色彩力學（視覺對比工程）</a>
+  </div>
+
   <a href="#section6">六、視覺敘事參考（一）：凱爾特德魯伊（Druidess）的林泉靈性與商業美學</a>
   <a href="#section7">七、視覺敘事參考（二）：紅髮女巫、異端同盟與獵巫反抗動態解析</a>
   <a href="#section8">八、結語：從演化孤島、獵巫焦慮到當代視覺符號的文化啟示</a>
@@ -318,7 +354,7 @@
 </p>
 
 <!-- 2.1 主流影視與流行文化明星 -->
-<h3 style="color: #2c3e50; border-left: 4px solid #3498db; padding-left: 8px;">2.1 主流影視與流行文化名人考據</h3>
+<h3 id="section2-1" style="color: #2c3e50; border-left: 4px solid #3498db; padding-left: 8px;">2.1 主流影視與流行文化名人考據</h3>
 
 <table>
   <thead>
@@ -383,7 +419,7 @@
 </div>
 
 <!-- 2.2 成人娛樂工業視覺符號學 -->
-<h3 style="color: #2c3e50; border-left: 4px solid #8e44ad; padding-left: 8px; margin-top: 35px;">2.2 成人娛樂工業中的紅髮符號學與體質對照</h3>
+<h3 id="section2-2" style="color: #2c3e50; border-left: 4px solid #8e44ad; padding-left: 8px; margin-top: 35px;">2.2 成人娛樂工業中的紅髮符號學與體質對照</h3>
 
 <div class="info-card" style="margin-bottom: 20px;">
   <p>
@@ -600,7 +636,7 @@
 </p>
 
 <div class="warning-card">
-  <h3 style="margin-top:0; color:#c0392b;">★ 核心設計法則：避免「生硬貼皮」，落實三層維度</h3>
+  <h3 id="rules" style="margin-top:0; color:#c0392b;">★ 核心設計法則：避免「生硬貼皮」，落實三層維度</h3>
   <ol>
     <li><strong>第一層：生理與環境自洽性（Physical Plausibility）</strong></li>
     <li><strong>第二層：文化原型與陣營定位（Cultural Archetype & Alignment）</strong></li>
@@ -608,7 +644,7 @@
   </ol>
 </div>
 
-<h3>1. 生理與環境自洽性（拒絕熱帶自然紅髮）</h3>
+<h3 id="section5-1">1. 生理與環境自洽性（拒絕熱帶自然紅髮）</h3>
 <ul>
   <li>
     <strong>地理光照邏輯：</strong> 如果你的世界觀是嚴肅奇幻或硬科幻，自然紅髮角色應來自<strong>高緯度、多霧、多雨、森林茂密、北海峽灣或終年積雪的北方邊陲</strong>（對應真實世界的愛爾蘭、蘇格蘭高地與斯堪地那維亞）。絕不應在熱帶沙漠或強烈烈日的海島原住民中設定「天生自然紅髮」，否則在演化生物學上完全不成立。
@@ -629,7 +665,7 @@
   </li>
 </ul>
 
-<h3>2. 文化原型與角色性格定位</h3>
+<h3 id="section5-2">2. 文化原型與角色性格定位</h3>
 <ul>
   <li>
     <strong>原型 A：狂暴的野性戰士（高地狂戰士 / 喀里多尼亞蠻族）</strong><br>
@@ -649,7 +685,7 @@
   </li>
 </ul>
 
-<h3>3. 遊戲美術的色彩力學（視覺對比工程）</h3>
+<h3 id="section5-3">3. 遊戲美術的色彩力學（視覺對比工程）</h3>
 <ul>
   <li>
     <strong>經典互補色穿搭（紅配綠 / 紅配藍）：</strong><br>
