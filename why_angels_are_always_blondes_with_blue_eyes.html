@@ -740,40 +740,48 @@
         認清歷史真相，並不會削弱藝術的想像力，反而能讓我們從當代演算法反芻的「單一西北歐雅利安模板」中徹底解放。只有保持獨立除錯的敏銳度，不落入意識形態與刻板符號的集體通靈，創作者才能在科技與大數據的浪潮中，真正奪回屬於我們自身的文化主控權與視覺自由。
     </p>
 </div>
-<div id="social-share" style="margin-top: 25px;">
+<ul id="messages"></ul>
+
+<div id="social-share" style="margin-top: 20px;">
+
     <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+
     <span> | </span>
+
     <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+
     <span> | </span>
+
     <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+
 </div>
+
 <script>
+
     var currentUrl = window.location.href;
+
     document.getElementById("fb-share").href =
+
         "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+
     document.getElementById("line-share").href =
+
         "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+
     document.getElementById("twitter-share").href =
-        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
-</script>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
-</script>
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
 
-<div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/why_angels_are_always_blondes_with_blue_eyes.html"
-     data-width="100%"
-     data-numposts="5"
-     style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 8px;">
-</div>
+</script>
 
 <footer>
-    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white; font-weight: bold;">周彥廷</a></p>
-    <p>創作日期：2026 年 6 月 8 日（架構重構與盲測資料庫擴充）</p>
-    <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400" style="margin: 15px auto 0; border: 1px solid #ddd; border-radius: 4px; display: block;">
-    <p style="font-size: 0.85em; margin-top: 15px; color: #bdc3c7;">所有頁面均來自同一 GitHub Pages 專案</p>
+
+    <p>專題作者：周彥廷 | 研究日期：2026 年 6 月 8 日</p>
+
+    <img loading="lazy" src="理平頭.jpg" alt="作者照片" width="300" height="400">
+
+    <p style="font-size: 0.8em; color: #bdc3c7;">版權所有 © 2026 同屬 GitHub Pages 人類學與次文化視覺革命專案</p>
+
 </footer>
 
 </body>
