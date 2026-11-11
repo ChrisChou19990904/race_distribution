@@ -10,7 +10,7 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-            line-height: 1.8;
+            line-height: 1.85;
             margin: 20px;
             background-color: #f9f9f9;
             color: #333;
@@ -22,6 +22,7 @@
             background-color: pink;
             padding: 10px 0;
             margin-bottom: 20px;
+            border-radius: 6px;
         }
         header nav ul {
             list-style-type: none;
@@ -57,8 +58,8 @@
         }
         section {
             background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 22px;
+            margin-bottom: 25px;
             border-radius: 8px;
             box-shadow: 0px 0px 5px #ccc;
             scroll-margin-top: 25px;
@@ -69,13 +70,22 @@
             margin-bottom: 15px;
             display: block;
         }
+        .showcase-box {
+            display: block;
+            text-align: center;
+            border: 2px solid #bce8f1;
+            background-color: #fcfdfe;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
         footer {
             text-align: center;
             margin-top: 40px;
             font-size: 0.9em;
             color: yellow;
             background-color: purple;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
         }
         #social-share a {
@@ -128,7 +138,7 @@
     <nav>
         <ul>
             <li><strong class="guide">本頁內容：</strong><br>
-                <a>世界人種分布與歷史原因</a></li>
+                <a>世界人種分布與歷史原因（入口總綱）</a></li>
 
             <li><strong class="guide">其他文章連結：</strong>
                 <ol>
@@ -225,135 +235,168 @@
 
 <section id="overview">
     <h2>全球概覽</h2>
-    <p>以下地圖顯示了不同人種在世界的分布情況：</p>
+    <p>世界人種的巨觀分佈，是在冰河時期晚期至全新世定型的大規模地緣演化結果。下圖呈現傳統體質人類學上的三大原生分佈帶：</p>
     <img id="global" src="世界人種分佈圖.jpg" alt="世界人種分布圖" style="border: 1px solid #ddd;">
-    <p>顏色標記說明：綠色（白色人種）、黃色（黃色人種）、紅色（黑色人種）。</p>
+    <p style="font-size: 0.9em; color: #555;">
+        <strong>顏色標記說明：</strong>綠色（廣義高加索人種，含歐洲、北非、西亞與北印度）、黃色（蒙古人種／東亞及美洲原住民先民）、紅色（尼格羅人種／撒哈拉以南非洲人群）。這張古典地圖明確揭示了高加索人種原本橫跨歐亞非三洲的連續版圖，而非僅限於歐洲大陸。
+    </p>
 </section>
 
 <section id="factors">
     <h2>形成因素</h2>
+    <p>現代演化生物學與分子人類學證實，人類群體的外貌差異由四大不可分割的動力共同推動：</p>
     <ul>
-        <li><strong>地理環境：</strong>地形、氣候影響人類適應與膚色演化。</li>
-        <li><strong>歷史遷徙：</strong>如印歐語系民族遷徙、蒙古西征。</li>
-        <li><strong>殖民與貿易：</strong>歐洲殖民、奴隸貿易改變了人口結構。</li>
-        <li><strong>文化交流：</strong>跨地區婚姻與融合，產生混血族群。</li>
+        <li><strong>地理氣候與紫外線天擇（UV Adaptation）：</strong><br>
+            赤道與低緯度地區強烈的紫外線促使人體保留高濃度的真黑素（Eumelanin）以保護葉酸代謝；而中高緯度地區因日照稀少，群體在遷徙過程中演化出褪黑色素基因（如 <code>SLC24A5</code>、<code>HERC2/OCA2</code>），以便在微弱陽光下高效合成維持骨骼健康所必需的維生素 D。</li>
+        <li><strong>史前與歷史時期的大遷徙（Great Migrations）：</strong><br>
+            距今約 2 萬年前古東北亞人群跨越白令陸橋開拓美洲；公元前 2000 年前後印歐語系牧民自顏那亞草原向歐洲、中亞與南亞擴散；以及蒙古帝國西征與突厥語族西移，不斷重塑歐亞大陸的基因版圖。</li>
+        <li><strong>近代殖民擴張與奴隸貿易（Colonial Restructuring）：</strong><br>
+            大航海時代打破了舊大陸的自然隔離，歐洲殖民者向美洲與大洋洲的武裝拓殖、跨大西洋黑奴貿易，使新大陸（如美國、巴西、加勒比海地區）在短短數百年內形成了全球最複雜的族群大熔爐。</li>
+        <li><strong>地緣走廊的持續文化與基因交流（Gene Flow）：</strong><br>
+            跨地區的通婚與商貿（如絲綢之路、地中海環形貿易帶）促成了過渡地帶人群的誕生，證明人類各族群本質上是連續流動的光譜，絕非封閉孤立的「純種島嶼」。</li>
     </ul>
 </section>
 
 <section id="cases">
     <h2>案例國家與地區</h2>
-    <h3>美洲</h3>
+
+    <h3>1. 美洲：從白令陸橋古東北亞祖源到混血新世界</h3>
     <p>
-        原住民在傳統分類中常被粗略歸為黃種人，分子遺傳學證實其祖源在冰河期源自古東北亞／東亞先民，經由西伯利亞並於約 2 萬年前穿越白令陸橋進入美洲，並逐漸擴散到南美洲。<br>
-        DNA 研究證實，美洲原住民與蒙古、西伯利亞地區的遠古人群有共同遺傳標記。<br>
-        後來，歐洲殖民者與非洲奴隸輸入，使今日美洲成為高度多元族群社會。
+        美洲原住民（印第安人）在傳統分類中常被粗略歸為黃種人。分子遺傳學與古 DNA 研究證實，其祖先在末次盛冰期源自<strong>古東北亞／東亞先民（Ancient Northern East Asian）</strong>，於約 2 萬年前經由白令陸橋（Beringia）進入北美，並在冰川消退後迅速擴散至中南美洲。他們完整保留了東亞人群的骨相特徵（如高鏟形門齒、平緩鼻根、內眥贅皮）。<br>
+        近代自 1492 年哥倫布抵達後，西班牙、葡萄牙、英國殖民者以及數百萬非洲黑奴的湧入，使今日拉丁美洲形成了獨特的麥士蒂索人（Mestizo，歐印混血）、穆拉托人（Mulatto，歐非混血）等多元社會結構。
     </p>
-    <h3>北非</h3>
+
+    <h3>2. 北非：撒哈拉沙漠屏障與高加索骨相原鄉</h3>
     <p>
-        從美國官方人口普查（OMB）的人種法規與歷史人類學來看，<strong>北非（如埃及、利比亞、摩洛哥等地區）的原始居民與西亞、歐洲同樣被歸類為白色人種（高加索人種）</strong>。<br>
-        雖然地處非洲大陸，但北非人的骨相與面部輪廓（如深邃的五官、立體的鼻梁）與撒哈拉以南的黑人族群有明顯區隔。<br>
-        這種地理與人種的特性在影視作品中也經常被體現：例如在電影《暮光之城》中登場的古老「埃及吸血鬼家族」（成員包含 Amun、Kebi、Tia 以及 Benjamin 等），劇組在選角時便特意挑選了具備中東或地中海血統、擁有深色頭髮與深邃五官的白人演員來飾演，完美貼合了北非高加索人種的立體骨相。<br>
-        此外，正如知名創作者「非典牧師」過去利用 AI 生成古代埃及聖經人物時所展示的視覺影像，古埃及人（北非人）在真實的歷史人種視覺還原中，往往展現出屬於白色人種的深邃面相與小麥色皮膚，打破了現代大眾常將北非與黑人族群混淆的刻板印象。
+        從美國官方人口普查（OMB）法規與體質人類學來看，<strong>北非（埃及、利比亞、阿爾及利亞、摩洛哥等）的原住民與西亞、歐洲同樣屬於白色人種（高加索人種）</strong>。巨大的撒哈拉沙漠自古以來形成了天然的生態隔離屏障，使得北非人（如柏柏爾人、古埃及後裔）在解剖學骨骼幾何（高狹鼻梁、深邃眼眶縱深）上與撒哈拉以南非洲人群有著根本性的演化區別。<br>
+        這種真實的地理人種特性常被體現在具備考據意識的影視作品中：例如在電影《暮光之城》中登場的「埃及吸血鬼家族」（成員 Amun、Kebi、Benjamin 等），劇組便特意挑選具備中東或地中海血統、擁有深色頭髮與深邃骨相的白人演員飾演；知名創作者「非典牧師」利用 AI 還原古代埃及聖經人物時，亦展現出標準高加索面相與健康小麥肌膚，破除了現代流行文化常將北非與黑人混淆的刻板印象。
     </p>
-    <em>註：下方的影片和GIF分別為AI生成的聖經人物和暮光之城的埃及家族角色</em>
-    <br>
-    <video controls style="width:300px; height:auto; aspect-ratio: 9/16; border: 1px solid #ddd;"><source src="用AI生成的聖經人物.mp4"></video>
-    <br>
-    <img loading="lazy" src="egyptian_coven.gif" alt="埃及吸血鬼家族" style="border: 1px solid #ddd;">
-    <h3>非洲（撒哈拉以南）</h3>
-    <p>以黑人種為主，擁有適應熱帶強烈紫外線的深色皮膚與獨特的生理特徵。</p>
-    <h3>歐洲</h3>
-    <p>主要為白人種，但歷史上有蒙古與中東族群交流，孕育出豐富的髮色與外貌多樣性。</p>
-    <h3>東亞</h3>
-    <p>以傳統定義的東亞族群為主，與蒙古、西伯利亞、東南亞族群互動，形成龐大的東亞文化圈。</p>
+
+    <div class="showcase-box">
+        <video controls style="width:300px; height:auto; aspect-ratio: 9/16; margin: 0 auto 10px;"><source src="用AI生成的聖經人物.mp4"></video>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 20px; font-weight:bold;">▲ 歷史視覺還原：知名創作者「非典牧師」以 AI 還原之古埃及聖經人物——深邃立體的高加索骨相與自然小麥肌膚</p>
+
+        <img loading="lazy" src="egyptian_coven.gif" alt="暮光之城埃及吸血鬼家族" style="margin: 0 auto 10px;">
+        <p style="font-size:0.9em; color:#222; margin:4px 0 10px; font-weight:bold;">▲ 《暮光之城：破曉》埃及家族選角：劇組選用具備地中海／西亞血統之深髮立體面孔演員，貼合北非高加索歷史骨相</p>
+    </div>
+
+    <h3>3. 非洲（撒哈拉以南）：全球遺傳多樣性最高的搖籃</h3>
+    <p>
+        撒哈拉以南非洲是智人（Homo sapiens）走出非洲的演化發源地。為適應熱帶赤道強烈的紫外線輻射，該地區人群保留了高密度的真黑素深色皮膚、緊密捲曲的毛髮（隔熱透氣）與寬平的鼻翼（加速散熱）。現代群體遺傳學實證：<strong>非洲大陸內部的基因多樣性，遠大於非洲以外全世界所有人類群體的總和</strong>。
+    </p>
+
+    <h3>4. 歐洲：地中海、阿爾卑斯與諾迪克的地緣交織</h3>
+    <p>
+        歐洲白人絕非單一的「金髮碧眼」。其人群本質上是由三股古代祖源混合而成：西方狩獵採集者（WHG）、早期歐洲農民（EEF，來自安納托利亞的黑髮高加索人群）以及青銅時代東歐草原牧民（Yamnaya）。南部地中海（義大利、西班牙、希臘）以深黑髮、深瞳孔與橄欖小麥肌為多數；中部阿爾卑斯呈現栗褐髮；唯有在低日照的西北歐，金髮與淺色瞳孔才佔有較高比例。
+    </p>
+
+    <h3>5. 東亞：中高緯度季風區的原生冷白肌與骨骼架構</h3>
+    <p>
+        東亞人群在適應東亞溫帶季風與寒冷乾燥環境中，演化出了特有的脂肪墊眼瞼（防風沙）、平緩鼻根、內眥贅皮與高反射率的細膩皮膚。由於緯度偏高且季風氣候冬季漫長，中北部東亞人（中國北方、南韓、日本）普遍擁有原生極度白皙通透的肌膚，在物理色度上與歐洲白人無異，徹底瓦解了西方偽科學將東亞人貼上「黃皮」標籤的政治編造。
+    </p>
 </section>
 
 <section id="regions">
     <h2>南亞、中亞與中東的人種歷史</h2>
-    <h3>南亞：印度與雅利安人</h3>
+
+    <h3>1. 南亞：印歐雅利安東征與 ANI/ASI 雙核心模型</h3>
     <p>
-        約公元前 2000 年，印-伊朗語族（Indo-Iranian，即「雅利安人」）從中亞草原遷入印度次大陸，<br>
-        帶來早期梵語與吠陀文化，並與當地的達羅毗荼人融合。<br>
-        這段歷史影響了今日印度的語言（印歐語系與達羅毗荼語系並存）、宗教與社會制度。
+        約公元前 2000 年至 1500 年間，源自中亞草原的印-伊朗語族（Indo-Iranian，即歷史上的雅利安人）跨越興都庫什山脈遷入印度次大陸，帶來了早期吠陀文化與印歐語系梵語。哈佛大學分子遺傳學家大衛·賴希（David Reich）團隊的研究證實，現代南亞人群體內普遍存在兩大古代基因核心：
     </p>
-    <h3>中亞：歐亞交匯之地</h3>
+    <ul>
+        <li><strong>祖先北印度成分（ANI，Ancestral North Indian）：</strong>與中東、中亞及歐洲人群親緣極近，攜帶大量青銅時代草原牧民的高加索遺傳標記，在北印度高種姓群體中比例極高。</li>
+        <li><strong>祖先南印度成分（ASI，Ancestral South Indian）：</strong>源自南亞次大陸更早期的古老原住採集狩獵人群。</li>
+    </ul>
     <p>
-        中亞歷史上是族群大熔爐。早期有印歐人（如吐火羅人），<br>
-        後有突厥、蒙古等民族遷入，並與原住人群融合。<br>
-        傳統上中亞被視為高加索人種的延伸，但現代基因研究顯示，<br>
-        中亞人同時擁有歐洲型與東亞型基因，是真正的「歐亞混合地帶」。
+        這段地緣遷徙實證了：現代多數印度人高挺的鼻梁與深邃的眼窩，完全承襲自高加索印歐祖源；其較深的皮膚色調，則是數千年來在南亞熱帶烈日下產生的保護性適應，骨相與非洲黑人截然不同。
     </p>
-    <h3>中東：文明與人種的交匯</h3>
+
+    <h3>2. 中亞：歐亞大陸的動態混合走廊</h3>
     <p>
-        中東位於歐亞非三洲交界，自古是「文明搖籃」。<br>
-        蘇美、巴比倫、波斯、阿拉伯帝國先後興起，使這裡成為白人種、閃米特人、乃至非洲人群的融合地。<br>
-        伊斯蘭擴張與絲路貿易更進一步強化了族群多樣性，使中東成為東西方文化與人種的交會點。
+        中亞自古即是東西方文明與人種的大熔爐。青銅時代早期，中亞主要由操印歐語系的東伊朗語族、吐火羅人（如塔里木盆地古乾屍）等高加索人群佔據；公元 6 世紀之後，突厥語民族興起、西突厥汗國建立，加之後續 13 世紀蒙古西征，大量東亞蒙古人種基因注入中亞，與當地的高加索原住民深度融合。<br>
+        現代基因檢測顯示，今日中亞人群（烏茲別克、哈薩克、吉爾吉斯）同時兼備歐洲型與東亞型單倍群，呈現出高度立體且兼具東亞柔和線條的「歐亞混合連續過渡帶」。
     </p>
-    <h3>現代觀點</h3>
+
+    <h3>3. 中東：三大洲文明十字路口與高加索原鄉</h3>
     <p>
-        南亞、中亞與中東的人種歷史顯示，人類族群並非孤立存在，<br>
-        而是在持續的遷徙與融合中形成現代的多樣格局。
+        中東地處歐、亞、非三大陸樞紐，是人類新石器時代農業革命與最早古文明的發源地。蘇美、巴比倫、波斯帝國與阿拉伯帝國在此交替演繹。中東人群（閃米特語族、伊朗語族等）是傳統人類學定義最核心的高加索發源板塊，具備高顴骨縱深、長顱型與深色捲髮。其後續透過伊斯蘭擴張與絲路商貿，持續扮演著歐亞非三洲基因與文化流動的中樞樞紐。
     </p>
 </section>
 
 <section id="hollywood-politics">
     <h2>附錄：美國普查法規與當代好萊塢的神話選角現象</h2>
     <p>
-        在探討世界人種分布與歷史之餘，當代的法律定義及影視娛樂工業也深刻地反映了這些人種分類的延伸應用：
+        在探討世界人種分布與歷史之餘，當代的法律定義及全球影視娛樂工業也深刻地反映了這些人種分類的延伸應用：
     </p>
+
     <h3 id="census-def">1. 美國官方普查中的「白人」定義</h3>
     <p>
-        根據美國聯邦政府（美國人口普查局與預算局 OMB）的官方標準定義，<strong>凡是來自歐洲、中東或北非（MENA地區）的原始居民，在族裔分類上都必須被填寫與歸類為「白人」（White）</strong>。儘管中東與北非移民的文化和具體外貌經驗各有差異，但在官方人口統計文書中始終歸納於此範疇。
+        根據美國聯邦政府管理與預算局（OMB）及美國人口普查局的官方標準法定定義，<strong>凡是源自歐洲、中東或北非（MENA，Middle East and North Africa）原始居民的後裔，在族裔登記上均被明確分類為「白人」（White）</strong>。這一法規直接證實：在國際法政與統計體系中，「白人」從來不等於「歐洲人」，中東阿拉伯人、波斯人、猶太人及北非埃及人在法理上始終屬於白色人種範疇。
     </p>
+
     <h3>2. 好萊塢的多元化選角與伊斯蘭/西亞角色定位</h3>
     <p>
-        為了落實當代影視產業的多元、公平與包容（DEI）原則，影視團隊在組建時通常會刻意平衡白人、非裔、亞裔與拉丁裔等多個族群的面孔。<br>
-        然而，由於中東/北非人官方被視為白人，加上部分西亞裔演員具備高加索人種深邃立體的骨相特徵，他們在作品中經常被指派為白人角色。在情節設定上，來自伊斯蘭或中東地區的角色往往會被賦予特定的社會標籤，例如在涉及財富或商業帝國的劇本中，常被形塑成「石油大亨」或「跨國企業富豪」等財閥形象。
+        為了落實當代西方影視產業的多元、公平與包容（DEI）規範，劇組在組建演員陣容時常會平衡多種族面孔。然而，由於中東/北非人官方被視為白人，加上西亞裔演員擁有極為立體深邃的高加索骨相，他們在作品中經常被指派為一般白人角色。在角色塑造上，來自西亞地區的角色常被貼上特定的刻板社會標籤——例如在涉外商戰電影中被定型為「波斯灣石油大亨」或「跨國財閥」。
     </p>
+
     <h3>3. 中東神話電影中的深髮白人選角現象</h3>
     <p>
-        在許多以古埃及、美索不達米亞或波斯等中東神話為題材的電影中，製片方經常會刻意挑選<strong>擁有一頭深色頭髮與深色眼睛的歐裔白人（包含歐洲原生白人或歐裔美國人）</strong>來擔任主角。這種現象背後有著雙重脈絡：
+        在諸多以古埃及、美索不達米亞或波斯神話為題材的好萊塢史詩大片中（如《埃及神祇》、《波斯王子：時之刃》、《出埃及記：天地王者》），片方往往刻意挑選<strong>擁有一頭深黑毛髮、茶黑眼眸的歐裔演員（南歐裔或深髮英美演員）</strong>擔任主角。這背後具備雙重邏輯：
     </p>
     <ul>
-        <li><strong>高加索人種的廣義同源：</strong>從歷史人類學和基因地理來看，歐洲白人與中東、南亞雅利安後裔同屬於廣義的高加索人種，在骨骼結構、鼻梁與五官輪廓上有著天生的相通性，因此深髮歐裔演員在扮演中東神話角色時，骨相違和感較低。</li>
-        <li><strong>商業審美與公關考量：</strong>相比於金髮碧眼的典型北歐長相（容易帶有過度強烈的現代西方感），深髮黑眸的歐裔演員既能維持好萊塢商業市場習慣的主流星光與白人骨相，又能散發神祕的異國情調，同時巧妙避開了過去直接找純金髮白人飾演非歐古文明所招致的「洗白（Whitewashing）」批判。</li>
+        <li><strong>高加索骨相的地緣同源：</strong>歷史人類學證實，歐洲白人與中東、北非高加索人群共享同源的面部解剖結構（高立體鼻骨與眉弓縱深），深髮歐裔演員在扮演中東角色時，面部幾何違和感極低。</li>
+        <li><strong>規避公關風暴與商業平衡：</strong>若直接找金髮碧眼的北歐外型演員扮演埃及或波斯神祇，容易招致強烈的「洗白（Whitewashing）」批判；而挑選深髮深瞳的歐裔巨星，既能符合西方商業市場的票房號召力，又能散發異國神話的古典威嚴。</li>
     </ul>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4afYKM63IKA?si=8bQtKmetXhH-cwFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/k2j9ygwM8TQ?si=8_WxioJ4Gazzvlyr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PrcKfWEYzVk?si=Sg4pqRcQwDDKRNIG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/tJP_b1ad7RU?si=M_nRFs2mLWUENPVC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SUqQotQcnSI?si=5K8ypyqteT1wWVeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="showcase-box">
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4afYKM63IKA?si=8bQtKmetXhH-cwFQ" title="電影《出埃及記：天地王者》選角深度解析" frameborder="0" allowfullscreen style="margin: 0 auto; display: block; max-width: 100%;"></iframe>
+        <p style="font-size:0.9em; color:#222; margin:6px 0 25px; font-weight:bold;">▲ 《出埃及記：天地王者》（Exodus: Gods and Kings）：克里斯汀·貝爾等深髮白人演員飾演古埃及與希伯來歷史人物的選角爭議與人類學背景解析</p>
+
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/k2j9ygwM8TQ?si=8_WxioJ4Gazzvlyr" title="電影《波斯王子：時之刃》深髮白人選角" frameborder="0" allowfullscreen style="margin: 0 auto; display: block; max-width: 100%;"></iframe>
+        <p style="font-size:0.9em; color:#222; margin:6px 0 25px; font-weight:bold;">▲ 《波斯王子：時之刃》：傑克·葛倫霍（Jake Gyllenhaal）以深黑髮色與立體輪廓演繹波斯帝國王子的選角考據</p>
+
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PrcKfWEYzVk?si=Sg4pqRcQwDDKRNIG" title="好萊塢西亞古文明電影洗白爭議" frameborder="0" allowfullscreen style="margin: 0 auto; display: block; max-width: 100%;"></iframe>
+        <p style="font-size:0.9em; color:#222; margin:6px 0 25px; font-weight:bold;">▲ 專題探討：好萊塢在處理古埃及、希臘與美索不達米亞神話時，如何運用深髮高加索演員達成商業審美與多元形象的平衡</p>
+
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/tJP_b1ad7RU?si=M_nRFs2mLWUENPVC" title="影視改編中的種族與角色定位" frameborder="0" allowfullscreen style="margin: 0 auto; display: block; max-width: 100%;"></iframe>
+        <p style="font-size:0.9em; color:#222; margin:6px 0 25px; font-weight:bold;">▲ 跨文化影視分析：西方商業巨作如何將「中東/北非人＝白人」的法定概念轉化為銀幕上的選角策略</p>
+
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SUqQotQcnSI?si=5K8ypyqteT1wWVeM" title="神話史詩大片選角的政治符號學" frameborder="0" allowfullscreen style="margin: 0 auto; display: block; max-width: 100%;"></iframe>
+        <p style="font-size:0.9em; color:#222; margin:6px 0 10px; font-weight:bold;">▲ 深度紀錄：解構商業大片中非歐裔古老文明的「黑髮白人面孔代碼」</p>
+    </div>
 </section>
 
 <section id="video">
-    <h2>影片作證</h2>
-    <em>
-        影片說明：這段影片向各位說明印度人為何是白種人，並且說明了印度人與歐洲人的共同祖先是來自中亞的雅利安人。
-    </em>
-    <br>
-    <video controls style="width: 100%; max-width: 560px; aspect-ratio: 16/9; border: 1px solid #ddd;"><source src="人種分布.mp4"></video>
-    <br>
-    <em>
-        影片說明：根據暮光之城的設定，狼人是印地安人，各位也可以看到影片中的印第安人長得像東亞人，<br>這是因為他們的祖先來自東亞，並在冰河時期穿越白令陸橋進入美洲的緣故。
-    </em>
-    <br>
-    <video controls width="560" height="315" style="border:10px red solid"><source src="暮光之城裡的印第安人長得像中國人.mp4"></video>
-    <br>
-    <em>
-        影片說明：新疆的維吾爾族、哈薩克族等民族，因為歷史上與中亞、東亞族群的交流與融合，<br>所以他們的外貌特徵同時具有高加索人種與蒙古人種的特徵，呈現出與歐洲人相似的外貌。
-    </em>
-    <br>
-    <video controls width="560" height="315" style="border:10px red solid"><source src="新疆人長得像歐洲人的真相.mp4"></video>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/puch6RESkME?si=nZulYKeGk3TRzljj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/75Mh-KHyrCg?si=8CLn_xTOXnGI6dxp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4ipZXPGh0N0?si=1TgKxE3UkgsSXZ8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>影片作證：多維度人類學與影視考據實證</h2>
+
+    <div class="showcase-box">
+        <video controls style="width: 100%; max-width: 600px; aspect-ratio: 16/9; margin: 0 auto 10px; border: 1px solid #ddd;"><source src="人種分布.mp4"></video>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 20px; font-weight:bold;">
+            ▲ 人類學科普短片一：南亞印歐人群的遺傳真相——詳細論述印度人為何屬於高加索人種，剖析印度人與歐洲白人共同起源自中亞草原雅利安人群的演化歷程。
+        </p>
+
+        <video controls width="560" height="315" style="border:5px solid #004d66; margin: 0 auto 10px;"><source src="暮光之城裡的印第安人長得像中國人.mp4"></video>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 20px; font-weight:bold;">
+            ▲ 影視人類學短片二：《暮光之城》狼人族群的面相考據——劇中扮演奎魯特原住民狼人的青年演員面容神似東亞人，實證美洲原住民源自冰河時期穿越白令陸橋的古東北亞祖源。
+        </p>
+
+        <video controls width="560" height="315" style="border:5px solid #004d66; margin: 0 auto 10px;"><source src="新疆人長得像歐洲人的真相.mp4"></video>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 20px; font-weight:bold;">
+            ▲ 歐亞融合走廊實證三：新疆維吾爾族與哈薩克族的體質特徵——實證絲綢之路上高加索立體骨相與東亞柔和基因的千年交融，呈現歐亞混合連續帶的面孔特質。
+        </p>
+    </div>
+<!--
+    <div class="showcase-box">
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/puch6RESkME?si=nZulYKeGk3TRzljj" title="世界人種分佈與基因遷徙科普" allowfullscreen></iframe>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 20px; font-weight:bold;">▲ 國際權威基因科普：智人出非洲後的各大洲遷徙路線、紫外線適應與現代三大族群分化全景解析</p>
+
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/75Mh-KHyrCg?si=8CLn_xTOXnGI6dxp" title="破解常見人種刻板標籤" allowfullscreen></iframe>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 20px; font-weight:bold;">▲ 人類學除錯專題：從解剖學骨骼與 DNA 定序出發，破解「膚色等於人種」、「白人必為金髮」等常見直覺迷思</p>
+
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4ipZXPGh0N0?si=1TgKxE3UkgsSXZ8E" title="歐亞大陸基因走廊紀錄片" allowfullscreen></iframe>
+        <p style="font-size:0.9em; color:#222; margin:4px 0 10px; font-weight:bold;">▲ 絲綢之路歷史人類學：西亞、中亞至中國西北地區兩千年來民族交融與骨相過渡的完整實錄</p>
+    </div>
+    -->
 </section>
 
 <section id="conclusion">
@@ -365,8 +408,12 @@
         從<strong>南亞高加索人群的膚色演化</strong>、<strong>中東西亞原鄉神話的單向洗產地</strong>，到<strong>中國西北走廊（新疆／甘肅）實證的歐亞地緣連續性</strong>與<strong>美洲原住民的跨陸橋古東北亞祖源</strong>，現代分子遺傳學與客觀史實皆清楚表明：<strong>外貌特徵是環境適應與族群遷徙的歷史印記，絕非優劣高低或非黑即白的陣營界線。</strong>
     </p>
     <p>
-        在當代影視娛樂、遊戲開發與跨文化傳播中，以嚴謹的歷史人類學、群體遺傳學與宗教文獻為依歸，不僅能徹底打破「白人僅限歐洲粉白皮」、「金髮碧眼等於全體歐裔」、「黃種人等於扁平單一」等流行文化偏見，更能建立一套真正兼具美學真實、科學客觀與跨文化包容的理性視野。
+        在當代影視娛樂、遊戲開發與跨文化傳播中，以嚴謹的歷史人類學、群體遺傳學與宗教文獻為依歸，不僅能徹底打破「白人僅限歐洲粉白皮」、「白人必定膚色白皙」、「金髮碧眼等於全體歐裔」、「黃種人等於扁平單一」等流行文化偏見，更能建立一套真正兼具美學真實、科學客觀與跨文化包容的理性視野。
     </p>
+    <div style="background-color: #f0f7f9; border-left: 4px solid #004d66; padding: 12px 16px; margin-top: 20px; border-radius: 4px;">
+        <strong style="color: #004d66;">👉 深入探索本專案 17 個專題報告：</strong><br>
+        若您希望進一步了解「黑髮白人體質骨相」、「納粹雅利安神話解構」、「二次元金髮碧眼偏執」、「印度人海外刻板印象」或「天使形象演變」，請點選頁面頂部的導覽選單或直接查閱對應專題連結。
+    </div>
 </section>
 
 <div id="social-share" style="margin-top: 20px;">
