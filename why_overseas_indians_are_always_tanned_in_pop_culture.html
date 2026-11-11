@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>跨文化視覺的「雙向閹割」：古 DNA 遺傳光譜、好萊塢深膚刻板印記與南亞族群認知除錯報告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
             "Microsoft JhengHei", sans-serif;
-            line-height: 1.7;
-            margin: 40px;
+            line-height: 1.8;
+            margin: 40px auto;
+            max-width: 860px;
+            padding: 0 20px;
             background-color: #fafafa;
             color: #222;
         }
@@ -24,23 +27,31 @@
         h1 {
             border-bottom: 2px solid #ccc;
             padding-bottom: 10px;
+            line-height: 1.4;
         }
         h2 {
             margin-top: 40px;
-            border-left: 6px solid #666;
-            padding-left: 10px;
+            border-left: 6px solid #8e44ad;
+            padding-left: 12px;
             color: #333;
         }
-        p {
-            margin: 12px 0;
+        h3 {
+            margin-top: 25px;
+            color: #444;
         }
-        ul {
+        p {
+            margin: 14px 0;
+        }
+        ul, ol {
             margin-left: 24px;
+        }
+        li {
+            margin: 6px 0;
         }
         blockquote {
             background: #f0f0f0;
             padding: 15px 20px;
-            border-left: 5px solid #999;
+            border-left: 5px solid #8e44ad;
             margin: 20px 0;
             font-style: italic;
         }
@@ -49,41 +60,73 @@
             border-left: 5px solid #4a90e2;
             padding: 15px;
             margin: 20px 0;
+            border-radius: 0 6px 6px 0;
         }
         hr {
             margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
         }
         .chart-container {
             text-align: center;
             margin: 30px auto;
-            padding: 20px 15px;
-            border: 2px solid #4a5568; /* 明確的深灰/鐵灰色實線框 */
-            border-radius: 8px;        /* 輕微圓角，視覺更精緻 */
-            background-color: #f8fafc; /* 淺灰底色，使圖表區域與本文背景區隔 */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 輕微懸浮陰影 */
-            max-width: 650px;          /* 限制最大寬度以貼合 600px 的 SVG */
-            overflow-x: auto;          /* 手機版若螢幕太窄可橫向滑動，避免破版 */
+            padding: 22px 18px;
+            border: 2px solid #4a5568;
+            border-radius: 8px;
+            background-color: #f8fafc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            max-width: 720px;
+            overflow-x: auto;
+            box-sizing: border-box;
         }
         svg {
             max-width: 100%;
             height: auto;
         }
-        #google_translate_element {
-            position:absolute;
-            top: 10px;  /* 距離頁面頂端 60px */
-            left: 10px; /* 距離頁面左側 10px */
-            z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+        img, video, iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            box-sizing: border-box;
+        }
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border: none;
+        }
+        #google-translate-box {
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            font-size: 0.85em;
+            color: #666;
+            box-sizing: border-box;
+        }
+        #google-translate-box p {
+            margin: 0;
+            font-size: 0.9em;
+            line-height: 1.2;
         }
         header {
             background-color: pink;
             padding: 10px 0;
+            border-radius: 6px;
+            margin-bottom: 20px;
         }
         footer {
             text-align: center;
             margin-top: 50px;
             background-color: purple;
             color: yellow;
-            font-size: 20px;
+            font-size: 18px;
             padding: 20px;
             border-radius: 6px;
         }
@@ -106,40 +149,41 @@
         #social-share a#twitter-share {
             color: #1DA1F2;
         }
-        p a{
+        p a, p a:visited {
             color: #2980b9;
         }
-        p a:visited{
-            color: #2980b9;
-        }
-        .catalog a{
+        .catalog a {
             color: #2980b9;
             text-decoration: none;
+            font-weight: 500;
         }
-        .catalog a:hover{
+        .catalog a:hover {
             text-decoration: underline;
         }
-        .catalog a:visited{
+        .catalog a:visited {
             color: #2980b9;
+        }
+        @media screen and (max-width: 767px) {
+            body { margin: 20px auto; padding: 0 12px; }
+            #google-translate-box { flex-direction: column; align-items: flex-start; gap: 4px; }
+            .chart-container { padding: 15px 10px; }
         }
     </style>
 </head>
 <body>
 <div id="google-translate-box">
     <div id="google_translate_element"></div>
-    <!-- Google Translate 的自動翻譯功能 -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',  // 頁面原語言
-                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                pageLanguage: 'zh-TW',
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <br>
-    <p>點擊上方的語言選單以切換語言</p>
+    <p>點擊語言選單以切換語言</p>
 </div>
 <header>
     <nav>
@@ -181,7 +225,8 @@
     <li><a href="#section4">四、跨族裔的「視覺遮蔽悖論」：賀錦麗身上的南亞符號隱形現象</a></li>
     <li><a href="#section5">五、破解迷思：古 DNA 視角下的南亞遺傳光譜</a></li>
     <li><a href="#section6">六、影視工業的內外分流：本土「白皙神格」 vs 海外「深膚標籤」</a></li>
-    <li><a href="#section7">七、結論：走出符號牢籠與認識論重構</a></li>
+    <li><a href="#section7">七、給創作者的解碼指南：如何跳脫刻板標籤，設計立體真實的南亞裔角色？</a></li>
+    <li><a href="#section8">八、結論：走出符號牢籠與認識論重構</a></li>
 </ul>
 <hr>
 <h2 id="introduction">前言</h2>
@@ -199,11 +244,18 @@
     <li><strong>淺膚色印度人的「視覺歸類失效」：</strong><br>膚色白皙的北印高種姓人群在海外常被路人直覺誤認為南歐人（如義大利、希臘）、地中海人或中東黎凡特人，導致大眾「看見了卻認不出來」。</li>
     <li><strong>近期現象級案例：</strong><br>2023–2024 年印度 21 歲力量舉選手 <strong>Keyaa Banerji</strong> 爆紅，因其深邃雙眼與白皙皮膚被全球網友驚呼「好看得不像印度人」。其背後真相在於其姓氏「Banerji（Banerjee）」為孟加拉頂級婆羅門（Kulin Brahmin）大姓，其外貌完全是印歐雅利安基因庫在內婚制下的生理實相，卻反襯出大眾對印度長相的普遍認知盲區。</li>
 </ul>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/IpVJvI9cSS0?si=9uqtqKVfsX2CAMhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/LAASqiFi-7k?si=YFRo6VY84nR7MZzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/TbDgFStEE3U?si=JmsAplMrzLGcZIZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="chart-container">
+    <iframe loading="lazy" src="https://www.youtube.com/embed/IpVJvI9cSS0?si=9uqtqKVfsX2CAMhg" title="印度舉重選手 Keyaa Banerji 爆紅影片一" allowfullscreen></iframe>
+    <p style="font-size:0.9em; color:#333; margin:4px 0 20px; font-weight:bold;">▲ 案例實證一：印度力量舉新星 Keyaa Banerji 賽場實錄——因其白皙膚色與深刻高加索五官引發全球網友熱議</p>
+
+    <iframe loading="lazy" src="https://www.youtube.com/embed/LAASqiFi-7k?si=YFRo6VY84nR7MZzo" title="Keyaa Banerji 外貌引發熱議" allowfullscreen></iframe>
+    <p style="font-size:0.9em; color:#333; margin:4px 0 20px; font-weight:bold;">▲ 案例實證二：跨文化認知衝擊——海外社群驚呼「好看得不像印度人」，實則反映大眾對北印婆羅門高加索遺傳庫的集體無知</p>
+
+    <iframe loading="lazy" src="https://www.youtube.com/embed/TbDgFStEE3U?si=JmsAplMrzLGcZIZO" title="孟加拉頂級婆羅門姓氏與遺傳實相" allowfullscreen></iframe>
+    <p style="font-size:0.9em; color:#333; margin:4px 0 10px; font-weight:bold;">▲ 案例實證三：姓氏人類學考證——Banerjee 作為孟加拉千年古老祭司種姓，在內婚制下完整保留了印歐雅利安的高反射率淺色膚質光譜</p>
+</div>
+
 <blockquote>
     你看不到，不代表他們不存在；而是當他們出現在你眼前時，你拒絕承認那是「印度人」。
 </blockquote>
@@ -219,15 +271,19 @@
     <li><strong>符號溢出與校園微歧視（Racial Slur）：</strong><br>這種刻板形象在現實中產生了毀滅性的霸凌效應。在歐美各級校園中，許多南亞裔學生長年被同儕戲謔地冠上「Baljeet」的外號，使一個虛構的卡通角色名詞退化成了針對南亞族群的侮辱性代名詞（Slur）。</li>
     <li><strong>主創團隊的 TikTok 公開致歉：</strong><br>由於該現象引發大量南亞裔社群的反彈，《飛哥與小佛》原創者兼導演 <strong>Dan Povenmire</strong> 於 2021 年在 TikTok 上親自錄製影片嚴正澄清。他公開承認當初的角色塑造確實帶有令人遺憾的文化刻板偏見，並嚴厲正告所有粉絲：<em>「如果你正在用 Baljeet 這個名字去貶低或嘲弄任何南亞血統的人，請立刻住手！（Just don't!）」</em> 這場主創親自下場滅火的公關風波，鐵證了西方極簡符號對現實肉身造成的不可逆傷害。</li>
 </ul>
-<img loading="lazy" src="baljeet.png" alt="baljeet" style="border:red 10px solid">
-<br>
-<video controls width="540" height="720" style="border:red solid 10px"><source src="Dan_Povenmire_apologized_on_Tik_Tok.mp4"></video>
-<br>
-<div style="background: #f8f9fa; border-left: 4px solid #e74c3c; padding: 12px 16px; margin-top: 10px; max-width: 540px; border-radius: 0 6px 6px 0; font-size: 0.9em; line-height: 1.6; color: #444;">
-    <strong>▲ 影像證物審計與跨端本地存檔記錄：</strong><br>
-    上方的影片為《飛哥與小佛》共同原創兼導演 <strong>Dan Povenmire</strong> 於 2021 年在 TikTok 上發布的公開致歉與呼籲實錄。他在片中直面承認了 Baljeet 一角在設計上存在令人遺憾的文化刻板偏見，並嚴正警告大眾：<em>「如果你正在現實中拿 Baljeet 的名字來霸凌、戲謔任何南亞血統的同學，請立刻停止！（Just don't!）」</em><br><br>
-    <em>註：為防範第三方平台刪文、下架或嵌入失效導致的數位失憶風險（Link Rot），本網頁作者未採用脆弱的網頁第三方嵌入代碼；而是透過手機端深度檢索定位原始發布源，繞過電腦端無下載權限的限制，直接自 TikTok 官方 App 提取未經二次壓縮的原始高畫質 MP4 數據流，再經由雲端同步部署至本地代碼庫中永久封裝存檔，以確保該項社會學翻車鐵證的真實性與不可篡改性。</em>
+
+<div class="chart-container" style="max-width: 600px;">
+    <img loading="lazy" src="baljeet.png" alt="Baljeet 角色設計" style="border: 4px solid #e74c3c; max-width: 480px;">
+    <p style="font-size:0.9em; color:#333; margin:4px 0 20px; font-weight:bold;">▲ 《飛哥與小佛》角色 Baljeet Tjinder：極簡深褐色塗裝、微捲黑髮與怯懦體格，成為西方影視高度符號化的典型範式</p>
+
+    <video controls style="max-width: 480px; border: 4px solid #e74c3c;"><source src="Dan_Povenmire_apologized_on_Tik_Tok.mp4" type="video/mp4"></video>
+    <div style="background: #fff; border-left: 4px solid #e74c3c; padding: 12px 16px; margin-top: 10px; text-align: left; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.6; color: #444;">
+        <strong>▲ 影像證物審計與跨端本地存檔記錄：</strong><br>
+        上方的影片為《飛哥與小佛》共同原創兼導演 <strong>Dan Povenmire</strong> 於 2021 年在 TikTok 上發布的公開致歉與呼籲實錄。他在片中直面承認了 Baljeet 一角在設計上存在令人遺憾的文化刻板偏見，並嚴正警告大眾：<em>「如果你正在現實中拿 Baljeet 的名字來霸凌、戲謔任何南亞血統的同學，請立刻停止！（Just don't!）」</em><br><br>
+        <em>註：為防範第三方平台刪文、下架或嵌入失效導致的數位失憶風險（Link Rot），本網頁作者未採用脆弱的網頁第三方嵌入代碼；而是透過手機端深度檢索定位原始發布源，繞過電腦端無下載權限的限制，直接自 TikTok 官方 App 提取未經二次壓縮的原始高畫質 MP4 數據流，再經由雲端同步部署至本地代碼庫中永久封裝存檔，以確保該項社會學翻車鐵證的真實性與不可篡改性。</em>
+    </div>
 </div>
+
 <hr>
 
 <h2 id="section3">三、淺膚色印度人在歐美的「辨識錯位」與認知本質</h2>
@@ -258,10 +314,11 @@
     </li>
 </ul>
 
-<div style="text-align: center; margin: 20px 0;">
-    <iframe loading="lazy" width="410" height="730" src="https://www.youtube.com/embed/LoietO34dgU" title="&quot;So, We&#39;re Both Indian,&quot; &quot;Yes!&quot; Kamala Harris and Mindy Kaling&#39;s 2019 Indian Cooking Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border: 2px solid #ddd; border-radius: 8px;"></iframe>
-    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">▲ 2019 年賀錦麗與印度裔演員敏迪·卡靈（Mindy Kaling）共同錄製印度料理短片，兩人反覆確認「我們都是印度人」，生動印證了南亞符號在未經文化道具宣告前、長期處於視覺隱形狀態的現實。</p>
+<div class="chart-container" style="max-width: 480px;">
+    <iframe loading="lazy" style="aspect-ratio: 9/16; max-width: 380px;" src="https://www.youtube.com/embed/LoietO34dgU" title="Kamala Harris and Mindy Kaling 2019 Cooking Show" allowfullscreen></iframe>
+    <p style="font-size: 0.88em; color: #444; margin-top: 10px; font-weight: 500;">▲ 2019 年賀錦麗與印度裔演員敏迪·卡靈（Mindy Kaling）共同錄製印度料理短片，兩人反覆確認「我們都是印度人」，生動印證了南亞符號在未經文化道具宣告前、長期處於視覺隱形狀態的現實。</p>
 </div>
+
 <hr>
 
 <h2 id="section5">五、破解迷思：古 DNA 視角下的南亞遺傳光譜</h2>
@@ -280,29 +337,31 @@
     <li><strong>種姓制度的「基因冰凍效應」：</strong><br>長達數千年的嚴格內婚制阻止了兩大成分的均質融合，形成了從北到南、從高階婆羅門到低階不可接觸者之間極為劇烈的膚色與骨相階梯。</li>
     <li><strong>共享祖先不等於「次等分支」：</strong><br>基因分支的演化是樹狀擴散與網狀交織的過程，將南亞人群視為「劣化版白人」是 19 世紀社會達爾文主義與殖民種族主義留下的認知毒素。</li>
 </ul>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4fRw8llv-dg?si=OR1JOZIA5-9Lzz9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <div class="chart-container">
-    <p><strong>南亞基因演化交織架構示意圖</strong></p>
-    <svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+    <iframe loading="lazy" src="https://www.youtube.com/embed/4fRw8llv-dg?si=OR1JOZIA5-9Lzz9Q" title="哈佛大學團隊古 DNA 與印度人起源科普" allowfullscreen></iframe>
+    <p style="font-size:0.9em; color:#333; margin:4px 0 20px; font-weight:bold;">▲ 分子人類學權威科普：哈佛大學大衛·賴希（David Reich）實驗室揭示的南亞古 DNA 雙核心形成史</p>
+
+    <p style="margin-top: 25px;"><strong>南亞基因演化交織架構示意圖</strong></p>
+    <svg width="600" height="250" viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
         <!-- 歐洲人 -->
-        <rect x="50" y="50" width="100" height="100" fill="#8da0cb"/>
-        <text x="100" y="45" text-anchor="middle" font-size="14">歐洲人</text>
+        <rect x="50" y="50" width="100" height="100" fill="#8da0cb" rx="6"/>
+        <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">歐洲人</text>
 
         <!-- 北印度人 (ANI: Steppe + Iran_N) -->
-        <rect x="250" y="50" width="100" height="100" fill="#fc8d62"/>
-        <text x="300" y="45" text-anchor="middle" font-size="14">北印度高種姓 (ANI主導)</text>
+        <rect x="250" y="50" width="100" height="100" fill="#fc8d62" rx="6"/>
+        <text x="300" y="45" text-anchor="middle" font-size="14" font-weight="bold">北印度高種姓 (ANI主導)</text>
 
         <!-- 南印度人 (ASI: AASI + Iran_N) -->
-        <rect x="450" y="50" width="100" height="100" fill="#66c2a5"/>
-        <text x="500" y="45" text-anchor="middle" font-size="14">南印度/基層 (ASI主導)</text>
+        <rect x="450" y="50" width="100" height="100" fill="#66c2a5" rx="6"/>
+        <text x="500" y="45" text-anchor="middle" font-size="14" font-weight="bold">南印度/基層 (ASI主導)</text>
 
         <!-- 標示 ANI 與 ASI 來源 -->
         <line x1="250" y1="50" x2="50" y2="150" stroke="#222" stroke-width="2" stroke-dasharray="5,5"/>
-        <text x="150" y="170" text-anchor="middle" font-size="12">歐亞草原同源血脈 (ANI)</text>
+        <text x="150" y="175" text-anchor="middle" font-size="12" fill="#555">歐亞草原同源血脈 (ANI)</text>
 
         <line x1="250" y1="150" x2="500" y2="150" stroke="#222" stroke-width="2" stroke-dasharray="5,5"/>
-        <text x="375" y="170" text-anchor="middle" font-size="12">古南亞本土基因 (AASI/ASI)</text>
+        <text x="375" y="175" text-anchor="middle" font-size="12" fill="#555">古南亞本土基因 (AASI/ASI)</text>
     </svg>
 </div>
 
@@ -313,15 +372,21 @@
 <p>
     在印度本土的文化工業中，商業票房與大眾美學長期被北印雅利安高種姓骨相牢牢統治。頂級影星如<strong>阿米爾·罕（Aamir Khan，普什圖高加索血統）</strong>、<strong>沙曼·喬希（Sharman Joshi，古吉拉特婆羅門世家）</strong>，皆擁有與南歐無異的立體五官與淺白皮膚。百集史詩電視劇<a href="https://en.wikipedia.org/wiki/Buddha_(TV_series)" target="_blank" class="Buddha">《佛陀》</a>在選角時，更是全套起用淺膚白皙的高種姓演員來扮演佛陀與釋迦族王室，藉由高加索美學換取崇高的收視率與神聖性。
 </p>
-<img loading="lazy" src="阿米爾罕.webp" alt="阿米爾罕" style="width: 640px; height: 400px;border: 1px solid red">
-<br>
-<img loading="lazy" src="沙爾曼喬希.webp" alt="沙爾曼喬希" style="width:426px;height:640px;border: 1px solid red;">
-<br>
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/upvKbKsGW_A?si=lcmUU5nYT9CDvxqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="chart-container">
+    <img loading="lazy" src="阿米爾罕.webp" alt="阿米爾罕" style="max-width: 600px; border: 1px solid red;">
+    <p style="font-size:0.9em; color:#333; margin:4px 0 25px; font-weight:bold;">▲ 寶萊塢天王 阿米爾·罕（Aamir Khan）：普什圖印歐雅利安高加索血統，端正立體的五官骨相與白皙膚質</p>
+
+    <img loading="lazy" src="沙爾曼喬希.webp" alt="沙爾曼喬希" style="max-width: 420px; border: 1px solid red;">
+    <p style="font-size:0.9em; color:#333; margin:4px 0 25px; font-weight:bold;">▲ 實力派巨星 沙曼·喬希（Sharman Joshi）：《三個傻瓜》主角之一，古吉拉特頂級婆羅門世家出身，膚質通透清秀</p>
+
+    <iframe loading="lazy" src="https://www.youtube.com/embed/upvKbKsGW_A?si=lcmUU5nYT9CDvxqE" title="印度百集史詩劇《佛陀》選角" allowfullscreen></iframe>
+    <p style="font-size:0.9em; color:#333; margin:4px 0 10px; font-weight:bold;">▲ 印度大型史詩電視劇《佛陀》（Buddha）：全劇清一色起用高種姓白皙演員飾演釋迦牟尼與古代王室，實證本土影視將高加索骨相「神格化」的審美邏輯</p>
+</div>
+
 <p>
     然而，一旦敘事鏡頭切換至西方歐美作品，工業流水線為了節省大眾辨識成本，會立刻抹除這層內部階層多樣性，強制使用深膚色作為單一標籤（如 Baljeet）。這導致了一種荒謬的割裂：<strong>印度人自己看著螢幕上的白人化神明與明星，而西方大眾卻深信所有印度人都如焦炭般黝黑。</strong>
 </p>
-
 
 <div class="chart-container">
     <p><strong>角色膚色設計示意圖：本土商業美學 vs 海外刻板符號</strong></p>
@@ -330,7 +395,7 @@
         <!-- 本土 -->
         <rect x="30" y="55" width="250" height="90" rx="6" fill="#fc8d62"/>
 
-        <text x="155" y="40" text-anchor="middle" font-size="14">
+        <text x="155" y="40" text-anchor="middle" font-size="14" font-weight="bold">
             印度本土影視 (寶萊塢/歷史劇)
         </text>
 
@@ -343,7 +408,7 @@
         <!-- 海外 -->
         <rect x="320" y="55" width="250" height="90" rx="6" fill="#8c6bb1"/>
 
-        <text x="445" y="40" text-anchor="middle" font-size="14">
+        <text x="445" y="40" text-anchor="middle" font-size="14" font-weight="bold">
             西方流行文化 (歐美卡通/喜劇)
         </text>
 
@@ -354,10 +419,100 @@
     </svg>
 </div>
 
+<hr>
+
+<h2 id="section7">七、給創作者的解碼指南：如何跳脫刻板標籤，設計立體真實的南亞裔角色？</h2>
+<p>
+    長久以來，全球影視與遊戲工業在設計南亞裔角色時，往往陷入兩極化的偷懶思維：西方二次元習慣將其塗裝為極端深黑且伴隨駝背、懦弱的滑稽書呆子（如 Baljeet）；而印度本土商業影視又偏執地將角色「粉白化」，試圖藉由抹去原生深色調來換取神聖感。
+</p>
+<p>
+    為了跳脫這層「雙向閹割」的怪圈，當代概念設計師與 3A 遊戲原畫師在建構南亞角色時，應遵循以下四項體質人類學與視覺美學策略：
+</p>
+
+<ul>
+    <li>
+        <strong>解綁「深膚＝醜化滑稽」的刻板聯結：</strong><br>
+        南亞熱帶陽光賦予的健康暖色小麥肌與古銅膚色，從不排斥高級的美感。設計時應注重肌膚的角質光澤與光影通透感，而非使用扁平發灰的焦炭色塊。
+    </li>
+    <li>
+        <strong>精準刻畫高加索立體顱面骨骼幾何（Craniofacial Architecture）：</strong><br>
+        南亞人群的核心特徵在於解剖學硬代碼——高聳而狹窄的鼻骨、深邃凹陷的眼眶縱深、線條分明的立體眉弓、長顱型輪廓與濃密的毛髮睫毛。只要骨骼結構考據精準，即便搭配深色調皮膚，依然能呈現世界頂級的威嚴與俊朗。
+    </li>
+    <li>
+        <strong>復歸古典雕塑的健美體魄，打破弱化體格標籤：</strong><br>
+        揚棄歐美影視強加的佝僂、瘦弱形象。古印度神廟雕塑與史詩原型（如阿周那、黑公主德羅波蒂）本就崇尚男性「寬肩、厚胸、窄腰」的剛毅線條與女性「端莊神聖、儀態大氣」的體格。
+    </li>
+    <li>
+        <strong>尊重次大陸的地緣與族群微光譜：</strong><br>
+        南亞並非鐵板一塊。設定北印／西北（旁遮普、喀什米爾）角色時可呈現淺小麥至象牙白膚質；設定南印／達羅毗荼核心群體時可強化深邃暖褐膚色；設定東北印（阿薩姆、錫金）時則需融入東亞蒙古人種的骨骼幾何，真實還原多樣性。
+    </li>
+</ul>
+
+<!-- AI 生成實證展示盒 -->
+<div class="chart-container" style="max-width: 720px; text-align: center; border: 2px solid #8e44ad; background-color: #faf5ff;">
+    <h3 style="color: #6b21a8; margin-top: 5px;">★ 實證影音：未輸入膚色 Prompt 下的南亞原生古典骨相還原</h3>
+    <p style="font-size: 0.9em; color: #4a5568; margin: 8px 15px 15px; line-height: 1.6;">
+        <strong>【測試條件與生成背景說明】：</strong>以下影像由本報告作者於早期額度充足時親自利用 Grok 模型渲染輸出（畫質高達 720p，持續時長 10 秒）。<strong>在輸入的英文提示詞（Prompt）中，完全未包含「白皮膚、黑皮膚、膚色深淺」等任何色彩干預詞彙</strong>，僅輸入「古代印度、神廟、古典王女／王子（Indian Princess / Prince）、英俊（handsome）、美麗（beauty）」等客觀美學詞。AI 模型依據海量人類學圖像所呈現的底層實相，證明了立體高加索骨相與自然深色皮膚的和諧共存。
+    </p>
+
+    <!-- 原始 Prompt 審計記錄卡片 -->
+    <!-- 原始 Prompt 審計記錄與真實截圖存證卡片 -->
+    <div style="background: #ffffff; border: 1px solid #d8b4fe; border-radius: 8px; padding: 16px 18px; margin: 20px auto 30px; max-width: 680px; text-align: left; box-sizing: border-box; box-shadow: 0 2px 5px rgba(107, 33, 168, 0.05);">
+        <strong style="color: #6b21a8; font-size: 1.05em;">📌 原始提示詞（Prompt）真實審計記錄與後台截圖存證：</strong>
+
+        <!-- 手機截圖對照展示區 -->
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 15px 0;">
+            <div style="flex: 1 1 200px; max-width: 280px; text-align: center;">
+                <img loading="lazy" src="male_prompt_screenshot.jpg" alt="男性王子 Prompt 截圖" style="width: 100%; border: 1px solid #ddd; border-radius: 6px; margin: 0 auto 6px;">
+                <span style="font-size: 0.82em; color: #555; font-weight: bold;">▲ 男角色指令後台截圖存證</span>
+            </div>
+            <div style="flex: 1 1 200px; max-width: 280px; text-align: center;">
+                <img loading="lazy" src="female_prompt_screenshot.jpg" alt="女性王女 Prompt 截圖" style="width: 100%; border: 1px solid #ddd; border-radius: 6px; margin: 0 auto 6px;">
+                <span style="font-size: 0.82em; color: #555; font-weight: bold;">▲ 女角色指令後台截圖存證</span>
+            </div>
+        </div>
+
+        <p style="margin: 10px 0 6px; font-size: 0.88em; color: #444; font-family: monospace; background: #f3f4f6; padding: 10px 12px; border-radius: 4px; word-break: break-all; line-height: 1.6;">
+            <strong>[男性王子指令]：</strong>"In ancient India, a handsome young man with abdominal muscles remained shirtless and wore a loincloth"<br><br>
+            <strong>[女性王女指令]：</strong>"In ancient India, a beautiful young woman wore princess clothing of lingerie style, with her belly button, thighs, legs, and arms exposed, a bindi on her forehead, and D cup breasts"
+        </p>
+
+        <p style="margin: 6px 0 0; font-size: 0.85em; color: #666; line-height: 1.6;">
+            ※ <strong>科學審計核心：</strong>如上方截圖所示，整體 Prompt 僅給予歷史背景、身形細節與純美學名詞（handsome / beautiful），完全排除任何關於膚色深淺（如 white, dark, brown, fair）的指定詞。AI 模型自發輸出的立體骨相與深色小麥肌，實證了古典南亞力與美在客觀視覺網絡中的底層共存。
+        </p>
+    </div>
+
+    <!-- 男性角色 -->
+    <video controls style="width: 100%; max-width: 480px; aspect-ratio: 9/16; margin: 15px auto; border-radius: 8px; border: 2px solid #6b21a8;"><source src="India_Prince.MP4" type="video/mp4"></video>
+    <p style="font-size: 0.9em; color: #222; margin: 4px 0 25px; font-weight: bold;">
+        ▲ 影像實證一（王子篇）：AI 在零膚色指令下生成的南亞男性——深邃立體的眉弓、高聳挺拔的鼻樑與結實的肩頸肌肉線條，證明古典南亞陽剛美學本就不依賴「漂白」即具備強大視覺衝擊力。
+    </p>
+
+    <video controls style="width: 100%; max-width: 480px; aspect-ratio: 9/16; margin: 15px auto; border-radius: 8px; border: 2px solid #6b21a8;"><source src="India_Prince2.MP4" type="video/mp4"></video>
+    <p style="font-size: 0.9em; color: #222; margin: 4px 0 25px; font-weight: bold;">
+        ▲ 影像實證二（神殿篇）：在古典神廟石柱光影下，深褐色健康肌膚與精緻面部骨骼結構完美咬合，徹底粉碎歐美卡通將南亞男性定型為「佝僂滑稽書呆子」的符號閹割。
+    </p>
+
+    <!-- 女性角色 -->
+    <video controls style="width: 100%; max-width: 480px; aspect-ratio: 9/16; margin: 15px auto; border-radius: 8px; border: 2px solid #6b21a8;"><source src="India_Princess.MP4" type="video/mp4"></video>
+    <p style="font-size: 0.9em; color: #222; margin: 4px 0 25px; font-weight: bold;">
+        ▲ 影像實證三（王女篇）：在未經膚色調色的預設條件下，AI 自發渲染出古典印度王女華麗、端莊且兼具威嚴的深瞳面貌與黃金首飾融合感。
+    </p>
+
+    <video controls style="width: 100%; max-width: 480px; aspect-ratio: 9/16; margin: 15px auto; border-radius: 8px; border: 2px solid #6b21a8;"><source src="India_Princess2.MP4" type="video/mp4"></video>
+    <p style="font-size: 0.9em; color: #222; margin: 4px 0 25px; font-weight: bold;">
+        ▲ 影像實證四（神聖儀態篇）：濃密挑眉與大氣眼窩幾何，展現達羅毗荼與印歐融合後的南亞古典女性獨有的神聖神格特質。
+    </p>
+
+    <video controls style="width: 100%; max-width: 480px; aspect-ratio: 9/16; margin: 15px auto; border-radius: 8px; border: 2px solid #6b21a8;"><source src="India_Princess3.MP4" type="video/mp4"></video>
+    <p style="font-size: 0.9em; color: #222; margin: 4px 0 10px; font-weight: bold;">
+        ▲ 影像實證五（古典細節篇）：溫潤的深色小麥膚質搭配繁複額飾，生動印證了真正的南亞美學無需模仿西方粉白皮，其骨骼與氣質本身即是完整的獨立美學範式。
+    </p>
+</div>
 
 <hr>
 
-<h2 id="section7">七、結論：走出符號牢籠與認識論重構</h2>
+<h2 id="section8">八、結論：走出符號牢籠與認識論重構</h2>
 
 <ul>
     <li>
@@ -384,22 +539,19 @@
     <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
 </div>
 <script>
-    // 自動抓取當前頁面的 URL
     var currentUrl = window.location.href;
-    // Facebook 分享
     document.getElementById("fb-share").href =
         "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-    // Line 分享
     document.getElementById("line-share").href =
         "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-    // X (Twitter) 分享
     document.getElementById("twitter-share").href =
-        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=" + encodeURIComponent(document.title);
 </script>
 <footer>
-    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white;">周彥廷</a></p>
-    <p>創作日期：2026 年 1 月 30 日</p>
-    <img src="理平頭.jpg" alt="作者照片" width="300" height="400">
+    <p>作者：<a href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color: white; font-weight: bold;">周彥廷</a></p>
+    <p>創作日期：2026 年 1 月 30 日（架構重構與實證擴充）</p>
+    <img src="理平頭.jpg" alt="作者照片" width="300" height="400" style="margin: 15px auto 0; border: 1px solid #ddd; border-radius: 4px; display: block;">
+    <p style="font-size: 0.85em; margin-top: 15px; color: yellow;">所有頁面均來自同一 GitHub Pages 專案</p>
 </footer>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
@@ -407,13 +559,11 @@
 </script>
 
 <div class="fb-comments"
-     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-href="https://chrischou19990904.github.io/why_overseas_indians_are_always_tanned_in_pop_culture.html"
      data-width="100%"
-     data-numposts="5">
+     data-numposts="5"
+     style="margin-top: 20px; background: #fff; padding: 15px; border-radius: 8px;">
 </div>
-<footer style="font-size: 0.9em; text-align: center; margin-top: 2em; color: yellow;">
-    所有頁面均來自同一 GitHub Pages 專案
-</footer>
 
 </body>
 </html>
